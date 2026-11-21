@@ -1,3 +1,9 @@
+"""FIKRA_NO_MUSIC_POLICY_GUARD (V3.1.1 — FIK-019): LEGACY QUARANTINED MODULE.
+Music generation is strictly disabled across all FIKRA STUDIO modes.
+Original source preserved below for historical archive integrity only.
+"""
+raise RuntimeError("FIKRA_NO_MUSIC_POLICY: Music generation is prohibited across all FIKRA STUDIO modes. Use sfx.py for justified SFX only.")
+
 """A simple background-music bed, synthesised (no downloads, no licences to check).
 
 Chords on a soft pad, a sub bass, and for the livelier moods a plucked arpeggio, a soft kick and hats.

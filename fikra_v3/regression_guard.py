@@ -74,6 +74,35 @@ def run_regression_checks(root: Path | None = None) -> dict[str, Any]:
         "observed": kg.get("counts", {}),
     }
 
+
+    # REG-008: ALL Remotion package.json files must have valid TypeScript version (<7.x) (FIK-018)
+    bad_ts = []
+    for pj in sorted(r.rglob("package.json")):
+        if "node_modules" in pj.parts:
+            continue
+        ts_v = json.loads(pj.read_text(encoding="utf-8")).get("devDependencies", {}).get("typescript", "")
+        if ts_v.startswith("7."):
+            bad_ts.append(f"{pj.relative_to(r).as_posix()}:{ts_v}")
+    checks["REG-008_all_package_json_valid_ts"] = {"pass": len(bad_ts) == 0, "bad": bad_ts}
+
+    # REG-009: music.py quarantined under strict NO-MUSIC policy (FIK-019)
+    mp = r / "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/music.py"
+    checks["REG-009_music_generator_quarantined"] = {
+        "pass": mp.exists() and "FIKRA_NO_MUSIC_POLICY_GUARD" in mp.read_text(encoding="utf-8"),
+        "file": "MOTALIM_PYTHON_SCRIPTS/music.py",
+    }
+
+    # REG-010: ASSET_REGISTRY JSON, CSV, ASSET_INDEX.csv, HASH_MANIFEST.csv counts match (FIK-010)
+    reg_dir = r / "09_ASSET_AND_RIGHTS_REGISTRY"
+    reg_json = json.loads((reg_dir / "ASSET_REGISTRY.json").read_text(encoding="utf-8")) if (reg_dir / "ASSET_REGISTRY.json").exists() else {}
+    n_json = reg_json.get("total_assets", -1)
+    n_hash = len((reg_dir / "HASH_MANIFEST.csv").read_text(encoding="utf-8").splitlines()) - 1 if (reg_dir / "HASH_MANIFEST.csv").exists() else -2
+    n_idx = len((reg_dir / "ASSET_INDEX.csv").read_text(encoding="utf-8").splitlines()) - 1 if (reg_dir / "ASSET_INDEX.csv").exists() else -3
+    checks["REG-010_registries_synchronized"] = {
+        "pass": n_json > 0 and n_json == n_hash == n_idx,
+        "counts": {"json": n_json, "hash_manifest": n_hash, "asset_index": n_idx},
+    }
+
     passed = sum(1 for c in checks.values() if c["pass"])
     return {
         "pass": passed == len(checks),

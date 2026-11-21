@@ -8,7 +8,7 @@ from typing import Any
 
 
 class ApprovalLockedError(PermissionError):
-    """Raised when attempting to modify a locked user approval without explicit override."""
+    """Raised when attempting to modify or re-lock a locked user approval without explicit override."""
 
 
 LOCKABLE_DECISIONS = ("idea", "script", "voiceover", "style", "character", "storyboard", "aspect_ratio")
@@ -19,24 +19,56 @@ def decision_digest(payload: Any) -> str:
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
-def lock_decision(state: dict[str, Any], key: str, value: Any, approved_by: str = "user") -> dict[str, Any]:
+def lock_decision(
+    state: dict[str, Any],
+    key: str,
+    value: Any,
+    approved_by: str = "user",
+    override_approved: bool = False,
+    override_reason: str = "",
+) -> dict[str, Any]:
     if key not in LOCKABLE_DECISIONS:
         raise ValueError(f"Unsupported lockable decision key: {key}")
     approvals = state.setdefault("approvals", {})
+    existing = approvals.get(key)
     digest = decision_digest(value)
+
+    if existing and existing.get("locked"):
+        if existing.get("sha256") == digest:
+            return existing
+        if not override_approved or not override_reason.strip():
+            raise ApprovalLockedError(
+                f"Decision '{key}' is already locked (sha256={existing['sha256'][:12]}). "
+                "Cannot overwrite via lock_decision() without override_approved=True and non-empty override_reason."
+            )
+        state.setdefault("audit_log", []).append({
+            "action": "OVERRIDE_LOCKED_APPROVAL",
+            "key": key,
+            "approved_by": approved_by,
+            "old_sha256": existing["sha256"],
+            "new_sha256": digest,
+            "old_value": existing.get("value"),
+            "new_value": value,
+            "reason": override_reason.strip(),
+            "timestamp_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        })
+
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     approvals[key] = {
         "locked": True,
         "approved_by": approved_by,
-        "locked_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "locked_at_utc": now,
         "sha256": digest,
         "value": value,
+        "overridden": bool(existing and existing.get("locked")),
     }
     state.setdefault("decisions", {})[key] = value
     state.setdefault("audit_log", []).append({
         "action": "LOCK_APPROVAL",
         "key": key,
+        "approved_by": approved_by,
         "sha256": digest,
-        "timestamp_utc": approvals[key]["locked_at_utc"],
+        "timestamp_utc": now,
     })
     return approvals[key]
 
@@ -47,30 +79,20 @@ def update_decision(
     new_value: Any,
     override_approved: bool = False,
     override_reason: str = "",
+    approved_by: str = "user",
 ) -> dict[str, Any]:
     approvals = state.get("approvals", {})
     existing = approvals.get(key)
     if existing and existing.get("locked"):
-        new_digest = decision_digest(new_value)
-        if new_digest == existing.get("sha256"):
-            return state
-        if not override_approved or not override_reason.strip():
-            raise ApprovalLockedError(
-                f"Decision '{key}' is locked (sha256={existing['sha256'][:12]}). "
-                "Explicit user override (override_approved=True + override_reason) is required."
-            )
-        state.setdefault("audit_log", []).append({
-            "action": "OVERRIDE_LOCKED_APPROVAL",
-            "key": key,
-            "old_sha256": existing["sha256"],
-            "new_sha256": new_digest,
-            "reason": override_reason.strip(),
-            "timestamp_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        })
-        existing["sha256"] = new_digest
-        existing["value"] = new_value
-        existing["overridden"] = True
-
+        lock_decision(
+            state,
+            key,
+            new_value,
+            approved_by=approved_by,
+            override_approved=override_approved,
+            override_reason=override_reason,
+        )
+        return state
     state.setdefault("decisions", {})[key] = new_value
     return state
 

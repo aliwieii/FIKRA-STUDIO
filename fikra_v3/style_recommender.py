@@ -49,7 +49,8 @@ def recommend_styles(
                 score += 20
         if mode == "STICKMAN_COMEDY_MODE" and "stickman" in (en + corpus.lower()):
             score += 40
-        if max_difficulty and max_difficulty.lower() == "low" and "high" in node.get("code_difficulty", "").lower():
+        diff_val = node.get("code_difficulty", "").lower()
+        if max_difficulty and max_difficulty.lower() in ("low", "سهل") and ("high" in diff_val or "صعب" in diff_val):
             score -= 15
 
         # Tie-breaker by reference richness
