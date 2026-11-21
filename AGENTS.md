@@ -1,4 +1,4 @@
-# AGENTS.md — FIKRA STUDIO V3.0 (Single Source of Truth)
+# AGENTS.md — FIKRA STUDIO V3.1 (Single Source of Truth)
 
 > **Activation Charter:** [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md)
 
@@ -9,7 +9,7 @@
 ---
 
 ## 1. What Is FIKRA STUDIO?
-FIKRA STUDIO V3.0 is a modular, forensic-grade creative production direction, prompt engineering, asset intelligence, and programmatic video engineering system supporting Arabic-first and universal video workflows.
+FIKRA STUDIO V3.1 is a modular, forensic-grade creative production direction, prompt engineering, asset intelligence, and programmatic video engineering system supporting Arabic-first and universal video workflows.
 
 ## 2. What Can It Do?
 - Route any creative request into **9 strictly isolated operating modes** (`UNIVERSAL_VIDEO_MODE`, `FIKRA_CHANNEL_MODE`, `QURAN_MODE`, `PODCAST_SHORT_MODE`, `LOGO_ANIMATION_MODE`, `PROMPT_ONLY_MODE`, `REFERENCE_AUDIT_MODE`, `VISUAL_UPGRADE_MODE`, `STICKMAN_COMEDY_MODE`).
@@ -46,3 +46,14 @@ Use `SYSTEM_MANIFEST.json` and `python3 -m fikra_v3 context --mode <MODE>` inste
 3. **Lock Approvals:** Record every user approval (`idea`, `script`, `voiceover`, `style`, `character`, `storyboard`) via `fikra_v3.approval_guard` — never silently mutate a locked decision.
 4. **Compile & Inspect:** Compile Production Prompt via `python3 -m fikra_v3 compile-prompt ...`, run Arabic QA (`python3 -m fikra_v3 arabic-qa ...`), and score readiness (`python3 -m fikra_v3 readiness ...`).
 5. **Verify Before Delivery:** Run `python3 -m unittest discover -s tests -v` and `python3 -m fikra_v3 integrity` before claiming completion.
+
+## 7. Strict Compliance vs. Flexible Sourcing Policy
+- **STRICT (No skipping, no ad-hoc drift, no inventing unbuildable styles):**
+  - Follow every stage and mandatory deliverable of the active workflow (`FIKRA_CHANNEL_WORKFLOW.md` / `UNIVERSAL_VIDEO_WORKFLOW.md`) and lock every approval gate.
+  - **Stage 6 (Voiceover — Mandatory in ALL modes):** ALWAYS deliver BOTH the **clean spoken script** AND the **ready-to-copy Voice Style / Performance Prompt** together automatically in the same response (never wait for the user to ask for the style prompt).
+  - **Stage 7 (Visual Styles — Mandatory in BOTH FIKRA Channel & Universal Modes):** Select visual styles **exclusively** from the 32 cataloged styles (`STY-001`..`STY-032` in `03_STYLE_LIBRARY/`) and logo animations from `L01`..`L17`, always citing official IDs (`STY-XXX` / `LXX`). **Controlled blending** of 2–3 existing library styles (e.g., `STY-001 + STY-014`) is allowed as long as the exact source IDs are named and the blend remains buildable with the studio's standard motion-graphics pipeline. **Inventing weird or unbuildable styles outside the library is strictly forbidden** unless explicitly requested by the user.
+- **FLEXIBLE (External sourcing and engineering creativity allowed):**
+  - Research and fact-checking from reliable external sources.
+  - Programming and technical implementation (Python, Remotion, HyperFrames).
+  - External images and visual assets (consistent with the approved style and rights policy).
+  - External sound effects (`SFX`) and ambient audio (while preserving the zero-music rule in `FIKRA_CHANNEL_MODE` and zero-audio-over-recitation in `QURAN_MODE`).

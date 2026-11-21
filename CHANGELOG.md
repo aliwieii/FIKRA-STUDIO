@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here.
 
+## [3.1.0] — 2026-11-21 (Tag: `v3.1.0` on `main`)
+### Added
+- **Strict vs. Flexible Policy (`ACTIVATION_PROMPT.md`, `AGENTS.md`, `01_SYSTEM_CORE/SYSTEM_RULES.md`):** Explicitly separates non-negotiable workflow/catalog commitments from flexible external sourcing (research, programming, external images, and SFX).
+- **Controlled Style Blending (`FIKRA_CHANNEL_WORKFLOW.md`, `UNIVERSAL_VIDEO_WORKFLOW.md`):** Locks visual style selection in both FIKRA Channel and Universal modes to the 32 verified catalog styles (`STY-001`..`STY-032`) with official IDs, while allowing controlled blending of 2–3 existing library styles that remain buildable in standard motion graphics—banning ad-hoc unbuildable invented styles unless explicitly requested.
+
+### Changed
+- **Stage 6 Mandatory Dual Voice Output:** Both `FIKRA_CHANNEL_WORKFLOW.md` and `UNIVERSAL_VIDEO_WORKFLOW.md` now require delivering the clean spoken script AND the ready-to-copy Voice Style / Performance Prompt together automatically in the same response.
+- **Registry & Version Bump:** Upgraded `SYSTEM_MANIFEST.json` and `fikra_v3` to `3.1.0` and rebuilt unified `ASSET_REGISTRY.{json,csv,sqlite}` + `KNOWLEDGE_GRAPH.json`.
+
 ## [3.0.0-rc.1] — 2026-11-21 (Branch: `development/v3.0`)
 ### Added
 - **Agent-First Entry Layer:** `AGENTS.md` (Single Source of Truth), `GEMINI.md`, `CLAUDE.md`, `README.md`, `AGENT_ONBOARDING_GUIDE.md`, `PROJECT_MAP.md`, `SYSTEM_MANIFEST.json`, `V3_ARCHITECTURE.md`, `ARCHITECTURE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `.gitignore`.
