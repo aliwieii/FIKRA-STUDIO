@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node / Remotion / HyperFrames
+node_modules/
+dist/
+build/
+out/
+.remotion/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large Media & Secrets (never commit raw credentials or massive renders)
+*.env
+.env.*
+secrets/
+*.mp4
+*.mov
+*.wav
+*.mp3
+!07_REFERENCE_MEDIA/AUDIO_SIGNATURES/*.json
+!07_REFERENCE_MEDIA/ANALYSIS_CARDS/*.md
