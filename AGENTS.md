@@ -1,5 +1,7 @@
 # AGENTS.md — FIKRA STUDIO V3.0 (Single Source of Truth)
 
+> **Activation Charter:** [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md)
+
 > **Identity:** `AGENT-FIRST UNIVERSAL CREATIVE PRODUCTION SYSTEM`
 > **Target Audience:** Gemini, Claude, ChatGPT, Antigravity, Cursor, Codex, and any modern AI agent.
 > **Rule:** This file is the **single canonical entry point** for agent rules and routing. Platform files (`GEMINI.md`, `CLAUDE.md`) are thin routers pointing here — never duplicate full rules into platform-specific files.

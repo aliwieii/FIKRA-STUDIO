@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0.0",
-  "generated_at_utc": "2026-11-21T05:32:57Z",
-  "total_assets": 338,
-  "total_bytes": 2343030,
+  "generated_at_utc": "2026-11-21T16:47:41Z",
+  "total_assets": 339,
+  "total_bytes": 2350169,
   "excluded_self_generated": [
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.csv",
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.json",
@@ -4532,11 +4532,11 @@
     },
     {
       "asset_id": "AST-0291",
-      "path": "AGENTS.md",
-      "name": "AGENTS.md",
+      "path": "ACTIVATION_PROMPT.md",
+      "name": "ACTIVATION_PROMPT.md",
       "extension": ".md",
-      "size_bytes": 4453,
-      "sha256": "9f83ba8ba590d1eb5563a992b5f65947dd0f91b58a45ba127ec7a750c200e45d",
+      "size_bytes": 6711,
+      "sha256": "476ad6cb9ab93486404fcd610e3cbd555cce8fcff8dfa1d3ba55bffe7ccd5296",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4547,6 +4547,21 @@
     },
     {
       "asset_id": "AST-0292",
+      "path": "AGENTS.md",
+      "name": "AGENTS.md",
+      "extension": ".md",
+      "size_bytes": 4527,
+      "sha256": "5651cf22b4cd0fa7d3913f4e764fdc289ccf641af433580edb93d958863b6b76",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0293",
       "path": "AGENT_ONBOARDING_GUIDE.md",
       "name": "AGENT_ONBOARDING_GUIDE.md",
       "extension": ".md",
@@ -4561,7 +4576,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0293",
+      "asset_id": "AST-0294",
       "path": "ARCHITECTURE.md",
       "name": "ARCHITECTURE.md",
       "extension": ".md",
@@ -4576,7 +4591,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0294",
+      "asset_id": "AST-0295",
       "path": "CHANGELOG.md",
       "name": "CHANGELOG.md",
       "extension": ".md",
@@ -4591,12 +4606,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0295",
+      "asset_id": "AST-0296",
       "path": "CLAUDE.md",
       "name": "CLAUDE.md",
       "extension": ".md",
-      "size_bytes": 596,
-      "sha256": "b195f4aabf43713413a638c4da5cc41a9861fe574d81dc890000c831b10e131c",
+      "size_bytes": 670,
+      "sha256": "e35f8c33bd6cb5ad395f901b0a76d74452daf8ab5bd505bc89bdac903fac8a6d",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4606,7 +4621,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0296",
+      "asset_id": "AST-0297",
       "path": "CONTRIBUTING.md",
       "name": "CONTRIBUTING.md",
       "extension": ".md",
@@ -4621,12 +4636,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0297",
+      "asset_id": "AST-0298",
       "path": "GEMINI.md",
       "name": "GEMINI.md",
       "extension": ".md",
-      "size_bytes": 610,
-      "sha256": "441633224c00045a83bbf07e0f42c8c874b0e81e21ade186cdb9ef897c1082d9",
+      "size_bytes": 684,
+      "sha256": "eb7ee5618dceac53d04393ec379e9f4ecd5aaeab07cf07000ca3d48a36f8f627",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4636,7 +4651,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0298",
+      "asset_id": "AST-0299",
       "path": "ISSUES_REGISTER.md",
       "name": "ISSUES_REGISTER.md",
       "extension": ".md",
@@ -4651,7 +4666,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0299",
+      "asset_id": "AST-0300",
       "path": "MIGRATION_MAP.md",
       "name": "MIGRATION_MAP.md",
       "extension": ".md",
@@ -4666,7 +4681,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0300",
+      "asset_id": "AST-0301",
       "path": "PROJECT_MAP.md",
       "name": "PROJECT_MAP.md",
       "extension": ".md",
@@ -4681,12 +4696,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0301",
+      "asset_id": "AST-0302",
       "path": "README.md",
       "name": "README.md",
       "extension": ".md",
-      "size_bytes": 3058,
-      "sha256": "a27bb16702da07caff0d0657637cda59d1d5b7abc5d793a23b40e2a37780b685",
+      "size_bytes": 3264,
+      "sha256": "02174081f02ca6b6106e3789ccbc45db7b1e99a37c05eb62ab6545a1ccb62097",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4696,7 +4711,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0302",
+      "asset_id": "AST-0303",
       "path": "REGRESSION_REPORT.md",
       "name": "REGRESSION_REPORT.md",
       "extension": ".md",
@@ -4711,7 +4726,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0303",
+      "asset_id": "AST-0304",
       "path": "SECURITY.md",
       "name": "SECURITY.md",
       "extension": ".md",
@@ -4726,7 +4741,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0304",
+      "asset_id": "AST-0305",
       "path": "SKILLS_AUDIT.md",
       "name": "SKILLS_AUDIT.md",
       "extension": ".md",
@@ -4741,7 +4756,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0305",
+      "asset_id": "AST-0306",
       "path": "TEST_RESULTS.md",
       "name": "TEST_RESULTS.md",
       "extension": ".md",
@@ -4756,7 +4771,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0306",
+      "asset_id": "AST-0307",
       "path": "TEST_STRATEGY.md",
       "name": "TEST_STRATEGY.md",
       "extension": ".md",
@@ -4771,7 +4786,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0307",
+      "asset_id": "AST-0308",
       "path": "V3_ARCHITECTURE.md",
       "name": "V3_ARCHITECTURE.md",
       "extension": ".md",
@@ -4786,7 +4801,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0308",
+      "asset_id": "AST-0309",
       "path": "V3_DEVELOPMENT_PLAN.md",
       "name": "V3_DEVELOPMENT_PLAN.md",
       "extension": ".md",
@@ -4801,7 +4816,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0309",
+      "asset_id": "AST-0310",
       "path": "V3_READINESS_REPORT.md",
       "name": "V3_READINESS_REPORT.md",
       "extension": ".md",
@@ -4816,7 +4831,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0310",
+      "asset_id": "AST-0311",
       "path": "archive/baseline_manifests/v1_audit_sha256_manifest.json",
       "name": "v1_audit_sha256_manifest.json",
       "extension": ".json",
@@ -4831,7 +4846,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0311",
+      "asset_id": "AST-0312",
       "path": "archive/baseline_manifests/v1_core_sha256_manifest.json",
       "name": "v1_core_sha256_manifest.json",
       "extension": ".json",
@@ -4846,7 +4861,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0312",
+      "asset_id": "AST-0313",
       "path": "archive/baseline_manifests/v1_to_v2_diff_summary.json",
       "name": "v1_to_v2_diff_summary.json",
       "extension": ".json",
@@ -4861,7 +4876,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0313",
+      "asset_id": "AST-0314",
       "path": "archive/baseline_manifests/v2_core_sha256_manifest.json",
       "name": "v2_core_sha256_manifest.json",
       "extension": ".json",
@@ -4876,7 +4891,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0314",
+      "asset_id": "AST-0315",
       "path": "archive/baseline_manifests/v2_pro_sha256_manifest.json",
       "name": "v2_pro_sha256_manifest.json",
       "extension": ".json",
@@ -4891,7 +4906,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0315",
+      "asset_id": "AST-0316",
       "path": "fikra_v3/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
@@ -4906,7 +4921,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0316",
+      "asset_id": "AST-0317",
       "path": "fikra_v3/__main__.py",
       "name": "__main__.py",
       "extension": ".py",
@@ -4921,7 +4936,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0317",
+      "asset_id": "AST-0318",
       "path": "fikra_v3/approval_guard.py",
       "name": "approval_guard.py",
       "extension": ".py",
@@ -4936,7 +4951,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0318",
+      "asset_id": "AST-0319",
       "path": "fikra_v3/arabic_qa.py",
       "name": "arabic_qa.py",
       "extension": ".py",
@@ -4951,7 +4966,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0319",
+      "asset_id": "AST-0320",
       "path": "fikra_v3/asset_intelligence.py",
       "name": "asset_intelligence.py",
       "extension": ".py",
@@ -4966,7 +4981,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0320",
+      "asset_id": "AST-0321",
       "path": "fikra_v3/context_loader.py",
       "name": "context_loader.py",
       "extension": ".py",
@@ -4981,7 +4996,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0321",
+      "asset_id": "AST-0322",
       "path": "fikra_v3/integrity_validator.py",
       "name": "integrity_validator.py",
       "extension": ".py",
@@ -4996,7 +5011,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0322",
+      "asset_id": "AST-0323",
       "path": "fikra_v3/knowledge_graph.py",
       "name": "knowledge_graph.py",
       "extension": ".py",
@@ -5011,7 +5026,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0323",
+      "asset_id": "AST-0324",
       "path": "fikra_v3/media_intelligence.py",
       "name": "media_intelligence.py",
       "extension": ".py",
@@ -5026,7 +5041,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0324",
+      "asset_id": "AST-0325",
       "path": "fikra_v3/model_adapter.py",
       "name": "model_adapter.py",
       "extension": ".py",
@@ -5041,7 +5056,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0325",
+      "asset_id": "AST-0326",
       "path": "fikra_v3/multi_agent_review.py",
       "name": "multi_agent_review.py",
       "extension": ".py",
@@ -5056,7 +5071,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0326",
+      "asset_id": "AST-0327",
       "path": "fikra_v3/project_bootstrap.py",
       "name": "project_bootstrap.py",
       "extension": ".py",
@@ -5071,7 +5086,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0327",
+      "asset_id": "AST-0328",
       "path": "fikra_v3/project_state.py",
       "name": "project_state.py",
       "extension": ".py",
@@ -5086,7 +5101,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0328",
+      "asset_id": "AST-0329",
       "path": "fikra_v3/prompt_compiler.py",
       "name": "prompt_compiler.py",
       "extension": ".py",
@@ -5101,7 +5116,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0329",
+      "asset_id": "AST-0330",
       "path": "fikra_v3/readiness_scorer.py",
       "name": "readiness_scorer.py",
       "extension": ".py",
@@ -5116,7 +5131,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0330",
+      "asset_id": "AST-0331",
       "path": "fikra_v3/regression_guard.py",
       "name": "regression_guard.py",
       "extension": ".py",
@@ -5131,7 +5146,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0331",
+      "asset_id": "AST-0332",
       "path": "fikra_v3/style_recommender.py",
       "name": "style_recommender.py",
       "extension": ".py",
@@ -5146,7 +5161,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0332",
+      "asset_id": "AST-0333",
       "path": "tests/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
@@ -5161,7 +5176,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0333",
+      "asset_id": "AST-0334",
       "path": "tests/test_arabic_qa.py",
       "name": "test_arabic_qa.py",
       "extension": ".py",
@@ -5176,7 +5191,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0334",
+      "asset_id": "AST-0335",
       "path": "tests/test_asset_and_graph.py",
       "name": "test_asset_and_graph.py",
       "extension": ".py",
@@ -5191,7 +5206,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0335",
+      "asset_id": "AST-0336",
       "path": "tests/test_context_and_modes.py",
       "name": "test_context_and_modes.py",
       "extension": ".py",
@@ -5206,7 +5221,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0336",
+      "asset_id": "AST-0337",
       "path": "tests/test_engines_and_regression.py",
       "name": "test_engines_and_regression.py",
       "extension": ".py",
@@ -5221,7 +5236,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0337",
+      "asset_id": "AST-0338",
       "path": "tests/test_media_intelligence.py",
       "name": "test_media_intelligence.py",
       "extension": ".py",
@@ -5236,7 +5251,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0338",
+      "asset_id": "AST-0339",
       "path": "tests/test_state_approvals_prompt.py",
       "name": "test_state_approvals_prompt.py",
       "extension": ".py",

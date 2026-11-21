@@ -1,5 +1,8 @@
 # FIKRA STUDIO V3.0 — Agent-First Universal Creative Production System
 
+> **AI Agents Start Here:** Read [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md) first as your complete operating charter, then [`AGENTS.md`](AGENTS.md) and [`SYSTEM_MANIFEST.json`](SYSTEM_MANIFEST.json).
+
+
 [![Version](https://img.shields.io/badge/version-3.0.0--rc.1-blue.svg)](CHANGELOG.md)
 [![Branch](https://img.shields.io/badge/branch-development%2Fv3.0-orange.svg)](V3_DEVELOPMENT_PLAN.md)
 [![Architecture](https://img.shields.io/badge/architecture-Agent--First-emerald.svg)](AGENTS.md)
