@@ -12,7 +12,7 @@ description: Animate the user's own logo in Remotion in one of 17 styles (line d
 **قبل أن تبدأ:**
 - المشروع الجاهز في `logo/`. شغّل أوامر `npm` من داخله.
 - كل أمثلة المعرض لشعار متعلم، وكودها في `logo/reference/motalim/styles/`. خذ منها **الطريقة** فقط، وطبّقها على أجزاء شعار المستخدم. لا تضع شعار متعلم في عمل المستخدم.
-- طريقة بناء كل ستايل في [references/styles.md](references/styles.md). وقواعد الكلمة العربية في [references/arabic.md](references/arabic.md).
+- طريقة بناء كل ستايل في [references/styles.md](../LOGO_ANIMATION_INDEX.md). وقواعد الكلمة العربية في [references/arabic.md](../../01_SYSTEM_CORE/SYSTEM_RULES.md).
 - المراحل بالترتيب، ولا تقفز فوق مرحلة.
 
 ## المرحلة 0: التجهيز
@@ -29,7 +29,7 @@ description: Animate the user's own logo in Remotion in one of 17 styles (line d
    - `transform` غير مدعوم، أو شكل بخط فقط (stroke)، أو نص حي، أو صورة داخل الملف: اطلب من المستخدم تصدير الملف مرة أخرى بعد «Outline stroke» و«Create outlines»، أو أصلح الملف بنفسك إن استطعت.
 4. **اعرف الأجزاء:** `npm run stills -- --id Parts 0`، ثم انظر إلى `out/stills/Parts-t00.00.png`: كل جزء بلون ورقمه عليه.
 5. **سمِّ المجموعات** في `src/groups.ts`: `mark` (الرمز، والشكل الخلفي أولًا)، و`word` (الكلمة)، و`dots` (نقاطها وتشكيلها)، و`tag` (الجملة الصغيرة). احذف ما ليس في الشعار، وأضف ما يلزم.
-6. **حدّد لغة الكلمة:** إن كانت عربية، فاقرأ [references/arabic.md](references/arabic.md) الآن.
+6. **حدّد لغة الكلمة:** إن كانت عربية، فاقرأ [references/arabic.md](../../01_SYSTEM_CORE/SYSTEM_RULES.md) الآن.
 
 ## المرحلة 2: الأسئلة، مرة واحدة فقط
 اسأل كل الأسئلة في رسالة واحدة، بلغة المستخدم وبكلام بسيط، مع اقتراحك لكل سؤال. لا تسأل عما قاله في طلبه.
@@ -40,7 +40,7 @@ description: Animate the user's own logo in Remotion in one of 17 styles (line d
 5. **الصوت:** مؤثرات صوتية على لحظات الحركة، أم بدون صوت؟
 6. **المقاس:** عرضي 16:9، أم طولي 9:16، أم مربع 1:1؟ وبدقة 1080p أم 4K؟
 7. **الاستخدام:** أين سيضعه؟ بداية فيديو يوتيوب، أو موقع، أو ريلز.
-8. **ستايلا «الهيرو» و«لوحة التصميم» فقط:** يحتاج صور موكاب فاضية (هودي، وموبايل، وكروت، وبوستر، وورق داكن، ونوتة). اسأله: هل يولّدها هو ببرومبتات تعطيها له من [references/mockups.md](references/mockups.md)، أم تولّدها أنت إن كان عندك مولّد صور، أم عنده صور جاهزة؟ لا ترسم الموكاب بالكود.
+8. **ستايلا «الهيرو» و«لوحة التصميم» فقط:** يحتاج صور موكاب فاضية (هودي، وموبايل، وكروت، وبوستر، وورق داكن، ونوتة). اسأله: هل يولّدها هو ببرومبتات تعطيها له من [references/mockups.md](../LOGO_REGISTRY.csv)، أم تولّدها أنت إن كان عندك مولّد صور، أم عنده صور جاهزة؟ لا ترسم الموكاب بالكود.
 
 انتظر الإجابات، ولا تبدأ البناء قبلها.
 
@@ -54,7 +54,7 @@ description: Animate the user's own logo in Remotion in one of 17 styles (line d
    - `npm run skeleton -- --group word=p8 --group tag=p9-p24` (بأرقام أجزاء شعار المستخدم).
    - تحقّق منه: `npm run stills -- --id Skeleton 0`. الخط الملوّن يمرّ في منتصف كل حرف، والترقيم يبدأ من اليمين، ولا فروع غريبة.
 3. **اكتب الستايل** في `src/styles/<Name>.tsx`، وسجّله في `src/styles/index.ts` (المعرّف والمدة).
-   - اتبع خطواته في [references/styles.md](references/styles.md)، واقرأ كوده المرجعي في `logo/reference/motalim/styles/`.
+   - اتبع خطواته في [references/styles.md](../LOGO_ANIMATION_INDEX.md)، واقرأ كوده المرجعي في `logo/reference/motalim/styles/`.
    - الأدوات: `src/logo.tsx` (`<Logo part={...}>` وستايل كل جزء)، و`src/groups.ts`، و`src/fx.tsx` (الزمن والتسارع والمسرح والصوت)، و`src/strokes.ts` (حركة القلم على الهيكل)، و`src/morph.ts` (تحويل شكل لشكل).
    - مثال كامل يعمل مع أي شعار: `src/styles/LightSweep.tsx`.
 4. **قواعد الحركة:**
