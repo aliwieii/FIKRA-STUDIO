@@ -73,14 +73,12 @@ def compile_production_prompt(state: dict[str, Any], root: Path | None = None) -
     else:
         lines.append("- **Style:** Custom / Not yet selected")
 
-    lines.append("
-## 3. Mandatory Guardrails")
+    lines.append("")
+    lines.append("## 3. Mandatory Guardrails")
     for g in guardrails:
         lines.append(f"- {g}")
 
-    prompt_text = "
-".join(lines) + "
-"
+    prompt_text = "\n".join(lines) + "\n"
     return {
         "mode": mode,
         "isolation_clean": not (

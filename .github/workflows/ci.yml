@@ -1,0 +1,42 @@
+name: FIKRA STUDIO V3.0 Continuous Forensic QA
+
+on:
+  push:
+    branches: [ "development/v3.0", "main" ]
+  pull_request:
+    branches: [ "development/v3.0", "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  forensic-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install FFmpeg for Media Intelligence tests
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Run Python unit, Arabic QA, Media & Regression test suite
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Run Automatic Integrity Validator
+        run: python3 -m fikra_v3 integrity
+
+      - name: Run Regression Guard
+        run: python3 -m fikra_v3 regression
+
+      - name: Validate Remotion timeline & caption invariants (Node.js)
+        run: node 08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/scripts/validate-timeline.mjs

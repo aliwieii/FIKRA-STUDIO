@@ -1,0 +1,916 @@
+{
+  "schema_version": "3.0.0",
+  "counts": {
+    "modes": 9,
+    "styles": 32,
+    "logo_animations": 17,
+    "reference_cards": 52,
+    "prompt_files": 17
+  },
+  "modes": [
+    "UNIVERSAL_VIDEO_MODE",
+    "FIKRA_CHANNEL_MODE",
+    "QURAN_MODE",
+    "PODCAST_SHORT_MODE",
+    "LOGO_ANIMATION_MODE",
+    "PROMPT_ONLY_MODE",
+    "REFERENCE_AUDIT_MODE",
+    "VISUAL_UPGRADE_MODE",
+    "STICKMAN_COMEDY_MODE"
+  ],
+  "styles": {
+    "STY-001": {
+      "style_id": "STY-001",
+      "arabic_name": "الكلمات المتحركة",
+      "english_name": "Kinetic Typography",
+      "family_key": "type",
+      "family_name": "ستايلات الكلام (Typography)",
+      "slug": "kinetic",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "اقتباس، أو إعلان سريع، أو ريلز",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-001_kinetic.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-015"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-015.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-002": {
+      "style_id": "STY-002",
+      "arabic_name": "كلمة بكلمة مع الصوت (البلوتر)",
+      "english_name": "Word-Synced Captions / Plotter",
+      "family_key": "type",
+      "family_name": "ستايلات الكلام (Typography)",
+      "slug": "synced",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "شرح بصوت، أو ريلز بترجمة، أو شرح تعليمي مخطوط",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-002_synced.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-003": {
+      "style_id": "STY-003",
+      "arabic_name": "التصميم المسطّح",
+      "english_name": "Flat Design",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "flat",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "شرح منتج، أو خدمة، أو فكرة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-003_flat.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-016"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-016.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-004": {
+      "style_id": "STY-004",
+      "arabic_name": "الشخصيات الكرتونية",
+      "english_name": "2D Character Animation",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "character",
+      "code_difficulty": "متوسط",
+      "readiness_status": "REFERENCE_ONLY",
+      "use_cases": "قصة، أو نصيحة، أو محتوى للأطفال أو حكايات خليجية/عربية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-004_character.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-010",
+        "REF-011",
+        "REF-014",
+        "REF-017",
+        "REF-019",
+        "REF-020"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-010.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-011.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-014.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-017.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-019.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-020.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-005": {
+      "style_id": "STY-005",
+      "arabic_name": "الرسم بالقلم (Doodle)",
+      "english_name": "Doodle / Hand-Drawn",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "doodle",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "حكاية، أو محتوى دافئ وبسيط، أو قصص قصيرة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-005_doodle.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-006": {
+      "style_id": "STY-006",
+      "arabic_name": "السبورة البيضاء",
+      "english_name": "Whiteboard Animation",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "whiteboard",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "درس، أو شرح خطوة بخطوة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-006_whiteboard.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-007": {
+      "style_id": "STY-007",
+      "arabic_name": "السبورة الطباشيرية",
+      "english_name": "Chalkboard Animation",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "chalk",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "رياضيات، وعلوم، وإثباتات بصرية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-007_chalk.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-008": {
+      "style_id": "STY-008",
+      "arabic_name": "الشخصية العصوية (Stickman)",
+      "english_name": "Stickman Animation",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "stick",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "كوميديا صامتة، أو نصيحة في موقف",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-008_stick.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-001",
+        "REF-007"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-001.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-007.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-009": {
+      "style_id": "STY-009",
+      "arabic_name": "الخطوط الأحادية",
+      "english_name": "Line Art / Monoline",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "line",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "أيقونات، وشرح أنيق وبسيط",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-009_line.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-010": {
+      "style_id": "STY-010",
+      "arabic_name": "الورق المقصوص",
+      "english_name": "Paper Cut-Out",
+      "family_key": "d2",
+      "family_name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)",
+      "slug": "paper",
+      "code_difficulty": "متوسط",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "قصة دافئة بطابع يدوي",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-010_paper.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-011": {
+      "style_id": "STY-011",
+      "arabic_name": "الإنفوجرافيك والبيانات",
+      "english_name": "Infographic / Data Viz",
+      "family_key": "data",
+      "family_name": "الأرقام والمعلومات (Data & Maps)",
+      "slug": "info",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "أرقام، وإحصاءات، وتقارير",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-011_info.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-012": {
+      "style_id": "STY-012",
+      "arabic_name": "رحلة الخرائط",
+      "english_name": "Map Journey Animation",
+      "family_key": "data",
+      "family_name": "الأرقام والمعلومات (Data & Maps)",
+      "slug": "map",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "تاريخ، أو رحلة، أو توسّع شركة، أو جغرافيا",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-012_map.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-013": {
+      "style_id": "STY-013",
+      "arabic_name": "العالم الأيزومتريك",
+      "english_name": "Isometric World",
+      "family_key": "depth",
+      "family_name": "العمق والأبعاد الثلاثة (Depth & 3D)",
+      "slug": "iso",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "شرح نظام، أو مراحل، أو مدينة أو تدفق بيانات",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-013_iso.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-022"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-022.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-014": {
+      "style_id": "STY-014",
+      "arabic_name": "العمق الوهمي (2.5D / Fake 3D)",
+      "english_name": "2.5D Parallax / Fake 3D",
+      "family_key": "depth",
+      "family_name": "العمق والأبعاد الثلاثة (Depth & 3D)",
+      "slug": "parallax",
+      "code_difficulty": "متوسط",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "افتتاحية فنية، أو صور بطبقات متعددة، أو لقطة واحدة بلا قطع",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-014_parallax.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 + React 19 (custom motion components)"
+    },
+    "STY-015": {
+      "style_id": "STY-015",
+      "arabic_name": "الأبعاد الثلاثة",
+      "english_name": "Cinematic 3D Motion",
+      "family_key": "depth",
+      "family_name": "العمق والأبعاد الثلاثة (Depth & 3D)",
+      "slug": "cube",
+      "code_difficulty": "صعب",
+      "readiness_status": "REFERENCE_ONLY",
+      "use_cases": "إعلان منتج، أو مشاهد فخمة، أو وثائقي ثلاثي الأبعاد",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-015_cube.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-009"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-009.md"
+      ],
+      "execution_requirements": "Remotion 4 + React 19 (custom motion components)"
+    },
+    "STY-016": {
+      "style_id": "STY-016",
+      "arabic_name": "الصلصال (Clay 3D)",
+      "english_name": "Clay / Claymation Look",
+      "family_key": "depth",
+      "family_name": "العمق والأبعاد الثلاثة (Depth & 3D)",
+      "slug": "clay",
+      "code_difficulty": "صعب",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "هوية لطيفة، أو محتوى للأطفال أو تبسيط مفاهيم",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-016_clay.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-017": {
+      "style_id": "STY-017",
+      "arabic_name": "الزجاج الشفاف",
+      "english_name": "Glassmorphism",
+      "family_key": "depth",
+      "family_name": "العمق والأبعاد الثلاثة (Depth & 3D)",
+      "slug": "glass",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "تقنية، وتطبيقات، ودورات، وواجهات حديثة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-017_glass.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-018": {
+      "style_id": "STY-018",
+      "arabic_name": "حركة الواجهات وإطلاق المنتجات",
+      "english_name": "UI Animation / Product Promo",
+      "family_key": "product",
+      "family_name": "المنتجات والتطبيقات (Product & UI)",
+      "slug": "ui",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "SPEC_READY",
+      "use_cases": "إعلان تطبيق، أو موقع، أو منصة، أو شرح تقني",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-018_ui.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/CHARACTER_BIBLE_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/PUBLISHING_PACK_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STORYBOARD_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STYLE_BIBLE_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/VIRAL_HOOKS_AND_PUBLISHING_COPY_V2.md"
+      ],
+      "reference_video_ids": [
+        "REF-004",
+        "REF-013",
+        "REF-018",
+        "REF-021"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-004.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-013.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-018.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-021.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-019": {
+      "style_id": "STY-019",
+      "arabic_name": "أسلوب Apple Keynote",
+      "english_name": "Apple Keynote Style",
+      "family_key": "product",
+      "family_name": "المنتجات والتطبيقات (Product & UI)",
+      "slug": "apple",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "إطلاق منتج، وأرقام كبيرة، وعروض فخمة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-019_apple.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/CHARACTER_BIBLE_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/PUBLISHING_PACK_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STORYBOARD_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STYLE_BIBLE_TEMPLATE.md",
+        "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/VIRAL_HOOKS_AND_PUBLISHING_COPY_V2.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-020": {
+      "style_id": "STY-020",
+      "arabic_name": "تحريك الشعار (عائلة مستقلة)",
+      "english_name": "Logo Animation (See Library 04)",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "logo",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "RENDER_TESTED",
+      "use_cases": "مقدمة قناة، أو هوية شركة (راجع مكتبة تحريك الشعارات الـ17)",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-020_logo.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-021": {
+      "style_id": "STY-021",
+      "arabic_name": "الأشكال المتحوّلة",
+      "english_name": "Abstract / Shape Morphing",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "morph",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "هوية، وانتقالات، وخلفيات مفاهيمية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-021_morph.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-022": {
+      "style_id": "STY-022",
+      "arabic_name": "الطابع القديم",
+      "english_name": "Retro / Vintage",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "retro",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "حنين، أو سرد تاريخي، أو هوية كلاسيكية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-022_retro.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-023": {
+      "style_id": "STY-023",
+      "arabic_name": "النيون",
+      "english_name": "Neon / Synthwave",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "neon",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "ألعاب، أو تقنية بطابع ليلي، أو إثارة بصرية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-023_neon.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-024": {
+      "style_id": "STY-024",
+      "arabic_name": "التشويش الرقمي",
+      "english_name": "Glitch Art",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "glitch",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "تقنية، وإثارة، وانتقالات سريعة، وأمن سيبراني",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-024_glitch.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-025": {
+      "style_id": "STY-025",
+      "arabic_name": "البكسل",
+      "english_name": "Pixel Art",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "pixel",
+      "code_difficulty": "متوسط",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "ألعاب، أو محتوى مرح بطابع كلاسيكي، أو تحديات رقمية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-025_pixel.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-026": {
+      "style_id": "STY-026",
+      "arabic_name": "الوسائط المختلطة والكولاج التحريري",
+      "english_name": "Mixed Media / Editorial Collage",
+      "family_key": "art",
+      "family_name": "الفن والهوية (Art & Identity)",
+      "slug": "mixed",
+      "code_difficulty": "متوسط",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "تحليل، أو أخبار، أو تاريخ بصور حقيقية ومقالات بصرية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-026_mixed.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-027": {
+      "style_id": "STY-027",
+      "arabic_name": "التأمل الليلي الهادئ",
+      "english_name": "Quiet Night / Reflective Illustration",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "quiet-night",
+      "code_difficulty": "متوسط",
+      "readiness_status": "REFERENCE_ONLY",
+      "use_cases": "مواضيع تأملية ووجدانية وإيمانية هادئة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-027_quiet-night.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-002",
+        "REF-003",
+        "REF-006"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-002.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-003.md",
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-006.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-028": {
+      "style_id": "STY-028",
+      "arabic_name": "الطقس والبيئة الرمزية",
+      "english_name": "Symbolic Weather & Environment",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "symbolic-weather",
+      "code_difficulty": "متوسط",
+      "readiness_status": "REFERENCE_ONLY",
+      "use_cases": "قصص الصبر والتغيير والابتلاء والتحول النفسي",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-028_symbolic-weather.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-005"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-005.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-029": {
+      "style_id": "STY-029",
+      "arabic_name": "موشن جرافيكس الكود التحريري",
+      "english_name": "Code-Based Motion Graphics Editorial",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "code-editorial",
+      "code_difficulty": "سهل بالكود",
+      "readiness_status": "REFERENCE_ONLY",
+      "use_cases": "شروحات تقنية وبرمجية وذكاء اصطناعي",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-029_code-editorial.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [
+        "REF-008"
+      ],
+      "reference_cards": [
+        "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-008.md"
+      ],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    },
+    "STY-030": {
+      "style_id": "STY-030",
+      "arabic_name": "التصوير العلمي ثلاثي الأبعاد",
+      "english_name": "Scientific 3D Visualization",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "scientific-3d",
+      "code_difficulty": "صعب",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "الفضاء، الدماغ، الأعضاء، الخلايا، الكواكب، والظواهر الفيزيائية",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-030_scientific-3d.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 + React 19 (custom motion components)"
+    },
+    "STY-031": {
+      "style_id": "STY-031",
+      "arabic_name": "الاستعارة الرمزية السريالية 3D",
+      "english_name": "Surreal 3D Metaphor",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "surreal-3d",
+      "code_difficulty": "صعب",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "أفكار فلسفية ونفسية وسلوكية عميقة",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-031_surreal-3d.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 + React 19 (custom motion components)"
+    },
+    "STY-032": {
+      "style_id": "STY-032",
+      "arabic_name": "اللقطات السينمائية + موشن ديزاين",
+      "english_name": "Cinematic AI Footage + Motion Design",
+      "family_key": "fikra_ext",
+      "family_name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)",
+      "slug": "cinematic-ai-motion",
+      "code_difficulty": "صعب",
+      "readiness_status": "CATALOG_ONLY",
+      "use_cases": "فيديوهات وثائقية وسرد سينمائي هجين",
+      "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-032_cinematic-ai-motion.md",
+      "prompt_templates": [
+        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+      ],
+      "reference_video_ids": [],
+      "reference_cards": [],
+      "execution_requirements": "Remotion 4 or HyperFrames HTML5 (deterministic 9:16/16:9)"
+    }
+  },
+  "logo_animations": {
+    "L01-LINEDRAW": {
+      "animation_id": "L01-LINEDRAW",
+      "arabic_name": "رسم الخطوط",
+      "english_name": "Line draw",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L01LineDraw.tsx",
+      "reference_videos": "L01-LineDraw.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L02-HANDWRITING": {
+      "animation_id": "L02-HANDWRITING",
+      "arabic_name": "الكتابة بالقلم",
+      "english_name": "Handwriting reveal",
+      "duration_sec": "8.4",
+      "resolution": "1920x1080",
+      "reference_tsx": "L02Handwriting.tsx",
+      "reference_videos": "L02-Handwriting.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L03-ASSEMBLY": {
+      "animation_id": "L03-ASSEMBLY",
+      "arabic_name": "تجميع الأجزاء",
+      "english_name": "Logo assembly",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L03Assembly.tsx",
+      "reference_videos": "L03-Assembly.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L04-MORPH": {
+      "animation_id": "L04-MORPH",
+      "arabic_name": "التحوّل",
+      "english_name": "Shape morph",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L04Morph.tsx",
+      "reference_videos": "L04-Morph.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L05-GEOMETRIC": {
+      "animation_id": "L05-GEOMETRIC",
+      "arabic_name": "أشكال هندسية",
+      "english_name": "Geometric build",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L05Geometric.tsx",
+      "reference_videos": "L05-Geometric.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L06-LIQUIDFILL": {
+      "animation_id": "L06-LIQUIDFILL",
+      "arabic_name": "السائل الذي يملأ",
+      "english_name": "Liquid fill",
+      "duration_sec": "6.51",
+      "resolution": "1920x1080",
+      "reference_tsx": "L06LiquidFill.tsx",
+      "reference_videos": "L06-LiquidFill.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L07-MASKWIPE": {
+      "animation_id": "L07-MASKWIPE",
+      "arabic_name": "المسح بالألوان",
+      "english_name": "Mask wipe",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L07MaskWipe.tsx",
+      "reference_videos": "L07-MaskWipe.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L08-LIGHTSWEEP": {
+      "animation_id": "L08-LIGHTSWEEP",
+      "arabic_name": "اللمعة",
+      "english_name": "Light sweep",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L08LightSweep.tsx",
+      "reference_videos": "L08-LightSweep.mp4, L08-LightSweep-Alpha.webm",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L09-KINETIC": {
+      "animation_id": "L09-KINETIC",
+      "arabic_name": "حرفًا بعد حرف",
+      "english_name": "Kinetic typing",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L09Kinetic.tsx",
+      "reference_videos": "L09-Kinetic.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L10-ELASTIC": {
+      "animation_id": "L10-ELASTIC",
+      "arabic_name": "المطاطي",
+      "english_name": "Elastic / jelly",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L10Elastic.tsx",
+      "reference_videos": "L10-Elastic.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L11-CHARACTER": {
+      "animation_id": "L11-CHARACTER",
+      "arabic_name": "الشعار شخصية",
+      "english_name": "Logo as a character",
+      "duration_sec": "6.51",
+      "resolution": "1920x1080",
+      "reference_tsx": "L11Character.tsx",
+      "reference_videos": "L11-Character.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L12-FLIP3D": {
+      "animation_id": "L12-FLIP3D",
+      "arabic_name": "قلبة 3D",
+      "english_name": "3D flip",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L12Flip3D.tsx",
+      "reference_videos": "L12-Flip3D.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L13-PARTICLES": {
+      "animation_id": "L13-PARTICLES",
+      "arabic_name": "الجزيئات",
+      "english_name": "Particles",
+      "duration_sec": "6.51",
+      "resolution": "1920x1080",
+      "reference_tsx": "L13Particles.tsx",
+      "reference_videos": "L13-Particles.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L14-GLITCH": {
+      "animation_id": "L14-GLITCH",
+      "arabic_name": "Glitch",
+      "english_name": "Glitch",
+      "duration_sec": "6.02",
+      "resolution": "1920x1080",
+      "reference_tsx": "L14Glitch.tsx",
+      "reference_videos": "L14-Glitch.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L15-NEON": {
+      "animation_id": "L15-NEON",
+      "arabic_name": "النيون",
+      "english_name": "Neon",
+      "duration_sec": "6.51",
+      "resolution": "1920x1080",
+      "reference_tsx": "L15Neon.tsx",
+      "reference_videos": "L15-Neon.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L16-HERO": {
+      "animation_id": "L16-HERO",
+      "arabic_name": "الهيرو",
+      "english_name": "Brand hero",
+      "duration_sec": "12.42",
+      "resolution": "1920x1080",
+      "reference_tsx": "L16Hero.tsx",
+      "reference_videos": "L16-Hero.mp4, L16-Hero-Vertical.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    },
+    "L17-CANVAS": {
+      "animation_id": "L17-CANVAS",
+      "arabic_name": "لوحة التصميم",
+      "english_name": "Design canvas",
+      "duration_sec": "17.3",
+      "resolution": "1920x1080",
+      "reference_tsx": "L17Canvas.tsx",
+      "reference_videos": "L17-Canvas.mp4, L17-Canvas-Vertical.mp4",
+      "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
+      "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX"
+    }
+  },
+  "reference_cards": {
+    "MLOGO-01": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-01.md",
+    "MLOGO-02": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-02.md",
+    "MLOGO-03": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-03.md",
+    "MLOGO-04": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-04.md",
+    "MLOGO-05": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-05.md",
+    "MLOGO-06": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-06.md",
+    "MLOGO-07": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-07.md",
+    "MLOGO-08": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-08.md",
+    "MLOGO-09": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-09.md",
+    "MLOGO-10": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-10.md",
+    "MLOGO-11": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-11.md",
+    "MLOGO-12": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-12.md",
+    "MLOGO-13": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-13.md",
+    "MLOGO-14": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-14.md",
+    "MLOGO-15": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-15.md",
+    "MLOGO-16": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-16.md",
+    "MLOGO-17": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-17.md",
+    "MLOGO-18": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-18.md",
+    "MLOGO-19": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-19.md",
+    "MLOGO-20": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-20.md",
+    "MSTY-01": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-01.md",
+    "MSTY-02": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-02.md",
+    "MSTY-03": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-03.md",
+    "MSTY-04": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-04.md",
+    "MSTY-05": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-05.md",
+    "MSTY-06": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-06.md",
+    "MSTY-07": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-07.md",
+    "MSTY-08": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-08.md",
+    "MSTY-09": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-09.md",
+    "MSTY-10": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-10.md",
+    "REF-001": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-001.md",
+    "REF-002": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-002.md",
+    "REF-003": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-003.md",
+    "REF-004": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-004.md",
+    "REF-005": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-005.md",
+    "REF-006": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-006.md",
+    "REF-007": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-007.md",
+    "REF-008": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-008.md",
+    "REF-009": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-009.md",
+    "REF-010": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-010.md",
+    "REF-011": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-011.md",
+    "REF-012": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-012.md",
+    "REF-013": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-013.md",
+    "REF-014": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-014.md",
+    "REF-015": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-015.md",
+    "REF-016": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-016.md",
+    "REF-017": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-017.md",
+    "REF-018": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-018.md",
+    "REF-019": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-019.md",
+    "REF-020": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-020.md",
+    "REF-021": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-021.md",
+    "REF-022": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-022.md"
+  }
+}

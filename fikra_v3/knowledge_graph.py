@@ -52,7 +52,7 @@ def build_knowledge_graph(root: Path | None = None, write_output: bool = True) -
         linked_refs = sorted(set(re.findall(r"(?:REF-\d{3}|MSTY-\d{2}|MLOGO-\d{2})", ref_assets, re.IGNORECASE)))
         matching_prompts = [pf for pf in prompt_files if fam and fam.lower() in pf.lower()]
         if not matching_prompts:
-            matching_prompts = ["06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/UNIVERSAL_PRODUCTION_PROMPT_V1.md"]
+            matching_prompts = ["06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"]
         diff = row.get("Code_Difficulty", "Medium")
         engine_req = (
             "Remotion 4 + React 19 (custom motion components)"
@@ -89,7 +89,7 @@ def build_knowledge_graph(root: Path | None = None, write_output: bool = True) -
             "resolution": row.get("Resolution", ""),
             "reference_tsx": row.get("Reference_TSX", ""),
             "reference_videos": row.get("Reference_Videos", ""),
-            "prompt_template": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/LOGO_ANIMATION_PROMPT_V1.md",
+            "prompt_template": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
             "execution_requirements": "Remotion 4 SVG Path/Spring Animation + SFX",
         }
 
@@ -127,4 +127,10 @@ def lookup_logo(logo_id: str, root: Path | None = None) -> dict[str, Any] | None
     r = repo_root(root)
     gp = r / "09_ASSET_AND_RIGHTS_REGISTRY/KNOWLEDGE_GRAPH.json"
     graph = json.loads(gp.read_text(encoding="utf-8")) if gp.exists() else build_knowledge_graph(r)
-    return graph["logo_animations"].get(logo_id.strip().upper())
+    key = logo_id.strip().upper()
+    if key in graph["logo_animations"]:
+        return graph["logo_animations"][key]
+    for k, v in graph["logo_animations"].items():
+        if k.startswith(key + "-") or k == key:
+            return v
+    return None

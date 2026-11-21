@@ -4,11 +4,11 @@ from __future__ import annotations
 import re
 from typing import Any
 
-ARABIC_RANGE = re.compile(r"[؀-ۿ]")
+ARABIC_RANGE = re.compile(r"[\u0600-\u06FF]")
 LATIN_RANGE = re.compile(r"[A-Za-z]")
-DIACRITICS = re.compile(r"[ً-ٰٟ]")
-ISOLATED_FORMS = re.compile(r"[ﹰ-﻿]")
-BROKEN_SPACED_LETTERS = re.compile(r"(?:^|\s)([ء-ي]\s+){3,}[ء-ي](?:\s|$)")
+DIACRITICS = re.compile(r"[\u064B-\u065F\u0670]")
+ISOLATED_FORMS = re.compile(r"[\uFE70-\uFEFF]")
+BROKEN_SPACED_LETTERS = re.compile(r"(?:^|\s)([\u0621-\u064A]\s+){3,}[\u0621-\u064A](?:\s|$)")
 
 
 def paginate_arabic_caption(words: list[dict[str, Any]], max_words_per_line: int = 6) -> list[list[dict[str, Any]]]:
@@ -30,7 +30,6 @@ def active_caption_page(
     if not pages:
         return []
     for page in pages:
-        p_start = page[0].get("start", 0.0)
         p_end = page[-1].get("end", 0.0)
         if current_sec <= p_end + 0.05:
             return page
@@ -56,14 +55,11 @@ def analyze_arabic_text(text: str, duration_sec: float | None = None, max_chars_
         issues.append(f"{len(long_lines)} line(s) exceed mobile readability limit ({max_chars_mobile} chars) — paginate without deleting words.")
 
     mixed_bidi_warning = False
-    if has_arabic and has_latin:
-        # Check if raw unmatched punctuation sits at boundary without isolation
-        if "⁦" not in text and "‏" not in text:
-            mixed_bidi_warning = True
+    if has_arabic and has_latin and ("\u2066" not in text and "\u200f" not in text):
+        mixed_bidi_warning = True
 
     words = re.findall(r"\S+", text)
-    cps = round(len(text.replace("
-", " ")) / duration_sec, 2) if duration_sec and duration_sec > 0 else None
+    cps = round(len(text.replace("\n", " ")) / duration_sec, 2) if duration_sec and duration_sec > 0 else None
     wpm = round((len(words) / duration_sec) * 60.0, 1) if duration_sec and duration_sec > 0 else None
     if cps is not None and cps > 22.0:
         issues.append(f"Reading speed too fast for mobile ({cps} chars/sec > 22 CPS).")
@@ -92,9 +88,7 @@ def _parse_srt_ts(ts: str) -> float:
 
 
 def validate_srt(srt_text: str) -> dict[str, Any]:
-    blocks = [b.strip() for b in re.split(r"?
-\s*?
-", srt_text.strip()) if b.strip()]
+    blocks = [b.strip() for b in re.split(r"\r?\n\s*\r?\n", srt_text.strip()) if b.strip()]
     ts_re = re.compile(r"^(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})$")
     errors = []
     prev_end = 0.0
@@ -114,8 +108,7 @@ def validate_srt(srt_text: str) -> dict[str, Any]:
         if start < prev_end - 0.001:
             errors.append(f"Block {idx}: timestamp overlap ({start:.3f} < {prev_end:.3f}).")
         prev_end = end
-        body = "
-".join(lines[2:])
+        body = "\n".join(lines[2:])
         qa = analyze_arabic_text(body, duration_sec=max(0.1, end - start))
         total_words += qa["word_count"]
         if not qa["pass"]:

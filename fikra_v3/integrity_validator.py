@@ -37,7 +37,7 @@ SECRET_PATTERNS = [
 ]
 
 MD_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
-HTML_LINK_RE = re.compile(r"""(?:href|src)=["']([^"']+)["']""")
+HTML_LINK_RE = re.compile(r"""(?<![a-zA-Z0-9_-])(?:href|src)=["']([^"']+)["']""")
 
 
 def check_links(root: Path) -> list[dict[str, str]]:
@@ -48,7 +48,8 @@ def check_links(root: Path) -> list[dict[str, str]]:
         if p.suffix.lower() not in {".md", ".html"}:
             continue
         text = p.read_text(encoding="utf-8", errors="ignore")
-        links = MD_LINK_RE.findall(text) if p.suffix.lower() == ".md" else HTML_LINK_RE.findall(text)
+        scan_text = re.sub(r"```.*?```", "", text, flags=re.S) if p.suffix.lower() == ".md" else text
+        links = MD_LINK_RE.findall(scan_text) if p.suffix.lower() == ".md" else HTML_LINK_RE.findall(scan_text)
         for lk in links:
             clean = lk.split("#")[0].split("?")[0].strip()
             if not clean or clean.startswith(("http://", "https://", "mailto:", "data:", "javascript:", "#", "${")):
