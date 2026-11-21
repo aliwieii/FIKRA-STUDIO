@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here.
 
+## [3.1.0] — 2026-11-21 (Branch: `development/v3.0` / `main`)
+### Added
+- **Interactive One-Question-at-a-Time Interview & Visual Hook Narrative Arc** (`Problem -> Escalation -> Resolution`) in `ACTIVATION_PROMPT.md` and `fikra_v3/prompt_compiler.py`.
+- **Mandatory Stage Closure Footer** (`format_stage_footer()`) in `fikra_v3/project_state.py` enforcing explicit user approval after every stage.
+- **Real FFmpeg Black-Frame QC (`detect_black_frames()`)** in `fikra_v3/media_intelligence.py` catching unintended black frames/flashes programmatically.
+- **Focused Publishing Pack Generator (`generate_publishing_pack()`)** enforcing 5–8 hashtags, cover text, short Arabic description, and comment hook.
+- **Strict NO-MUSIC Default & 2D/Motion Non-Photorealistic Human Identity Guardrail** across all prompts and workflows.
+- **New Automated Test Suite (`tests/test_v31_upgrades.py`)** verifying all V3.1.0 features including live FFmpeg black-frame detection.
+
 ## [3.0.0-rc.1] — 2026-11-21 (Branch: `development/v3.0`)
 ### Added
 - **Agent-First Entry Layer:** `AGENTS.md` (Single Source of Truth), `GEMINI.md`, `CLAUDE.md`, `README.md`, `AGENT_ONBOARDING_GUIDE.md`, `PROJECT_MAP.md`, `SYSTEM_MANIFEST.json`, `V3_ARCHITECTURE.md`, `ARCHITECTURE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `.gitignore`.

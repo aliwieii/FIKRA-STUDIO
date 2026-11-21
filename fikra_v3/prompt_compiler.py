@@ -24,6 +24,9 @@ def compile_production_prompt(state: dict[str, Any], root: Path | None = None) -
         "Preserve Arabic RTL shaping; never split Arabic words into isolated letters.",
         "Never truncate long Arabic captions; paginate words across time-synced chunks.",
         "Never claim unexecuted renders or synthetic audio measurements.",
+        "STRICT NO-MUSIC DEFAULT: Zero background music across all productions (voiceover, verified external Quran recitation, justified SFX, or intentional silence only).",
+        "VISUAL IDENTITY GUARDRAIL: Use 2D animation and creative motion graphics from the 32-style library; avoid photorealistic 3D humans and static slide decks.",
+        "NARRATIVE ARC: Open with a strong visual hook in the first seconds, follow Problem -> Escalation -> Resolution, and maintain character/palette consistency across scenes.",
     ]
     if mode == "FIKRA_CHANNEL_MODE":
         guardrails.extend([
@@ -86,4 +89,25 @@ def compile_production_prompt(state: dict[str, Any], root: Path | None = None) -
             and ("FIKRA CHANNEL POLICY" in prompt_text or "FIKRA VOICE 01 (" in prompt_text)
         ),
         "prompt_markdown": prompt_text,
+    }
+
+
+def generate_publishing_pack(
+    title: str,
+    short_description: str,
+    cover_text: str,
+    engagement_question: str,
+    hashtags: list[str],
+) -> dict[str, Any]:
+    """Build a V3.1 focused Arabic publishing pack (enforcing 5-8 hashtags)."""
+    clean_tags = [t if t.startswith("#") else f"#{t}" for t in hashtags if t.strip()]
+    if not (5 <= len(clean_tags) <= 8):
+        raise ValueError(f"Publishing pack must contain 5-8 hashtags, got {len(clean_tags)}.")
+    return {
+        "title": title.strip(),
+        "short_description": short_description.strip(),
+        "cover_text": cover_text.strip(),
+        "engagement_question": engagement_question.strip(),
+        "hashtags": clean_tags,
+        "hashtag_count": len(clean_tags),
     }

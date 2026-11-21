@@ -52,3 +52,13 @@ def save_state(state: dict[str, Any], path: Path) -> Path:
 
 def load_state(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def format_stage_footer(completed: str, remaining: str, next_step: str) -> str:
+    """Standard V3.1 stage-closure summary enforcing explicit user approval before advancing."""
+    return (
+        f"- **ما تم إنجازه:** {completed}\n"
+        f"- **ما المتبقي:** {remaining}\n"
+        f"- **الخطوة التالية:** {next_step}\n"
+        "- **تنبيه:** لن يتم الانتقال للمرحلة التالية قبل مراجعتك وموافقتك الصريحة."
+    )

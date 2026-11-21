@@ -87,3 +87,30 @@ def analyze_audio_real(media_path: Path, fps: int = 30, silence_db: float = -45.
         "envelope_frames": len(envelope),
         "envelope": envelope,
     }
+
+
+def detect_black_frames(media_path: Path, min_duration: float = 0.2, pix_th: float = 0.10) -> dict[str, Any]:
+    """Run real FFmpeg blackdetect filter to catch unintended black frames/flashes."""
+    if not media_path.exists():
+        raise FileNotFoundError(f"Media file not found: {media_path}")
+    res = subprocess.run(
+        [
+            "ffmpeg", "-hide_banner", "-i", str(media_path),
+            "-vf", f"blackdetect=d={min_duration}:pix_th={pix_th}",
+            "-an", "-f", "null", "-",
+        ],
+        capture_output=True, text=True,
+    )
+    intervals = []
+    for m in re.finditer(r"black_start:([\d.]+)\s+black_end:([\d.]+)\s+black_duration:([\d.]+)", res.stderr):
+        intervals.append({
+            "start": float(m.group(1)),
+            "end": float(m.group(2)),
+            "duration": float(m.group(3)),
+        })
+    return {
+        "measurement_type": "REAL_FFMPEG_BLACKDETECT",
+        "black_intervals_count": len(intervals),
+        "black_intervals": intervals,
+        "pass": len(intervals) == 0,
+    }
