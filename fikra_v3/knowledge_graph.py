@@ -39,8 +39,24 @@ def build_knowledge_graph(root: Path | None = None, write_output: bool = True) -
 
     prompt_files = [
         p.relative_to(r).as_posix()
-        for p in sorted((r / "06_PROMPT_LIBRARY").rglob("*.md"))
+        for base_dir in (r / "03_STYLE_LIBRARY/STYLE_PROMPTS", r / "06_PROMPT_LIBRARY")
+        if base_dir.exists()
+        for p in sorted(base_dir.rglob("*.md"))
     ]
+    family_prompt_map = {
+        "typography": "03_STYLE_LIBRARY/STYLE_PROMPTS/01_TYPOGRAPHY_FAMILY_PROMPT.md",
+        "2d": "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md",
+        "illustration": "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md",
+        "data": "03_STYLE_LIBRARY/STYLE_PROMPTS/03_DATA_AND_MAPS_FAMILY_PROMPT.md",
+        "map": "03_STYLE_LIBRARY/STYLE_PROMPTS/03_DATA_AND_MAPS_FAMILY_PROMPT.md",
+        "depth": "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md",
+        "3d": "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md",
+        "product": "03_STYLE_LIBRARY/STYLE_PROMPTS/05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
+        "ui": "03_STYLE_LIBRARY/STYLE_PROMPTS/05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
+        "art": "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md",
+        "identity": "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md",
+        "fikra": "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md",
+    }
 
     styles_nodes: dict[str, Any] = {}
     for row in styles_raw:
@@ -51,6 +67,9 @@ def build_knowledge_graph(root: Path | None = None, write_output: bool = True) -
         ref_assets = row.get("Reference_Assets", "")
         linked_refs = sorted(set(re.findall(r"(?:REF-\d{3}|MSTY-\d{2}|MLOGO-\d{2})", ref_assets, re.IGNORECASE)))
         matching_prompts = [pf for pf in prompt_files if fam and fam.lower() in pf.lower()]
+        for key, fpath in family_prompt_map.items():
+            if (key in fam.lower() or key in row.get("Family_Name", "").lower()) and (r / fpath).exists() and fpath not in matching_prompts:
+                matching_prompts.append(fpath)
         if not matching_prompts:
             matching_prompts = ["06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"]
         diff = row.get("Code_Difficulty", "Medium")

@@ -18,6 +18,8 @@ SELF_GENERATED = {
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.sqlite",
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY_CHECKSUMS.json",
     "09_ASSET_AND_RIGHTS_REGISTRY/KNOWLEDGE_GRAPH.json",
+    "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_INDEX.csv",
+    "09_ASSET_AND_RIGHTS_REGISTRY/HASH_MANIFEST.csv",
     "SYSTEM_MANIFEST.json",
 }
 
@@ -65,7 +67,7 @@ def classify_asset(rel: str) -> tuple[str, str, str]:
 def extract_linked_ids(rel: str) -> dict[str, list[str]]:
     name = Path(rel).name
     styles = sorted(set(re.findall(r"STY-\d{3}", name, re.IGNORECASE)))
-    logos = sorted(set(re.findall(r"L(?:0[1-9]|1[0-7])", name)))
+    logos = sorted(set(re.findall(r"(?<![A-Za-z0-9])L(?:0[1-9]|1[0-7])(?![0-9])", name)))
     refs = sorted(set(re.findall(r"(?:REF-\d{3}|MSTY-\d{2}|MLOGO-\d{2})", name, re.IGNORECASE)))
     return {
         "style_ids": [s.upper() for s in styles],
@@ -175,6 +177,38 @@ def build_asset_registry(root: Path | None = None, write_outputs: bool = True) -
             conn.commit()
         finally:
             conn.close()
+
+        # Sync legacy ASSET_INDEX.csv and HASH_MANIFEST.csv from unified registry (Fixes FIK-010)
+        with (reg_dir / "HASH_MANIFEST.csv").open("w", encoding="utf-8", newline="") as hf:
+            hw = csv.DictWriter(hf, fieldnames=["Asset_ID", "Archive_Path", "Size_Bytes", "SHA256"])
+            hw.writeheader()
+            for rec in records:
+                hw.writerow({
+                    "Asset_ID": rec["asset_id"],
+                    "Archive_Path": rec["path"],
+                    "Size_Bytes": rec["size_bytes"],
+                    "SHA256": rec["sha256"],
+                })
+        with (reg_dir / "ASSET_INDEX.csv").open("w", encoding="utf-8", newline="") as af:
+            aw = csv.DictWriter(af, fieldnames=[
+                "Asset_ID", "Name", "File_Type", "Source", "Archive_Path",
+                "Size_Bytes", "Format", "SHA256", "Rights_Status", "Intended_Usage", "Inspection_Status",
+            ])
+            aw.writeheader()
+            for rec in records:
+                aw.writerow({
+                    "Asset_ID": rec["asset_id"],
+                    "Name": rec["name"],
+                    "File_Type": rec["category"],
+                    "Source": "FIKRA STUDIO V3.1.1",
+                    "Archive_Path": rec["path"],
+                    "Size_Bytes": rec["size_bytes"],
+                    "Format": rec["extension"],
+                    "SHA256": rec["sha256"],
+                    "Rights_Status": rec["rights_status"],
+                    "Intended_Usage": rec["usage_type"],
+                    "Inspection_Status": "VERIFIED",
+                })
 
         # Write sidecar checksums for the generated registry artifacts themselves
         sidecar = {

@@ -5,7 +5,7 @@
     "styles": 32,
     "logo_animations": 17,
     "reference_cards": 52,
-    "prompt_files": 17
+    "prompt_files": 25
   },
   "modes": [
     "UNIVERSAL_VIDEO_MODE",
@@ -31,7 +31,7 @@
       "use_cases": "اقتباس، أو إعلان سريع، أو ريلز",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-001_kinetic.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/01_TYPOGRAPHY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-015"
@@ -53,7 +53,7 @@
       "use_cases": "شرح بصوت، أو ريلز بترجمة، أو شرح تعليمي مخطوط",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-002_synced.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/01_TYPOGRAPHY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -71,7 +71,7 @@
       "use_cases": "شرح منتج، أو خدمة، أو فكرة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-003_flat.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-016"
@@ -93,7 +93,7 @@
       "use_cases": "قصة، أو نصيحة، أو محتوى للأطفال أو حكايات خليجية/عربية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-004_character.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-010",
@@ -125,7 +125,7 @@
       "use_cases": "حكاية، أو محتوى دافئ وبسيط، أو قصص قصيرة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-005_doodle.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -143,7 +143,7 @@
       "use_cases": "درس، أو شرح خطوة بخطوة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-006_whiteboard.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -161,7 +161,7 @@
       "use_cases": "رياضيات، وعلوم، وإثباتات بصرية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-007_chalk.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -179,7 +179,7 @@
       "use_cases": "كوميديا صامتة، أو نصيحة في موقف",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-008_stick.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-001",
@@ -203,7 +203,7 @@
       "use_cases": "أيقونات، وشرح أنيق وبسيط",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-009_line.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -221,7 +221,7 @@
       "use_cases": "قصة دافئة بطابع يدوي",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-010_paper.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -239,7 +239,7 @@
       "use_cases": "أرقام، وإحصاءات، وتقارير",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-011_info.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/03_DATA_AND_MAPS_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -257,7 +257,7 @@
       "use_cases": "تاريخ، أو رحلة، أو توسّع شركة، أو جغرافيا",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-012_map.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/03_DATA_AND_MAPS_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -275,7 +275,7 @@
       "use_cases": "شرح نظام، أو مراحل، أو مدينة أو تدفق بيانات",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-013_iso.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-022"
@@ -297,7 +297,7 @@
       "use_cases": "افتتاحية فنية، أو صور بطبقات متعددة، أو لقطة واحدة بلا قطع",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-014_parallax.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -315,7 +315,7 @@
       "use_cases": "إعلان منتج، أو مشاهد فخمة، أو وثائقي ثلاثي الأبعاد",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-015_cube.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-009"
@@ -337,7 +337,7 @@
       "use_cases": "هوية لطيفة، أو محتوى للأطفال أو تبسيط مفاهيم",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-016_clay.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -355,7 +355,7 @@
       "use_cases": "تقنية، وتطبيقات، ودورات، وواجهات حديثة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-017_glass.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -373,6 +373,7 @@
       "use_cases": "إعلان تطبيق، أو موقع، أو منصة، أو شرح تقني",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-018_ui.md",
       "prompt_templates": [
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
         "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
         "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md",
         "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/CHARACTER_BIBLE_TEMPLATE.md",
@@ -407,6 +408,7 @@
       "use_cases": "إطلاق منتج، وأرقام كبيرة، وعروض فخمة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-019_apple.md",
       "prompt_templates": [
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
         "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
         "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md",
         "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/CHARACTER_BIBLE_TEMPLATE.md",
@@ -431,7 +433,7 @@
       "use_cases": "مقدمة قناة، أو هوية شركة (راجع مكتبة تحريك الشعارات الـ17)",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-020_logo.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -449,7 +451,7 @@
       "use_cases": "هوية، وانتقالات، وخلفيات مفاهيمية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-021_morph.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -467,7 +469,7 @@
       "use_cases": "حنين، أو سرد تاريخي، أو هوية كلاسيكية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-022_retro.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -485,7 +487,7 @@
       "use_cases": "ألعاب، أو تقنية بطابع ليلي، أو إثارة بصرية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-023_neon.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -503,7 +505,7 @@
       "use_cases": "تقنية، وإثارة، وانتقالات سريعة، وأمن سيبراني",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-024_glitch.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -521,7 +523,7 @@
       "use_cases": "ألعاب، أو محتوى مرح بطابع كلاسيكي، أو تحديات رقمية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-025_pixel.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -539,7 +541,7 @@
       "use_cases": "تحليل، أو أخبار، أو تاريخ بصور حقيقية ومقالات بصرية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-026_mixed.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -557,7 +559,7 @@
       "use_cases": "مواضيع تأملية ووجدانية وإيمانية هادئة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-027_quiet-night.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-002",
@@ -583,7 +585,7 @@
       "use_cases": "قصص الصبر والتغيير والابتلاء والتحول النفسي",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-028_symbolic-weather.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-005"
@@ -605,7 +607,7 @@
       "use_cases": "شروحات تقنية وبرمجية وذكاء اصطناعي",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-029_code-editorial.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [
         "REF-008"
@@ -627,7 +629,7 @@
       "use_cases": "الفضاء، الدماغ، الأعضاء، الخلايا، الكواكب، والظواهر الفيزيائية",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-030_scientific-3d.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -645,7 +647,7 @@
       "use_cases": "أفكار فلسفية ونفسية وسلوكية عميقة",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-031_surreal-3d.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],
@@ -663,7 +665,7 @@
       "use_cases": "فيديوهات وثائقية وسرد سينمائي هجين",
       "spec_file": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-032_cinematic-ai-motion.md",
       "prompt_templates": [
-        "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md"
+        "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md"
       ],
       "reference_video_ids": [],
       "reference_cards": [],

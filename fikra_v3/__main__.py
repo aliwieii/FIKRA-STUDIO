@@ -12,10 +12,11 @@ from .asset_intelligence import build_asset_registry, query_assets
 from .context_loader import load_context
 from .integrity_validator import run_integrity_audit
 from .knowledge_graph import build_knowledge_graph, lookup_logo, lookup_style
-from .media_intelligence import analyze_audio_real
+from .approval_guard import lock_decision
+from .media_intelligence import analyze_audio_real, detect_black_frames
 from .model_adapter import build_adapter_payload
 from .project_bootstrap import bootstrap_project
-from .project_state import load_state
+from .project_state import advance_stage, create_project_state, load_state, save_state
 from .prompt_compiler import compile_production_prompt
 from .readiness_scorer import score_readiness
 from .regression_guard import run_regression_checks
@@ -76,6 +77,20 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("integrity", help="Run Automatic Integrity Validator (Feature N)")
     sub.add_parser("regression", help="Run Regression Guard (Feature L)")
+    p_st = sub.add_parser("state", help="Manage Project State Machine (Feature E)")
+    st_sub = p_st.add_subparsers(dest="state_cmd", required=True)
+    p_si = st_sub.add_parser("init", help="Initialize a new project_state.json")
+    p_si.add_argument("--out", required=True)
+    p_si.add_argument("--id", required=True)
+    p_si.add_argument("--title", required=True)
+    p_si.add_argument("--mode", default="UNIVERSAL_VIDEO_MODE")
+    p_si.add_argument("--aspect", default=None)
+    p_sa = st_sub.add_parser("advance", help="Advance stage with explicit approval")
+    p_sa.add_argument("--state", required=True)
+    p_sa.add_argument("--to", required=True)
+    p_sa.add_argument("--approve", action="store_true")
+    p_bd = sub.add_parser("blackdetect", help="Run FFmpeg black-frame detector (Feature H)")
+    p_bd.add_argument("--file", required=True)
 
     args = parser.parse_args(argv)
     r = repo_root()
@@ -120,6 +135,20 @@ def main(argv: list[str] | None = None) -> int:
         res = run_regression_checks(r)
         _p(res)
         return 0 if res["pass"] else 1
+    elif args.cmd == "state":
+        if args.state_cmd == "init":
+            st = create_project_state(args.id, args.title, mode=args.mode, aspect_ratio=args.aspect)
+            saved = save_state(st, Path(args.out))
+            _p({"saved": str(saved), "stage": st["stage"], "mode": st["mode"]})
+        elif args.state_cmd == "advance":
+            sp = Path(args.state)
+            st = advance_stage(load_state(sp), args.to, user_approved=args.approve)
+            save_state(st, sp)
+            _p({"stage": st["stage"], "updated_at_utc": st["updated_at_utc"]})
+    elif args.cmd == "blackdetect":
+        rep = detect_black_frames(Path(args.file))
+        _p(rep)
+        return 0 if rep["pass"] else 1
     return 0
 
 
