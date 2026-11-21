@@ -1,0 +1,50 @@
+{
+  "project_id": "PRJ-YYYY-001",
+  "studio_version": "FIKRA_STUDIO_V1.0",
+  "mode": "UNIVERSAL_VIDEO_MODE | FIKRA_CHANNEL_MODE",
+  "topic": "",
+  "goal": "",
+  "audience": "",
+  "aspect_ratio": "",
+  "duration_sec": null,
+  "current_stage": 1,
+  "approved_decisions": {
+    "idea": {
+      "locked": false,
+      "value": ""
+    },
+    "script": {
+      "locked": false,
+      "value": ""
+    },
+    "voiceover_text": {
+      "locked": false,
+      "value": ""
+    },
+    "voice_profile": {
+      "locked": false,
+      "value": ""
+    },
+    "visual_style": {
+      "locked": false,
+      "style_ids": []
+    },
+    "characters": {
+      "locked": false,
+      "character_ids": []
+    },
+    "storyboard": {
+      "locked": false,
+      "scenes_count": 0
+    }
+  },
+  "references_used": [],
+  "assets": [],
+  "prompts": {
+    "voice_prompt": "",
+    "production_prompt_v1": ""
+  },
+  "reviews_and_tests": [],
+  "revision_log": [],
+  "remaining_tasks": []
+}

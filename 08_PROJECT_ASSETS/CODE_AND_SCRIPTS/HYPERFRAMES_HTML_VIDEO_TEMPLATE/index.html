@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIKRA STUDIO V2.0 — HyperFrames HTML Video Composition</title>
+  <style>
+    :root {
+      --bg: #050A14;
+      --gold: #F59E0B;
+      --cyan: #38BDF8;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #02050B;
+      color: var(--text);
+      font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 16px;
+    }
+    .stage-wrap {
+      width: min(360px, 90vw);
+      aspect-ratio: 9 / 16;
+      background: radial-gradient(circle at 50% 25%, #112546 0%, var(--bg) 72%);
+      border-radius: 24px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.75);
+      position: relative;
+      overflow: hidden;
+    }
+    .scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 24px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .badge {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--cyan);
+      margin-bottom: 16px;
+    }
+    .headline { font-size: 26px; font-weight: 900; line-height: 1.45; }
+    .stat { font-size: 32px; font-weight: 900; color: var(--cyan); direction: ltr; margin: 10px 0; }
+    .quran {
+      font-family: 'Amiri', Georgia, serif;
+      font-size: 24px;
+      line-height: 1.7;
+      color: var(--gold);
+      text-shadow: 0 0 24px rgba(245, 158, 11, 0.4);
+      margin-top: 16px;
+    }
+    .brand { font-size: 56px; font-weight: 900; color: var(--gold); text-shadow: 0 0 36px rgba(245,158,11,0.45); }
+    .controls {
+      width: min(360px, 90vw);
+      background: #0B1324;
+      border: 1px solid #1E293B;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; }
+    button {
+      background: var(--gold);
+      color: #050A14;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    input[type="range"] { width: 100%; accent-color: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="stage-wrap" id="stage" data-fps="30" data-duration="12">
+    <div class="scene" id="scene-hook" data-start="0" data-end="120">
+      <div class="badge">مشهد 01 · الخطاف</div>
+      <div class="headline" id="v-hook"></div>
+    </div>
+    <div class="scene" id="scene-core" data-start="120" data-end="270">
+      <div class="badge">مشهد 02 · الحقيقة والآية</div>
+      <div class="stat" id="v-stat"></div>
+      <div style="color:var(--muted);font-size:15px;" id="v-label"></div>
+      <div class="quran" id="v-quran"></div>
+    </div>
+    <div class="scene" id="scene-outro" data-start="270" data-end="360">
+      <div class="brand" id="v-brand"></div>
+      <div style="color:var(--muted);margin-top:10px;font-size:14px;">FIKRA STUDIO V2.0 · HyperFrames</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="row">
+      <button id="playBtn">تشغيل / إيقاف</button>
+      <span id="frameInfo">Frame 0 / 360 (0.00s)</span>
+    </div>
+    <input type="range" id="scrubber" min="0" max="360" value="0" />
+  </div>
+
+  <script>
+    const EPISODE_VARS = {
+      hook_line: "كل نجم تراه الليلة... هو رسالة من الماضي البعيد",
+      core_stat: "+2,000,000,000,000",
+      core_label: "مجرة في الكون المرصود",
+      quran_verse: "﴿سَنُرِيهِمْ آيَاتِنَا فِي الْآفَاقِ وَفِي أَنفُسِهِمْ﴾",
+      outro_brand: "فِكْرَة",
+      fps: 30,
+      totalFrames: 360
+    };
+
+    document.getElementById("v-hook").textContent = EPISODE_VARS.hook_line;
+    document.getElementById("v-stat").textContent = EPISODE_VARS.core_stat;
+    document.getElementById("v-label").textContent = EPISODE_VARS.core_label;
+    document.getElementById("v-quran").textContent = EPISODE_VARS.quran_verse;
+    document.getElementById("v-brand").textContent = EPISODE_VARS.outro_brand;
+
+    const scenes = [
+      document.getElementById("scene-hook"),
+      document.getElementById("scene-core"),
+      document.getElementById("scene-outro")
+    ];
+    const scrubber = document.getElementById("scrubber");
+    const frameInfo = document.getElementById("frameInfo");
+
+    function clamp01(x) { return Math.max(0, Math.min(1, x)); }
+
+    window.seekToFrame = function(frame) {
+      const f = Math.max(0, Math.min(EPISODE_VARS.totalFrames, Math.round(frame)));
+      scrubber.value = f;
+      frameInfo.textContent = `Frame ${f} / ${EPISODE_VARS.totalFrames} (${(f / EPISODE_VARS.fps).toFixed(2)}s)`;
+      scenes.forEach((el) => {
+        const s = Number(el.dataset.start);
+        const e = Number(el.dataset.end);
+        const fadeIn = clamp01((f - s) / 18);
+        const fadeOut = clamp01((e - f) / 18);
+        const op = (f >= s && f <= e) ? Math.min(fadeIn, fadeOut) : 0;
+        const dy = (1 - fadeIn) * 20;
+        el.style.opacity = op.toFixed(3);
+        el.style.transform = `translateY(${dy.toFixed(1)}px)`;
+      });
+    };
+
+    let playing = false, cur = 0, raf = null;
+    function tick() {
+      if (!playing) return;
+      cur = (cur + 1) % (EPISODE_VARS.totalFrames + 1);
+      window.seekToFrame(cur);
+      raf = requestAnimationFrame(tick);
+    }
+    document.getElementById("playBtn").addEventListener("click", () => {
+      playing = !playing;
+      if (playing) tick(); else cancelAnimationFrame(raf);
+    });
+    scrubber.addEventListener("input", (e) => {
+      playing = false;
+      cur = Number(e.target.value);
+      window.seekToFrame(cur);
+    });
+    window.seekToFrame(0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿Animation_ID,Arabic_Name,English_Name,Duration_Sec,Resolution,Reference_TSX,Reference_Videos,Test_Status,Source
+L01-LineDraw,رسم الخطوط,Line draw,6.02,1920x1080,L01LineDraw.tsx,L01-LineDraw.mp4,RENDER_TESTED,motion-starter-kit-main
+L02-Handwriting,الكتابة بالقلم,Handwriting reveal,8.4,1920x1080,L02Handwriting.tsx,L02-Handwriting.mp4,RENDER_TESTED,motion-starter-kit-main
+L03-Assembly,تجميع الأجزاء,Logo assembly,6.02,1920x1080,L03Assembly.tsx,L03-Assembly.mp4,RENDER_TESTED,motion-starter-kit-main
+L04-Morph,التحوّل,Shape morph,6.02,1920x1080,L04Morph.tsx,L04-Morph.mp4,RENDER_TESTED,motion-starter-kit-main
+L05-Geometric,أشكال هندسية,Geometric build,6.02,1920x1080,L05Geometric.tsx,L05-Geometric.mp4,RENDER_TESTED,motion-starter-kit-main
+L06-LiquidFill,السائل الذي يملأ,Liquid fill,6.51,1920x1080,L06LiquidFill.tsx,L06-LiquidFill.mp4,RENDER_TESTED,motion-starter-kit-main
+L07-MaskWipe,المسح بالألوان,Mask wipe,6.02,1920x1080,L07MaskWipe.tsx,L07-MaskWipe.mp4,RENDER_TESTED,motion-starter-kit-main
+L08-LightSweep,اللمعة,Light sweep,6.02,1920x1080,L08LightSweep.tsx,"L08-LightSweep.mp4, L08-LightSweep-Alpha.webm",RENDER_TESTED,motion-starter-kit-main
+L09-Kinetic,حرفًا بعد حرف,Kinetic typing,6.02,1920x1080,L09Kinetic.tsx,L09-Kinetic.mp4,RENDER_TESTED,motion-starter-kit-main
+L10-Elastic,المطاطي,Elastic / jelly,6.02,1920x1080,L10Elastic.tsx,L10-Elastic.mp4,RENDER_TESTED,motion-starter-kit-main
+L11-Character,الشعار شخصية,Logo as a character,6.51,1920x1080,L11Character.tsx,L11-Character.mp4,RENDER_TESTED,motion-starter-kit-main
+L12-Flip3D,قلبة 3D,3D flip,6.02,1920x1080,L12Flip3D.tsx,L12-Flip3D.mp4,RENDER_TESTED,motion-starter-kit-main
+L13-Particles,الجزيئات,Particles,6.51,1920x1080,L13Particles.tsx,L13-Particles.mp4,RENDER_TESTED,motion-starter-kit-main
+L14-Glitch,Glitch,Glitch,6.02,1920x1080,L14Glitch.tsx,L14-Glitch.mp4,RENDER_TESTED,motion-starter-kit-main
+L15-Neon,النيون,Neon,6.51,1920x1080,L15Neon.tsx,L15-Neon.mp4,RENDER_TESTED,motion-starter-kit-main
+L16-Hero,الهيرو,Brand hero,12.42,1920x1080,L16Hero.tsx,"L16-Hero.mp4, L16-Hero-Vertical.mp4",RENDER_TESTED,motion-starter-kit-main
+L17-Canvas,لوحة التصميم,Design canvas,17.3,1920x1080,L17Canvas.tsx,"L17-Canvas.mp4, L17-Canvas-Vertical.mp4",RENDER_TESTED,motion-starter-kit-main

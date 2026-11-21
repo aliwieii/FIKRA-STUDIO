@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIKRA STUDIO V2.0 — لوحة القصة البصرية (Visual Storyboard)</title>
+  <style>
+    :root { --bg:#070D19; --card:#0F1A2E; --gold:#F59E0B; --cyan:#38BDF8; --text:#F8FAFC; --muted:#94A3B8; --border:#1E293B; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Cairo','Tajawal',system-ui,sans-serif; padding:28px; }
+    .top { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:24px; border-bottom:1px solid var(--border); padding-bottom:16px; }
+    .top h1 { font-size:24px; color:var(--gold); }
+    .btn { background:var(--gold); color:#070D19; border:none; border-radius:10px; padding:8px 16px; font-weight:800; cursor:pointer; text-decoration:none; font-size:14px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:18px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+    .frame-9-16 { aspect-ratio:9/16; max-height:220px; width:100%; border-radius:12px; background:linear-gradient(160deg,#13284A,#060B14); border:1px dashed rgba(56,189,248,0.45); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:13px; text-align:center; padding:12px; }
+    .meta { display:flex; justify-content:space-between; font-size:12px; color:var(--cyan); font-weight:700; }
+    .field { font-size:13px; color:var(--text); line-height:1.6; }
+    .field strong { color:var(--gold); }
+    .quran-tag { background:rgba(245,158,11,0.16); color:var(--gold); border:1px solid rgba(245,158,11,0.45); padding:3px 8px; border-radius:6px; font-size:11px; width:fit-content; }
+    @media print { body { background:#fff; color:#000; } .card { border:1px solid #ccc; background:#fff; } .btn { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div>
+      <h1>لوحة القصة البصرية — FIKRA STUDIO V2.0 Storyboard</h1>
+      <p style="color:var(--muted);font-size:14px;">قالب تفاعلي قابل للطباعة لحلقات 9:16 العمودية (6 مشاهد قياسية)</p>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn" onclick="window.print()">طباعة / حفظ PDF</button>
+      <a class="btn" style="background:#1E293B;color:#F8FAFC;" href="../../00_START_HERE/FIKRA_STUDIO_V2_HUB.html">← مركز القيادة V2.0</a>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="meta"><span>مشهد 01 · الخطاف</span><span>00:00 – 00:06</span></div>
+      <div class="frame-9-16">لقطة افتتاحية بصرية صافية<br/>(Push-in بطيء 4%)</div>
+      <div class="field"><strong>التعليق:</strong> جملة استفهامية قصيرة تخطف الانتباه.</div>
+      <div class="field"><strong>النص:</strong> بلا نص في أول ثانيتين.</div>
+    </div>
+    <div class="card">
+      <div class="meta"><span>مشهد 02 · السياق</span><span>00:06 – 00:18</span></div>
+      <div class="frame-9-16">انسحاب كاميرا يكشف المشهد الأوسع</div>
+      <div class="field"><strong>التعليق:</strong> تقديم الحقيقة العلمية أو الفكرة الأساسية.</div>
+      <div class="field"><strong>النص:</strong> عنوان عربي أبيض داخل المنطقة الآمنة.</div>
+    </div>
+    <div class="card">
+      <div class="meta"><span>مشهد 03 · التصعيد</span><span>00:18 – 00:32</span></div>
+      <div class="frame-9-16">إنفوجرافيك أو عدّاد بيانات متحرك</div>
+      <div class="field"><strong>التعليق:</strong> ربط الأرقام بالمقياس البشري.</div>
+      <div class="field"><strong>الحركة:</strong> إطار حتمي عبر Remotion أو HyperFrames.</div>
+    </div>
+    <div class="card" style="border-color:rgba(245,158,11,0.5);">
+      <div class="meta"><span>مشهد 04 · الذروة القرآنية</span><span>00:32 – 00:46</span></div>
+      <div class="quran-tag">تلاوة نقية فقط · صفر موسيقى/SFX</div>
+      <div class="frame-9-16" style="border-color:var(--gold);color:var(--gold);">خط Amiri ذهبي #F59E0B<br/>فوق خلفية فجرية هادئة</div>
+      <div class="field"><strong>القاعدة:</strong> عدم تكرار التلاوة أو دمج أي مؤثرات فوقها.</div>
+    </div>
+    <div class="card">
+      <div class="meta"><span>مشهد 05 · التأمل</span><span>00:46 – 00:55</span></div>
+      <div class="frame-9-16">لقطة هادئة تعيد المشاهد إلى ذاته</div>
+      <div class="field"><strong>التعليق:</strong> خلاصة تأملية موجزة بصوت FIKRA VOICE 01.</div>
+    </div>
+    <div class="card">
+      <div class="meta"><span>مشهد 06 · الخاتمة</span><span>00:55 – 01:00</span></div>
+      <div class="frame-9-16">شعار فِكْرَة · حركة L08-LightSweep</div>
+      <div class="field"><strong>الهوية:</strong> ظهور الشعار + خفوت تدريجي سلس.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIKRA STUDIO V2.0 — مركز القيادة التفاعلي</title>
+  <style>
+    :root {
+      --bg: #050912;
+      --surface: #0C1526;
+      --surface-2: #111E36;
+      --gold: #F59E0B;
+      --gold-soft: rgba(245, 158, 11, 0.14);
+      --cyan: #38BDF8;
+      --cyan-soft: rgba(56, 189, 248, 0.14);
+      --emerald: #10B981;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+      --border: rgba(148, 163, 184, 0.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 15% 10%, #10203D 0%, var(--bg) 52%);
+      color: var(--text);
+      font-family: 'Cairo', 'Tajawal', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 20px 64px; }
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 29, 54, 0.92), rgba(7, 13, 25, 0.95));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 26px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 14px; border-radius: 999px;
+      background: var(--gold-soft); border: 1px solid rgba(245,158,11,0.45);
+      color: var(--gold); font-size: 13px; font-weight: 800; margin-bottom: 12px;
+    }
+    h1 { font-size: clamp(26px, 4vw, 40px); font-weight: 900; letter-spacing: -0.3px; margin-bottom: 8px; }
+    h1 span { color: var(--gold); }
+    .subtitle { color: var(--muted); max-width: 720px; font-size: 15px; }
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px; margin-top: 24px;
+    }
+    .stat-card {
+      background: rgba(5, 9, 18, 0.65); border: 1px solid var(--border);
+      border-radius: 16px; padding: 14px 16px;
+    }
+    .stat-val { font-size: 26px; font-weight: 900; color: var(--cyan); }
+    .stat-lbl { font-size: 12px; color: var(--muted); }
+    .tabs {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+      border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    }
+    .tab-btn {
+      background: var(--surface); color: var(--muted); border: 1px solid var(--border);
+      padding: 10px 18px; border-radius: 12px; font-family: inherit; font-size: 14px; font-weight: 800;
+      cursor: pointer; transition: all 0.16s ease;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--gold-soft); color: var(--gold); border-color: rgba(245,158,11,0.55);
+    }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .search-input, .select-input {
+      background: var(--surface); color: var(--text); border: 1px solid var(--border);
+      border-radius: 12px; padding: 10px 14px; font-family: inherit; font-size: 14px; outline: none;
+    }
+    .search-input { flex: 1; min-width: 220px; }
+    .search-input:focus, .select-input:focus { border-color: var(--cyan); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 10px;
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .card:hover { transform: translateY(-2px); border-color: rgba(56,189,248,0.45); }
+    .card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .code-tag { font-family: monospace; font-size: 12px; color: var(--gold); background: var(--gold-soft); padding: 3px 8px; border-radius: 6px; }
+    .badge { font-size: 11px; padding: 3px 8px; border-radius: 999px; background: var(--cyan-soft); color: var(--cyan); font-weight: 700; }
+    .card h3 { font-size: 16px; font-weight: 800; }
+    .card p { font-size: 13px; color: var(--muted); }
+    .btn-copy {
+      margin-top: auto; background: var(--surface-2); color: var(--text);
+      border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px;
+      font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    .btn-copy:hover { border-color: var(--gold); color: var(--gold); }
+    .mode-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .prompt-box {
+      margin-top: 18px; background: #030710; border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px; font-size: 14px; white-space: pre-wrap; color: #E2E8F0;
+    }
+    .links-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .quick-link {
+      text-decoration: none; color: var(--text); background: var(--surface-2);
+      border: 1px solid var(--border); padding: 8px 14px; border-radius: 10px; font-size: 13px; font-weight: 700;
+    }
+    .quick-link:hover { border-color: var(--cyan); color: var(--cyan); }
+    .toast {
+      position: fixed; bottom: 24px; left: 24px; background: var(--emerald); color: #03150E;
+      padding: 10px 18px; border-radius: 12px; font-weight: 800; font-size: 13px;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+    }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="pill">✦ الإصدار الثاني · FIKRA STUDIO V2.0</div>
+          <h1>مركز قيادة <span>فكرة استوديو</span> الشامل</h1>
+          <p class="subtitle">البيئة الموحدة لهندسة برومبتات الفيديو، الإخراج الإبداعي، ومشاريع Remotion 4 وHyperFrames — مرتبة ومدقّقة بالكامل بـ 0 روابط معطوبة.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card"><div class="stat-val" id="stat-styles">32</div><div class="stat-lbl">ستايلًا بصريًا موثقًا</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-logos">17</div><div class="stat-lbl">حركة شعار (L01–L17)</div></div>
+        <div class="stat-card"><div class="stat-val">2</div><div class="stat-lbl">محركا فيديو (Remotion + HyperFrames)</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--emerald);">0</div><div class="stat-lbl">روابط معطوبة أو ملفات زائدة</div></div>
+      </div>
+      <div class="links-row">
+        <a class="quick-link" href="../03_STYLE_LIBRARY/STYLE_REFERENCES/motalim_26_styles_gallery.html">معرض الـ26 ستايلًا</a>
+        <a class="quick-link" href="../04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/motalim_17_logo_gallery.html">معرض الـ17 شعارًا</a>
+        <a class="quick-link" href="../07_REFERENCE_MEDIA/STORYBOARDS/FIKRA_VISUAL_STORYBOARD_V2_TEMPLATE.html">لوحة Storyboard التفاعلية</a>
+        <a class="quick-link" href="../08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/index.html">معاينة قالب HyperFrames 9:16</a>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="router">1. موجّه الأوضاع والبرومبتات</button>
+      <button class="tab-btn" data-tab="styles">2. مكتبة الستايلات (32)</button>
+      <button class="tab-btn" data-tab="logos">3. مكتبة الشعارات (17)</button>
+      <button class="tab-btn" data-tab="engines">4. ترقيات V2.0 والمحركات</button>
+    </div>
+
+    <section id="tab-router" class="panel active">
+      <div class="mode-grid">
+        <div class="card">
+          <div class="card-head"><span class="code-tag">FIKRA_CHANNEL_MODE</span><span class="badge">12 مرحلة</span></div>
+          <h3>إنتاج فيديو قناة فكرة</h3>
+          <p>عمودي 9:16، 10 فئات موضوعية، صوت FIKRA VOICE 01، خط ذهبي للقرآن وأبيض للسرد، وحظر موسيقى تام.</p>
+          <button class="btn-copy" onclick="selectMode('fikra')">توليد برومبت البدء</button>
+        </div>
+        <div class="card">
+          <div class="card-head"><span class="code-tag">UNIVERSAL_VIDEO_MODE</span><span class="badge">11 مرحلة</span></div>
+          <h3>إنتاج فيديو عام (بلا قيود القناة)</h3>
+          <p>لأي فيديو إعلاني أو تعليمي أو شرح منتج بأي مقاس وأسلوب من مكتبة الـ32 ستايلًا.</p>
+          <button class="btn-copy" onclick="selectMode('universal')">توليد برومبت البدء</button>
+        </div>
+        <div class="card">
+          <div class="card-head"><span class="code-tag">LOGO_ANIMATION_MODE</span><span class="badge">17 حركة</span></div>
+          <h3>تحريك شعار SVG احترافي</h3>
+          <p>اختر من L01 إلى L17 مع رندر Remotion 4 وتوليد مؤثرات صوتية متزامنة.</p>
+          <button class="btn-copy" onclick="selectMode('logo')">توليد برومبت البدء</button>
+        </div>
+      </div>
+      <div class="prompt-box" id="mode-prompt">اضغط على أحد الأوضاع أعلاه لتوليد برومبت التشغيل الجاهز للنسخ.</div>
+      <div style="margin-top:10px;"><button class="btn-copy" onclick="copyText(document.getElementById('mode-prompt').textContent)">نسخ البرومبت المولّد</button></div>
+    </section>
+
+    <section id="tab-styles" class="panel">
+      <div class="toolbar">
+        <input class="search-input" id="style-search" placeholder="ابحث باسم الستايل بالعربية أو الإنجليزية أو الرمز (مثل STY-030)..." />
+        <select class="select-input" id="family-filter"><option value="">جميع العائلات البصرية</option></select>
+      </div>
+      <div class="grid" id="styles-grid"></div>
+    </section>
+
+    <section id="tab-logos" class="panel">
+      <div class="toolbar">
+        <input class="search-input" id="logo-search" placeholder="ابحث في حركات الشعارات (مثل L08 أو LightSweep أو كتابة)..." />
+      </div>
+      <div class="grid" id="logos-grid"></div>
+    </section>
+
+    <section id="tab-engines" class="panel">
+      <div class="grid">
+        <div class="card">
+          <div class="card-head"><span class="code-tag">Remotion 4 + React 19</span><span class="badge">871.9K تثبيت</span></div>
+          <h3>قالب الفيديو المطوّر (remotion-best-practices)</h3>
+          <p>مكونات ArabicCaptionOverlay وAudioSpectrumBar وFikraChannelOutro وrtl.ts مع منع CSS transitions والالتزام الكامل بـ useCurrentFrame().</p>
+          <a class="quick-link" href="../08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/REMOTION_V2_BEST_PRACTICES.md">قراءة الدليل الهندسي</a>
+        </div>
+        <div class="card">
+          <div class="card-head"><span class="code-tag">HyperFrames HTML</span><span class="badge">1.6M تثبيت</span></div>
+          <h3>قالب الفيديو بـ HTML5 (hyperframes)</h3>
+          <p>فصل بيانات الحلقة في variables.json عن التصميم مع دالة seekToFrame(frame) لإنتاج فيديوهات عمودية متطابقة الإطارات.</p>
+          <a class="quick-link" href="../08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/index.html">فتح المعاينة التفاعلية</a>
+        </div>
+        <div class="card">
+          <div class="card-head"><span class="code-tag">Frontend Design</span><span class="badge">1.1M تثبيت</span></div>
+          <h3>معارض ومركز قيادة V2.0</h3>
+          <p>إصلاح جميع الروابط المعطوبة في معارض V1.0 وبناء مركز قيادة عربي RTL موحّد يعمل دون اتصال.</p>
+          <a class="quick-link" href="../11_VERSIONING_AND_DOCUMENTATION/CHANGELOG_V1_TO_V2.md">سجل التغييرات V1 → V2</a>
+        </div>
+        <div class="card">
+          <div class="card-head"><span class="code-tag">Canvas Design</span><span class="badge">136.2K تثبيت</span></div>
+          <h3>الفلسفة البصرية والـStoryboards</h3>
+          <p>ترقية Style Bible إلى منهجية المرحلتين، وإضافة لوحة Storyboard تفاعلية قابلة للطباعة ونموذج حلقة تطبيقي كامل.</p>
+          <a class="quick-link" href="../07_REFERENCE_MEDIA/STORYBOARDS/FIKRA_VISUAL_STORYBOARD_V2_TEMPLATE.html">فتح لوحة Storyboard</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast">تم النسخ بنجاح ✓</div>
+
+  <script>
+    const STYLES = [{"Style_ID": "STY-001", "Family_Key": "type", "Family_Name": "ستايلات الكلام (Typography)", "Slug": "kinetic", "Arabic_Name": "الكلمات المتحركة", "English_Name": "Kinetic Typography", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "اقتباس، أو إعلان سريع، أو ريلز", "Reference_Assets": "REF-015", "Pinterest_Query": "kinetic typography"}, {"Style_ID": "STY-002", "Family_Key": "type", "Family_Name": "ستايلات الكلام (Typography)", "Slug": "synced", "Arabic_Name": "كلمة بكلمة مع الصوت (البلوتر)", "English_Name": "Word-Synced Captions / Plotter", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "SPEC_READY", "Use_Cases": "شرح بصوت، أو ريلز بترجمة، أو شرح تعليمي مخطوط", "Reference_Assets": "plotter_reference.mp4", "Pinterest_Query": "animated captions video"}, {"Style_ID": "STY-003", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "flat", "Arabic_Name": "التصميم المسطّح", "English_Name": "Flat Design", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "شرح منتج، أو خدمة، أو فكرة", "Reference_Assets": "REF-016", "Pinterest_Query": "flat illustration motion graphics"}, {"Style_ID": "STY-004", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "character", "Arabic_Name": "الشخصيات الكرتونية", "English_Name": "2D Character Animation", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "متوسط", "Readiness_Status": "REFERENCE_ONLY", "Use_Cases": "قصة، أو نصيحة، أو محتوى للأطفال أو حكايات خليجية/عربية", "Reference_Assets": "REF-010, REF-011, REF-014, REF-017, REF-019, REF-020", "Pinterest_Query": "2d character animation style"}, {"Style_ID": "STY-005", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "doodle", "Arabic_Name": "الرسم بالقلم (Doodle)", "English_Name": "Doodle / Hand-Drawn", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "حكاية، أو محتوى دافئ وبسيط، أو قصص قصيرة", "Reference_Assets": "doodle_reference.mp4", "Pinterest_Query": "doodle animation style"}, {"Style_ID": "STY-006", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "whiteboard", "Arabic_Name": "السبورة البيضاء", "English_Name": "Whiteboard Animation", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "درس، أو شرح خطوة بخطوة", "Reference_Assets": "whiteboard_reference.mp4", "Pinterest_Query": "whiteboard animation"}, {"Style_ID": "STY-007", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "chalk", "Arabic_Name": "السبورة الطباشيرية", "English_Name": "Chalkboard Animation", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "رياضيات، وعلوم، وإثباتات بصرية", "Reference_Assets": "chalkboard_reference.mp4", "Pinterest_Query": "chalkboard illustration"}, {"Style_ID": "STY-008", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "stick", "Arabic_Name": "الشخصية العصوية (Stickman)", "English_Name": "Stickman Animation", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "كوميديا صامتة، أو نصيحة في موقف", "Reference_Assets": "stickman_reference.mp4, REF-001, REF-007", "Pinterest_Query": "stickman animation"}, {"Style_ID": "STY-009", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "line", "Arabic_Name": "الخطوط الأحادية", "English_Name": "Line Art / Monoline", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "أيقونات، وشرح أنيق وبسيط", "Reference_Assets": "", "Pinterest_Query": "monoline illustration animation"}, {"Style_ID": "STY-010", "Family_Key": "d2", "Family_Name": "الرسم ثنائي الأبعاد (2D Illustration & Drawing)", "Slug": "paper", "Arabic_Name": "الورق المقصوص", "English_Name": "Paper Cut-Out", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "متوسط", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "قصة دافئة بطابع يدوي", "Reference_Assets": "", "Pinterest_Query": "paper cut out animation"}, {"Style_ID": "STY-011", "Family_Key": "data", "Family_Name": "الأرقام والمعلومات (Data & Maps)", "Slug": "info", "Arabic_Name": "الإنفوجرافيك والبيانات", "English_Name": "Infographic / Data Viz", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "SPEC_READY", "Use_Cases": "أرقام، وإحصاءات، وتقارير", "Reference_Assets": "infographic_reference.mp4", "Pinterest_Query": "infographic motion design"}, {"Style_ID": "STY-012", "Family_Key": "data", "Family_Name": "الأرقام والمعلومات (Data & Maps)", "Slug": "map", "Arabic_Name": "رحلة الخرائط", "English_Name": "Map Journey Animation", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "تاريخ، أو رحلة، أو توسّع شركة، أو جغرافيا", "Reference_Assets": "map-journey_reference.mp4", "Pinterest_Query": "vintage map illustration"}, {"Style_ID": "STY-013", "Family_Key": "depth", "Family_Name": "العمق والأبعاد الثلاثة (Depth & 3D)", "Slug": "iso", "Arabic_Name": "العالم الأيزومتريك", "English_Name": "Isometric World", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "SPEC_READY", "Use_Cases": "شرح نظام، أو مراحل، أو مدينة أو تدفق بيانات", "Reference_Assets": "isometric_reference.mp4, REF-022", "Pinterest_Query": "isometric illustration"}, {"Style_ID": "STY-014", "Family_Key": "depth", "Family_Name": "العمق والأبعاد الثلاثة (Depth & 3D)", "Slug": "parallax", "Arabic_Name": "العمق الوهمي (2.5D / Fake 3D)", "English_Name": "2.5D Parallax / Fake 3D", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "متوسط", "Readiness_Status": "SPEC_READY", "Use_Cases": "افتتاحية فنية، أو صور بطبقات متعددة، أو لقطة واحدة بلا قطع", "Reference_Assets": "fake3d_reference.mp4", "Pinterest_Query": "parallax illustration layers"}, {"Style_ID": "STY-015", "Family_Key": "depth", "Family_Name": "العمق والأبعاد الثلاثة (Depth & 3D)", "Slug": "cube", "Arabic_Name": "الأبعاد الثلاثة", "English_Name": "Cinematic 3D Motion", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "صعب", "Readiness_Status": "REFERENCE_ONLY", "Use_Cases": "إعلان منتج، أو مشاهد فخمة، أو وثائقي ثلاثي الأبعاد", "Reference_Assets": "REF-009", "Pinterest_Query": "3d motion design"}, {"Style_ID": "STY-016", "Family_Key": "depth", "Family_Name": "العمق والأبعاد الثلاثة (Depth & 3D)", "Slug": "clay", "Arabic_Name": "الصلصال (Clay 3D)", "English_Name": "Clay / Claymation Look", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "صعب", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "هوية لطيفة، أو محتوى للأطفال أو تبسيط مفاهيم", "Reference_Assets": "", "Pinterest_Query": "clay 3d illustration"}, {"Style_ID": "STY-017", "Family_Key": "depth", "Family_Name": "العمق والأبعاد الثلاثة (Depth & 3D)", "Slug": "glass", "Arabic_Name": "الزجاج الشفاف", "English_Name": "Glassmorphism", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "تقنية، وتطبيقات، ودورات، وواجهات حديثة", "Reference_Assets": "", "Pinterest_Query": "glassmorphism"}, {"Style_ID": "STY-018", "Family_Key": "product", "Family_Name": "المنتجات والتطبيقات (Product & UI)", "Slug": "ui", "Arabic_Name": "حركة الواجهات وإطلاق المنتجات", "English_Name": "UI Animation / Product Promo", "Source": "Motalim Motion Starter Kit (gallery + styles/)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "SPEC_READY", "Use_Cases": "إعلان تطبيق، أو موقع، أو منصة، أو شرح تقني", "Reference_Assets": "product_reference.mp4, REF-004, REF-013, REF-018, REF-021", "Pinterest_Query": "app ui animation"}, {"Style_ID": "STY-019", "Family_Key": "product", "Family_Name": "المنتجات والتطبيقات (Product & UI)", "Slug": "apple", "Arabic_Name": "أسلوب Apple Keynote", "English_Name": "Apple Keynote Style", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "إطلاق منتج، وأرقام كبيرة، وعروض فخمة", "Reference_Assets": "", "Pinterest_Query": "apple keynote design"}, {"Style_ID": "STY-020", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "logo", "Arabic_Name": "تحريك الشعار (عائلة مستقلة)", "English_Name": "Logo Animation (See Library 04)", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "RENDER_TESTED", "Use_Cases": "مقدمة قناة، أو هوية شركة (راجع مكتبة تحريك الشعارات الـ17)", "Reference_Assets": "L01–L17 (20 videos in 07_REFERENCE_MEDIA/VIDEOS/MOTALIM_LOGO_REFS)", "Pinterest_Query": "logo animation"}, {"Style_ID": "STY-021", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "morph", "Arabic_Name": "الأشكال المتحوّلة", "English_Name": "Abstract / Shape Morphing", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "هوية، وانتقالات، وخلفيات مفاهيمية", "Reference_Assets": "", "Pinterest_Query": "abstract shape motion design"}, {"Style_ID": "STY-022", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "retro", "Arabic_Name": "الطابع القديم", "English_Name": "Retro / Vintage", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "حنين، أو سرد تاريخي، أو هوية كلاسيكية", "Reference_Assets": "", "Pinterest_Query": "retro vintage illustration"}, {"Style_ID": "STY-023", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "neon", "Arabic_Name": "النيون", "English_Name": "Neon / Synthwave", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "ألعاب، أو تقنية بطابع ليلي، أو إثارة بصرية", "Reference_Assets": "", "Pinterest_Query": "synthwave neon grid"}, {"Style_ID": "STY-024", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "glitch", "Arabic_Name": "التشويش الرقمي", "English_Name": "Glitch Art", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "تقنية، وإثارة، وانتقالات سريعة، وأمن سيبراني", "Reference_Assets": "", "Pinterest_Query": "glitch art design"}, {"Style_ID": "STY-025", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "pixel", "Arabic_Name": "البكسل", "English_Name": "Pixel Art", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "متوسط", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "ألعاب، أو محتوى مرح بطابع كلاسيكي، أو تحديات رقمية", "Reference_Assets": "", "Pinterest_Query": "pixel art scene"}, {"Style_ID": "STY-026", "Family_Key": "art", "Family_Name": "الفن والهوية (Art & Identity)", "Slug": "mixed", "Arabic_Name": "الوسائط المختلطة والكولاج التحريري", "English_Name": "Mixed Media / Editorial Collage", "Source": "Motalim Motion Starter Kit (gallery/index.html)", "Code_Difficulty": "متوسط", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "تحليل، أو أخبار، أو تاريخ بصور حقيقية ومقالات بصرية", "Reference_Assets": "", "Pinterest_Query": "mixed media collage design"}, {"Style_ID": "STY-027", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "quiet-night", "Arabic_Name": "التأمل الليلي الهادئ", "English_Name": "Quiet Night / Reflective Illustration", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "متوسط", "Readiness_Status": "REFERENCE_ONLY", "Use_Cases": "مواضيع تأملية ووجدانية وإيمانية هادئة", "Reference_Assets": "REF-002, REF-003, REF-006", "Pinterest_Query": "night reflective illustration"}, {"Style_ID": "STY-028", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "symbolic-weather", "Arabic_Name": "الطقس والبيئة الرمزية", "English_Name": "Symbolic Weather & Environment", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "متوسط", "Readiness_Status": "REFERENCE_ONLY", "Use_Cases": "قصص الصبر والتغيير والابتلاء والتحول النفسي", "Reference_Assets": "REF-005", "Pinterest_Query": "symbolic weather illustration"}, {"Style_ID": "STY-029", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "code-editorial", "Arabic_Name": "موشن جرافيكس الكود التحريري", "English_Name": "Code-Based Motion Graphics Editorial", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "سهل بالكود", "Readiness_Status": "REFERENCE_ONLY", "Use_Cases": "شروحات تقنية وبرمجية وذكاء اصطناعي", "Reference_Assets": "REF-008", "Pinterest_Query": "code motion graphics dark ui"}, {"Style_ID": "STY-030", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "scientific-3d", "Arabic_Name": "التصوير العلمي ثلاثي الأبعاد", "English_Name": "Scientific 3D Visualization", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "صعب", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "الفضاء، الدماغ، الأعضاء، الخلايا، الكواكب، والظواهر الفيزيائية", "Reference_Assets": "", "Pinterest_Query": "scientific 3d visualization"}, {"Style_ID": "STY-031", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "surreal-3d", "Arabic_Name": "الاستعارة الرمزية السريالية 3D", "English_Name": "Surreal 3D Metaphor", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "صعب", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "أفكار فلسفية ونفسية وسلوكية عميقة", "Reference_Assets": "", "Pinterest_Query": "surreal 3d metaphor"}, {"Style_ID": "STY-032", "Family_Key": "fikra_ext", "Family_Name": "توسعات قناة فكرة والسرد الوثائقي (FIKRA V17 Extended)", "Slug": "cinematic-ai-motion", "Arabic_Name": "اللقطات السينمائية + موشن ديزاين", "English_Name": "Cinematic AI Footage + Motion Design", "Source": "FIKRA AI Studio V17", "Code_Difficulty": "صعب", "Readiness_Status": "CATALOG_ONLY", "Use_Cases": "فيديوهات وثائقية وسرد سينمائي هجين", "Reference_Assets": "", "Pinterest_Query": "cinematic documentary motion graphics"}];
+    const LOGOS = [{"Animation_ID": "L01-LineDraw", "Arabic_Name": "رسم الخطوط", "English_Name": "Line draw", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L01LineDraw.tsx", "Reference_Videos": "L01-LineDraw.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L02-Handwriting", "Arabic_Name": "الكتابة بالقلم", "English_Name": "Handwriting reveal", "Duration_Sec": "8.4", "Resolution": "1920x1080", "Reference_TSX": "L02Handwriting.tsx", "Reference_Videos": "L02-Handwriting.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L03-Assembly", "Arabic_Name": "تجميع الأجزاء", "English_Name": "Logo assembly", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L03Assembly.tsx", "Reference_Videos": "L03-Assembly.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L04-Morph", "Arabic_Name": "التحوّل", "English_Name": "Shape morph", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L04Morph.tsx", "Reference_Videos": "L04-Morph.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L05-Geometric", "Arabic_Name": "أشكال هندسية", "English_Name": "Geometric build", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L05Geometric.tsx", "Reference_Videos": "L05-Geometric.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L06-LiquidFill", "Arabic_Name": "السائل الذي يملأ", "English_Name": "Liquid fill", "Duration_Sec": "6.51", "Resolution": "1920x1080", "Reference_TSX": "L06LiquidFill.tsx", "Reference_Videos": "L06-LiquidFill.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L07-MaskWipe", "Arabic_Name": "المسح بالألوان", "English_Name": "Mask wipe", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L07MaskWipe.tsx", "Reference_Videos": "L07-MaskWipe.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L08-LightSweep", "Arabic_Name": "اللمعة", "English_Name": "Light sweep", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L08LightSweep.tsx", "Reference_Videos": "L08-LightSweep.mp4, L08-LightSweep-Alpha.webm", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L09-Kinetic", "Arabic_Name": "حرفًا بعد حرف", "English_Name": "Kinetic typing", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L09Kinetic.tsx", "Reference_Videos": "L09-Kinetic.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L10-Elastic", "Arabic_Name": "المطاطي", "English_Name": "Elastic / jelly", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L10Elastic.tsx", "Reference_Videos": "L10-Elastic.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L11-Character", "Arabic_Name": "الشعار شخصية", "English_Name": "Logo as a character", "Duration_Sec": "6.51", "Resolution": "1920x1080", "Reference_TSX": "L11Character.tsx", "Reference_Videos": "L11-Character.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L12-Flip3D", "Arabic_Name": "قلبة 3D", "English_Name": "3D flip", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L12Flip3D.tsx", "Reference_Videos": "L12-Flip3D.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L13-Particles", "Arabic_Name": "الجزيئات", "English_Name": "Particles", "Duration_Sec": "6.51", "Resolution": "1920x1080", "Reference_TSX": "L13Particles.tsx", "Reference_Videos": "L13-Particles.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L14-Glitch", "Arabic_Name": "Glitch", "English_Name": "Glitch", "Duration_Sec": "6.02", "Resolution": "1920x1080", "Reference_TSX": "L14Glitch.tsx", "Reference_Videos": "L14-Glitch.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L15-Neon", "Arabic_Name": "النيون", "English_Name": "Neon", "Duration_Sec": "6.51", "Resolution": "1920x1080", "Reference_TSX": "L15Neon.tsx", "Reference_Videos": "L15-Neon.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L16-Hero", "Arabic_Name": "الهيرو", "English_Name": "Brand hero", "Duration_Sec": "12.42", "Resolution": "1920x1080", "Reference_TSX": "L16Hero.tsx", "Reference_Videos": "L16-Hero.mp4, L16-Hero-Vertical.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}, {"Animation_ID": "L17-Canvas", "Arabic_Name": "لوحة التصميم", "English_Name": "Design canvas", "Duration_Sec": "17.3", "Resolution": "1920x1080", "Reference_TSX": "L17Canvas.tsx", "Reference_Videos": "L17-Canvas.mp4, L17-Canvas-Vertical.mp4", "Test_Status": "RENDER_TESTED", "Source": "motion-starter-kit-main"}];
+
+    document.getElementById("stat-styles").textContent = STYLES.length;
+    document.getElementById("stat-logos").textContent = LOGOS.length;
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg || "تم النسخ بنجاح ✓";
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 1800);
+    }
+    function copyText(txt) {
+      navigator.clipboard.writeText(txt).then(() => showToast("تم النسخ إلى الحافظة ✓"));
+    }
+
+    // Tabs
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        document.querySelectorAll(".panel").forEach((p) => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+      });
+    });
+
+    // Mode Router
+    const MODE_PROMPTS = {
+      fikra: "هيا نبدأ بإنشاء فيديو قناة فكرة (FIKRA STUDIO V2.0 — FIKRA_CHANNEL_MODE).\nالموضوع المقترح: [اكتب الفكرة هنا]\nالالتزامات: عمودي 9:16، صوت FIKRA VOICE 01، خط ذهبي للآيات وأبيض للسرد، صفر موسيقى، وتجهيز Storyboard + Style Bible قبل الإنتاج.",
+      universal: "ابدأ مشروع فيديو عام ضمن FIKRA STUDIO V2.0 (UNIVERSAL_VIDEO_MODE).\nالهدف والجمهور: [اكتب الهدف]\nالمدة والمقاس: [60 ثانية / 9:16 أو 16:9]\nاقترح عليّ أفضل 3 ستايلات من مكتبة الـ32 ستايلًا مع تحديد المحرك الأنسب (Remotion أو HyperFrames).",
+      logo: "أريد تحريك شعار SVG ضمن FIKRA STUDIO V2.0 (LOGO_ANIMATION_MODE).\nاقترح أفضل 3 حركات من مكتبة L01–L17 تناسب هوية الشعار، وجهّز إعدادات Remotion والمؤثرات الصوتية المتزامنة."
+    };
+    function selectMode(k) {
+      document.getElementById("mode-prompt").textContent = MODE_PROMPTS[k];
+    }
+    selectMode("fikra");
+
+    // Populate family filter
+    const families = [...new Set(STYLES.map((s) => s.Family_Name).filter(Boolean))];
+    const famSel = document.getElementById("family-filter");
+    families.forEach((f) => {
+      const opt = document.createElement("option");
+      opt.value = f; opt.textContent = f;
+      famSel.appendChild(opt);
+    });
+
+    function renderStyles() {
+      const q = document.getElementById("style-search").value.trim().toLowerCase();
+      const fam = famSel.value;
+      const grid = document.getElementById("styles-grid");
+      const filtered = STYLES.filter((s) => {
+        if (fam && s.Family_Name !== fam) return false;
+        if (!q) return true;
+        return (s.Style_ID + " " + s.Arabic_Name + " " + s.English_Name + " " + s.Use_Cases).toLowerCase().includes(q);
+      });
+      grid.innerHTML = filtered.map((s) => `
+        <div class="card">
+          <div class="card-head"><span class="code-tag">${s.Style_ID}</span><span class="badge">${s.Code_Difficulty || 'متوسط'}</span></div>
+          <h3>${s.Arabic_Name}</h3>
+          <p>${s.English_Name} · ${s.Family_Name}</p>
+          <p style="font-size:12px;">${s.Use_Cases || ''}</p>
+          <button class="btn-copy" onclick="copyText('استخدم ستايل ${s.Style_ID} (${s.Arabic_Name} / ${s.English_Name}) من FIKRA STUDIO V2.0 في هذا المشروع.')">نسخ أمر الستايل</button>
+        </div>
+      `).join("");
+    }
+    document.getElementById("style-search").addEventListener("input", renderStyles);
+    famSel.addEventListener("change", renderStyles);
+    renderStyles();
+
+    function renderLogos() {
+      const q = document.getElementById("logo-search").value.trim().toLowerCase();
+      const grid = document.getElementById("logos-grid");
+      const filtered = LOGOS.filter((l) => !q || (l.Animation_ID + " " + l.Arabic_Name + " " + l.English_Name).toLowerCase().includes(q));
+      grid.innerHTML = filtered.map((l) => `
+        <div class="card">
+          <div class="card-head"><span class="code-tag">${l.Animation_ID}</span><span class="badge">${l.Duration_Sec}s · ${l.Resolution}</span></div>
+          <h3>${l.Arabic_Name}</h3>
+          <p>${l.English_Name} · ملف الكود: <code>${l.Reference_TSX}</code></p>
+          <button class="btn-copy" onclick="copyText('طبّق حركة الشعار ${l.Animation_ID} (${l.Arabic_Name}) باستخدام ${l.Reference_TSX} في FIKRA STUDIO V2.0.')">نسخ أمر الحركة</button>
+        </div>
+      `).join("");
+    }
+    document.getElementById("logo-search").addEventListener("input", renderLogos);
+    renderLogos();
+  </script>
+</body>
+</html>
