@@ -1,8 +1,8 @@
-name: FIKRA STUDIO V3.1.1 Continuous Forensic QA
+name: FIKRA STUDIO V3.3 Continuous Forensic QA
 
 on:
   push:
-    branches: [ "fix/v3.1-production-readiness", "development/v3.0", "main" ]
+    branches: [ "fix/v3.3-ci-zero-dep", "feature/v3.3-creative-experience", "development/v3.0", "main" ]
   pull_request:
     branches: [ "main", "development/v3.0" ]
 
