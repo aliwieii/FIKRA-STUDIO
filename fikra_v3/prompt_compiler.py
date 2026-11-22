@@ -111,3 +111,133 @@ def generate_publishing_pack(
         "hashtags": clean_tags,
         "hashtag_count": len(clean_tags),
     }
+
+
+TOOL_ADAPTER_GUIDES: dict[str, str] = {
+    "video_gen": "Focus on concise camera trajectories, lighting continuity, negative prompt constraints, and 4-6s shot durations.",
+    "image_gen": "Specify exact framing, subject pose, color palette hex codes, lighting angle, and text-free clean composition.",
+    "remotion_motion": "Use 100% frame-driven useCurrentFrame() springs/interpolations, RTL Arabic safe zones, and zero CSS transitions.",
+    "hyperframes": "Drive all motion from seekToFrame(frame) and separate episode text/colors into variables.json.",
+    "3d_scene": "Specify camera focal length, key/rim/fill lighting rig, stylized non-photorealistic shaders, and keyframe curves.",
+    "video_editor": "Provide exact timecode cut sheet, SFX placement, RTL caption SRT sync, and export specs (H.264/AAC).",
+}
+
+INTERVIEW_BANK: dict[str, list[dict[str, str]]] = {
+    "product_ad": [
+        {"key": "topic", "question": "ما المنتج أو الخدمة وما المشكلة الأساسية التي يحلّها؟", "default": "تطبيق إنتاجي يختصر وقت العمل اليومي"},
+        {"key": "audience", "question": "من الجمهور المستهدف والمنصة الأساسية للنشر؟", "default": "روّاد الأعمال والمصممون على Reels وTikTok"},
+        {"key": "duration", "question": "ما المدة المستهدفة والمقاس (9:16 أم 16:9 أم 1:1)؟", "default": "30 ثانية بمقاس 9:16"},
+    ],
+    "documentary": [
+        {"key": "topic", "question": "ما الموضوع أو السؤال المركزي الذي تريد أن يشدّ المشاهد في أول 3 ثوانٍ؟", "default": "حقيقة علمية أو تاريخية مدهشة"},
+        {"key": "tone", "question": "ما الإحساس المطلوب (تأملي، حماسي، غامض، تعليمي)؟", "default": "تأملي معرفي هادئ مع تصاعد بصري"},
+        {"key": "duration", "question": "ما المدة المستهدفة للفيديو؟", "default": "60 ثانية عمودي 9:16"},
+    ],
+    "educational": [
+        {"key": "topic", "question": "ما المفهوم التعليمي الذي نريد تبسيطه وما الفئة العمرية؟", "default": "شرح مفهوم علمي/رياضي بمثال بصري حي"},
+        {"key": "example", "question": "هل لديك مثال عملي محدد أم أقترح لك مثالًا بصريًا؟", "default": "مثال بصري تفاعلي من الحياة اليومية"},
+    ],
+}
+
+
+def get_adaptive_interview_question(project_type: str, known_answers: dict[str, Any]) -> dict[str, Any]:
+    """V3.2 Adaptive One-Question-at-a-Time Interview skipping already-known facts."""
+    bank = INTERVIEW_BANK.get(project_type, INTERVIEW_BANK["documentary"])
+    for item in bank:
+        if not known_answers.get(item["key"]):
+            return {
+                "complete": False,
+                "next_key": item["key"],
+                "question": item["question"],
+                "recommended_default": item["default"],
+            }
+    return {"complete": True, "next_key": None, "question": None}
+
+
+def compile_v32_production_prompt(
+    state: dict[str, Any],
+    target_tool: str = "remotion_motion",
+    required_assets: list[dict[str, str]] | None = None,
+    motion_specs: list[dict[str, str]] | None = None,
+    root: Path | None = None,
+) -> dict[str, Any]:
+    """V3.2 Tool-Adapted Production Prompt Compiler with REQUIRED INPUT ASSETS,
+    executable motion specs, Negative Prompt, and strict NO-MUSIC enforcement."""
+    base = compile_production_prompt(state, root=root)
+    tool_key = target_tool if target_tool in TOOL_ADAPTER_GUIDES else "remotion_motion"
+    assets_list = required_assets or [
+        {"file": "voiceover.wav", "role": "Master Arabic narration audio (NO background music)"},
+        {"file": "style_contact_sheet.png", "role": "Visual style & palette reference"},
+    ]
+    motions = motion_specs or [
+        {
+            "scene": "S01_HOOK",
+            "subject": "Primary title + hero graphic",
+            "motion": "Starts off-screen bottom (+40px), rises with cubic ease-out in 0.55s, holds 2.0s, dissolves into S02",
+            "camera": "Subtle push-in 1.00 -> 1.06 scale over 3.0s",
+        }
+    ]
+    extra = [
+        "",
+        f"## 4. Target Production Tool Adapter (`{tool_key}`)",
+        f"- **Tool Guidance:** {TOOL_ADAPTER_GUIDES[tool_key]}",
+        "",
+        "## 5. Executable Motion & Camera Specifications",
+    ]
+    for m in motions:
+        extra.append(f"- **{m['scene']}** | Subject: {m['subject']} | Motion: {m['motion']} | Camera: {m['camera']}")
+    extra.extend([
+        "",
+        "## 6. REQUIRED INPUT ASSETS",
+    ])
+    for a in assets_list:
+        extra.append(f"- `{a['file']}` — {a['role']}")
+    extra.extend([
+        "",
+        "## 7. REFERENCE USAGE INSTRUCTIONS",
+        "- Match pacing, composition, and lighting contrast from verified reference frames only; never copy copyrighted logos or watermarks.",
+        "",
+        "## 8. Negative Prompt & Generation Constraints",
+        "- NO background music, NO photorealistic 3D human faces, NO static slide decks, NO truncated Arabic captions, NO split isolated Arabic letters, NO watermarks.",
+    ])
+    full_prompt = base["prompt_markdown"] + "\n".join(extra) + "\n"
+    qa_gate = score_prompt_quality(full_prompt, state)
+    return {
+        "mode": base["mode"],
+        "target_tool": tool_key,
+        "isolation_clean": base["isolation_clean"],
+        "prompt_markdown": full_prompt,
+        "prompt_qa_gate": qa_gate,
+    }
+
+
+def score_prompt_quality(prompt_markdown: str, state: dict[str, Any]) -> dict[str, Any]:
+    """V3.2 15-Criterion Pre-Delivery Prompt Quality Gate (0-100)."""
+    checks = {
+        "project_identity": bool(state.get("project_id") and state.get("title")),
+        "mode_declared": state.get("mode", "") in prompt_markdown,
+        "aspect_ratio_declared": bool(state.get("aspect_ratio")) and str(state.get("aspect_ratio")) in prompt_markdown,
+        "idea_present": bool(state.get("decisions", {}).get("idea")),
+        "script_present": bool(state.get("decisions", {}).get("script")),
+        "style_selected": bool(state.get("decisions", {}).get("style")),
+        "visual_hook_arc": "Problem -> Escalation -> Resolution" in prompt_markdown,
+        "no_music_guardrail": "STRICT NO-MUSIC DEFAULT" in prompt_markdown,
+        "arabic_rtl_guardrail": "Arabic RTL" in prompt_markdown,
+        "no_truncation_guardrail": "Never truncate" in prompt_markdown,
+        "tool_adapter_present": "Target Production Tool Adapter" in prompt_markdown,
+        "executable_motion_specs": "Executable Motion & Camera Specifications" in prompt_markdown,
+        "required_input_assets": "REQUIRED INPUT ASSETS" in prompt_markdown,
+        "reference_usage_instructions": "REFERENCE USAGE INSTRUCTIONS" in prompt_markdown,
+        "negative_prompt_present": "Negative Prompt" in prompt_markdown,
+    }
+    passed = sum(1 for v in checks.values() if v)
+    score = round((passed / len(checks)) * 100)
+    missing = [k for k, v in checks.items() if not v]
+    return {
+        "score": score,
+        "max_score": 100,
+        "passed_criteria": passed,
+        "total_criteria": len(checks),
+        "pass": score >= 80 and "no_music_guardrail" not in missing and "required_input_assets" not in missing,
+        "missing_criteria": missing,
+    }
