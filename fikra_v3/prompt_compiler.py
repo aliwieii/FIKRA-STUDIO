@@ -241,3 +241,84 @@ def score_prompt_quality(prompt_markdown: str, state: dict[str, Any]) -> dict[st
         "pass": score >= 80 and "no_music_guardrail" not in missing and "required_input_assets" not in missing,
         "missing_criteria": missing,
     }
+
+MUSIC_LEAK_PATTERNS = (
+    "add background music",
+    "background music track",
+    "include upbeat music",
+    "choose suitable music",
+    "أضف موسيقى خلفية",
+    "موسيقى خلفية مناسبة",
+    "اختر موسيقى",
+    "مسموح بالموسيقى",
+)
+
+
+def assert_no_music_leak(text: str) -> dict[str, Any]:
+    """V3.3 Strict NO-MUSIC text audit across all 9 modes; FAILS if any phrase permits music."""
+    low = text.lower()
+    hits = [pat for pat in MUSIC_LEAK_PATTERNS if pat.lower() in low]
+    return {"pass": len(hits) == 0, "leaks": hits}
+
+
+def compile_v33_production_prompt(
+    state: dict[str, Any],
+    target_tool: str = "remotion_motion",
+    voiceover_direction: str | None = None,
+    sfx_direction: str = "Subtle motivated whooshes and UI clicks aligned to scene cuts (ZERO music).",
+    root: Path | None = None,
+) -> dict[str, Any]:
+    """V3.3 Bilingual Production Prompt Compiler with strict NO-MUSIC verification & audio-direction-only."""
+    import json
+    from . import repo_root
+    r = repo_root(root)
+    base = compile_v32_production_prompt(state, target_tool=target_tool, root=r)
+    sid = state.get("decisions", {}).get("style", "STY-001")
+    ux_path = r / "03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json"
+    ux_item = {}
+    if ux_path.exists():
+        for it in json.loads(ux_path.read_text(encoding="utf-8")).get("styles", []):
+            if it["style_id"] == sid:
+                ux_item = it
+                break
+
+    mode = state["mode"]
+    if mode == "QURAN_MODE":
+        audio_lines = [
+            "- **Voiceover / Recitation:** External verified Quran recitation only (no synthetic TTS).",
+            "- **SFX & Music:** STRICT SILENCE over recitation — NO BACKGROUND MUSIC, ZERO SFX, ZERO nasheed.",
+        ]
+    elif mode == "FIKRA_CHANNEL_MODE":
+        audio_lines = [
+            f"- **Voiceover Direction:** {voiceover_direction or 'FIKRA VOICE 01 — warm, clear Modern Standard Arabic documentary narration.'}",
+            f"- **SFX Direction:** {sfx_direction}",
+            "- **Music Policy:** STRICTLY FORBIDDEN (NO BACKGROUND MUSIC).",
+        ]
+    else:
+        audio_lines = [
+            f"- **Voiceover Direction (Optional):** {voiceover_direction or 'Natural clear narration matching audience & language (do NOT force FIKRA VOICE 01).'}",
+            f"- **SFX Direction:** {sfx_direction}",
+            "- **Music Policy:** STRICTLY FORBIDDEN across all 9 FIKRA STUDIO modes (NO BACKGROUND MUSIC).",
+        ]
+
+    v33_lines = [
+        "",
+        "## 9. V3.3 Bilingual Style Clarity & Audio Direction (Direction Only — No Audio Generation)",
+        f"- **Arabic Style Name:** {ux_item.get('simplified_arabic_name', sid)}",
+        f"- **Technical Style:** {ux_item.get('original_technical_name', sid)}",
+        f"- **Execution:** {ux_item.get('short_description', 'Purposeful animated motion with consistent palette and lighting.')}",
+        *audio_lines,
+        "",
+    ]
+    final_prompt = base["prompt_markdown"] + "\n".join(v33_lines)
+    music_audit = assert_no_music_leak(final_prompt)
+    if not music_audit["pass"]:
+        raise ValueError(f"NO-MUSIC policy violation detected in compiled prompt: {music_audit['leaks']}")
+    return {
+        "mode": mode,
+        "target_tool": base["target_tool"],
+        "isolation_clean": base["isolation_clean"],
+        "music_audit": music_audit,
+        "prompt_qa_gate": base["prompt_qa_gate"],
+        "prompt_markdown": final_prompt,
+    }

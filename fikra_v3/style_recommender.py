@@ -155,3 +155,56 @@ def compare_styles(
         "alternative": top[1] if len(top) > 1 else None,
         "compared_styles": top,
     }
+
+
+def recommend_styles_v33(
+    topic: str,
+    audience: str = "general",
+    mood: str = "clear",
+    aspect_ratio: str = "9:16",
+    mode: str = "UNIVERSAL_VIDEO_MODE",
+    top_k: int = 3,
+    root: Path | None = None,
+) -> dict[str, Any]:
+    """V3.3 Style Selection separating idea_fit, reference_quality, execution_readiness,
+    and analysis_confidence — enriched with simplified Arabic names & external gallery images."""
+    import json
+    from . import repo_root
+    r = repo_root(root)
+    cmp_data = compare_styles(topic=f"{topic} {audience} {mood}", mode=mode, top_k=top_k, root=r)
+    ux_path = r / "03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json"
+    ux_by_id = {}
+    if ux_path.exists():
+        for item in json.loads(ux_path.read_text(encoding="utf-8")).get("styles", []):
+            ux_by_id[item["style_id"]] = item
+
+    enriched = []
+    for st in cmp_data["compared_styles"]:
+        ux = ux_by_id.get(st["style_id"], {})
+        ext = ux.get("external_preview", {})
+        enriched.append({
+            "style_id": st["style_id"],
+            "simplified_arabic_name": ux.get("simplified_arabic_name", st["arabic_name"]),
+            "technical_name": st["english_name"],
+            "categories": ux.get("categories", []),
+            "what_appears_in_video": ux.get("short_description", ""),
+            "practical_example": ux.get("practical_example", ""),
+            "aspect_ratio": aspect_ratio,
+            "scores_separated": {
+                "idea_fit_25": st["breakdown"]["idea_fit_25"],
+                "reference_quality_10": st["breakdown"]["reference_verification_10"],
+                "execution_readiness": st["readiness_status"],
+                "analysis_confidence": st["confidence"],
+            },
+            "external_image_url": ext.get("image_url"),
+            "external_source_url": ext.get("source_url"),
+            "external_image_status": ext.get("image_status", "PENDING_EXTERNAL_CURATION"),
+            "pros": st["pros"],
+            "cons": st["cons"],
+        })
+    return {
+        "topic": topic,
+        "mode": mode,
+        "aspect_ratio": aspect_ratio,
+        "top_choices": enriched,
+    }

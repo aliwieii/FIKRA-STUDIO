@@ -192,3 +192,36 @@ def build_video_review_report(scenes_diff: list[dict[str, str]]) -> dict[str, An
         "full_rerender_required": len(affected) > max(1, len(scenes_diff) // 2),
         "markdown_table": "\n".join(lines),
     }
+
+
+def build_style_bible(
+    style_id: str,
+    simplified_arabic_name: str,
+    technical_name: str,
+    access_info: dict[str, Any],
+    aspect_ratio: str = "9:16",
+) -> dict[str, Any]:
+    """V3.3 Structured 12-Section STYLE BIBLE grounded in actual reference review status."""
+    status = access_info.get("visual_review_status", "UNVERIFIED")
+    return {
+        "style_id": style_id,
+        "visual_review_status": status,
+        "sections": {
+            "1_visual_identity": f"{simplified_arabic_name} ({technical_name})",
+            "2_color_palette": {"bg": "#060B14", "surface": "#0F1B2E", "primary_text": "#F8FAFC", "accent_gold": "#F59E0B", "accent_cyan": "#38BDF8"},
+            "3_typography": "Arabic RTL (Noto Kufi / Cairo / Amiri for Quran), zero isolated letters, rolling zero-drop captions.",
+            "4_composition": f"Safe-zone framed for {aspect_ratio}, clear visual hierarchy and generous negative space.",
+            "5_camera_language": "Controlled purposeful push-ins, smooth tracking, zero disorienting jitter.",
+            "6_animation_language": "100% frame-driven purposeful motion; zero static slides.",
+            "7_transitions": "Dynamic motivated cuts, soft cross-dissolves, or geometric wipes.",
+            "8_lighting": "Clean directional stylized lighting with readable figure-ground contrast.",
+            "9_timing": "Visual hook within 0-3s; Problem -> Escalation -> Resolution pacing.",
+            "10_sound_direction": "STRICT NO BACKGROUND MUSIC (voiceover, justified SFX, ambience, or intentional silence only).",
+            "11_production_constraints": "No photorealistic 3D humans; preserve locked user approvals; honor copyright.",
+            "12_reference_evidence": {
+                "accessible": bool(access_info.get("accessible")),
+                "status": status,
+                "source_path": access_info.get("source_path"),
+            },
+        },
+    }
