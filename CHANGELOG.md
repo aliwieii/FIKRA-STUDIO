@@ -2,6 +2,22 @@
 
 All notable changes to this project are documented here.
 
+## [3.3.0] — 2026-11-22 (Merged to `main`, Release `v3.3.0`)
+### Added & Improved
+- **32-Style Arabic UX Catalog (`03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json`):** Plain-Arabic creative names, multi-category tags, and honest `STY-014` Fake 3D labeling.
+- **External Open-License Visual Gallery (`03_STYLE_LIBRARY/STYLE_EXTERNAL_GALLERY.json` & `FIKRA_STYLE_GALLERY_V33.html`):** Verified external Wikimedia Commons image links with zero heavy binary bloat in Git.
+- **Creative Experience Engine (`fikra_v3/creative_experience.py`):** 12-section `build_style_bible()`, `recommend_styles_v33()`, strict `assert_no_music_leak()` across all 9 modes, and `compile_v33_production_prompt()`.
+- **Zero-Dependency CI Contact Sheet Fallback:** `extract_contact_sheet()` falls back cleanly to native FFmpeg `tile` when `Pillow` is absent (50/50 tests green on GitHub Actions `ubuntu-latest`).
+- **Full V3.3 Documentation Sync:** Unified `GEMINI.md`, `CLAUDE.md`, `PROJECT_MAP.md`, `ARCHITECTURE.md`, `V3_ARCHITECTURE.md`, `AGENT_ONBOARDING_GUIDE.md`, `CHANGELOG.md`, and `fikra_v3/__init__.py` to V3.3.
+
+## [3.2.0] — 2026-11-22
+### Added
+- **Visual Intelligence Layer (`fikra_v3/visual_intelligence.py`):** 5-level `VISUAL_REVIEW_STATUS`, truthful reference access verification, real FFmpeg contact sheet extraction, 7-dimension analysis card, 6-criteria weighted style comparison, 15-point prompt QA scorer, and adaptive interview questions (`tests/test_v32_visual_intelligence.py`).
+
+## [3.1.1] — 2026-11-21
+### Fixed
+- Resolved `FIK-004`..`FIK-019` production-readiness issues: locked decision overwrite guard, strict state machine transitions, FFmpeg `blackdetect` + SHA-256 bound readiness QA, logo regex & registry sync, `music.py` quarantine guard, and Remotion TypeScript `^5.7.2` alignment.
+
 ## [3.1.0] — 2026-11-21 (Branch: `development/v3.0` / `main`)
 ### Added
 - **Interactive One-Question-at-a-Time Interview & Visual Hook Narrative Arc** (`Problem -> Escalation -> Resolution`) in `ACTIVATION_PROMPT.md` and `fikra_v3/prompt_compiler.py`.
