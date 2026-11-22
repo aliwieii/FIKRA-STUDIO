@@ -1,0 +1,13 @@
+{
+  "base_commit": "712084b644cf8ceed7f45a636b4416925707a306",
+  "files": {
+    "README.md": "8417b8a83bcd15ef3cd02de528c94a838e05c5d737d89d08a2961478daefb30e",
+    "AGENTS.md": "b0ec8795eafd0b77c55f5c6e2c0332babe868af0b41e4a8aeb75e5546a4879d9",
+    "ACTIVATION_PROMPT.md": "58d4aa962c2c205b9b52d02c4163330fb671cdc39cd8100cb1599330ad4cec70",
+    "SYSTEM_MANIFEST.json": "221b2769b5e5ebf9c14977331d836fccd24cecdb4010bb1f2a902d8cabbede93",
+    "fikra_v3/__init__.py": "dad8a9309a7a9126ae8b6ea80978f827ade3179fd42a17c1fd585ee551e35b71",
+    "fikra_v3/__main__.py": "ea5b27e72f961580255f1b4a05d521fcd78802c2692990afa35a0e0663abac74",
+    "fikra_v3/prompt_compiler.py": "418e48959973b2f8de5efea1de73a444a5d5aa68581b2619100d7cdda4da8570",
+    "fikra_v3/style_recommender.py": "eba6a22de9bff578f192918ff3162d158ede73c7ca05f0af2d0c1fd75b6b1ccd"
+  }
+}

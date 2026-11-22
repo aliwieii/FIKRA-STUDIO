@@ -1,8 +1,8 @@
 {
   "name": "FIKRA STUDIO",
-  "version": "3.1.1",
+  "version": "3.3.0",
   "identity": "AGENT-FIRST UNIVERSAL CREATIVE PRODUCTION SYSTEM",
-  "branch": "fix/v3.1-production-readiness",
+  "branch": "feature/v3.3-creative-experience",
   "source_of_truth": "AGENTS.md",
   "agent_routers": {
     "gemini": "GEMINI.md",
@@ -33,7 +33,7 @@
     "styles": 32,
     "logo_animations": 17,
     "reference_cards": 52,
-    "indexed_assets": 339
+    "indexed_assets": 353
   },
   "registries": {
     "asset_json": "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.json",
@@ -51,5 +51,11 @@
     "note": "Original >90MB ZIPs (FIKRA_AI_STUDIO_V17.zip, motion-starter-kit-main.zip) and 52 reference MP4 videos (~370MB) are stored externally on Google Drive due to GitHub's 100MB per-file limit.",
     "drive_v1_archive_id": "1b-NCg70RNGlac4K7rUjAe6uLzzZORzAf",
     "drive_v2_archive_id": "19ymMBsXLBUKBHee40w3sl0AzZ2MSYJLY"
+  },
+  "style_gallery_v33": {
+    "ux_catalog": "03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json",
+    "external_gallery": "03_STYLE_LIBRARY/STYLE_EXTERNAL_GALLERY.json",
+    "html_gallery": "03_STYLE_LIBRARY/FIKRA_STYLE_GALLERY_V33.html",
+    "naming_map": "FIKRA_STYLE_NAMING_MAP.md"
   }
 }

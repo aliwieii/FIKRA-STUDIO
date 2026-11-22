@@ -17,10 +17,11 @@ from .media_intelligence import analyze_audio_real, detect_black_frames
 from .model_adapter import build_adapter_payload
 from .project_bootstrap import bootstrap_project
 from .project_state import advance_stage, create_project_state, load_state, save_state
-from .prompt_compiler import compile_production_prompt
+from .prompt_compiler import compile_production_prompt, compile_v32_production_prompt
 from .readiness_scorer import score_readiness
 from .regression_guard import run_regression_checks
-from .style_recommender import recommend_styles
+from .style_recommender import compare_styles, recommend_styles
+from .visual_intelligence import extract_contact_sheet, verify_reference_access
 
 
 def _p(data):
@@ -91,6 +92,15 @@ def main(argv: list[str] | None = None) -> int:
     p_sa.add_argument("--approve", action="store_true")
     p_bd = sub.add_parser("blackdetect", help="Run FFmpeg black-frame detector (Feature H)")
     p_bd.add_argument("--file", required=True)
+    p_cs = sub.add_parser("contact-sheet", help="Extract labeled FFmpeg Contact Sheet (V3.2)")
+    p_cs.add_argument("--video", required=True)
+    p_cs.add_argument("--out", required=True)
+    p_cs.add_argument("--ref-id", default="REF-CUSTOM")
+    p_cs.add_argument("--frames", type=int, default=6)
+    p_cmp = sub.add_parser("compare-styles", help="6-Criteria Weighted Style Comparison (V3.2)")
+    p_cmp.add_argument("--topic", required=True)
+    p_cmp.add_argument("--mode", default="UNIVERSAL_VIDEO_MODE")
+    p_cmp.add_argument("--tool", default="remotion_motion")
 
     args = parser.parse_args(argv)
     r = repo_root()
@@ -149,6 +159,10 @@ def main(argv: list[str] | None = None) -> int:
         rep = detect_black_frames(Path(args.file))
         _p(rep)
         return 0 if rep["pass"] else 1
+    elif args.cmd == "contact-sheet":
+        _p(extract_contact_sheet(Path(args.video), Path(args.out), args.ref_id, num_frames=args.frames))
+    elif args.cmd == "compare-styles":
+        _p(compare_styles(args.topic, mode=args.mode, target_tool=args.tool, root=r))
     return 0
 
 

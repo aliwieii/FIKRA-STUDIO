@@ -1,0 +1,14 @@
+{
+  "base_commit": "f9df03a6df8b25e8ae966333613acb70c442aaac",
+  "files": {
+    "README.md": "8c8aee2097fecf21a68cf227cfc9deb16e33e5222427c15c2fb27b133d3be417",
+    "AGENTS.md": "c3df29adef01009a91fe6585992dc82074b636470ccf9bd418168b3dda876e78",
+    "ACTIVATION_PROMPT.md": "1f1d401fd3dfaf8779012321fad14bf0c1baedd4fc1ff5fe2def2eb6cecddcc7",
+    "SYSTEM_MANIFEST.json": "76f29ca72734d45dca57102ae94fb1658c71f986cba731759744eb94b08ec1d5",
+    "fikra_v3/__init__.py": "ff3a83e183d7e8791964152578458dcbf8ccc6370bef91d6a4ea3eb79beb77e6",
+    "fikra_v3/__main__.py": "569df9393b856b43891295cb08b00a46e42a1f07f349ac7aeb0dcf45072ea628",
+    "fikra_v3/visual_intelligence.py": "55dd904268d377570396e9e9dcbd52d24a263c8721a6ff39a464d491b549c514",
+    "fikra_v3/style_recommender.py": "8c4e01617946d60f2460b9ae822c4427e9ceaccb18abeed97c9eb75b88cf201d",
+    "fikra_v3/prompt_compiler.py": "48d3a10f1e64033cc425a9e149842c1a6acf16effd924d70a9a10783fbd39704"
+  }
+}
