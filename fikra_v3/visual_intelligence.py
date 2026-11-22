@@ -75,7 +75,11 @@ def extract_contact_sheet(
     if num_frames < 2:
         raise ValueError("num_frames must be >= 2 to inspect more than a single frame.")
 
-    from PIL import Image, ImageDraw
+    try:
+        from PIL import Image, ImageDraw
+        has_pil = True
+    except ImportError:
+        has_pil = False
 
     info = probe_media(video_path)
     duration = float(info.get("format", {}).get("duration", 0.0))
@@ -99,44 +103,60 @@ def extract_contact_sheet(
         td_p = Path(td)
         thumbs = []
         for idx, ts in enumerate(timestamps):
-            frame_jpg = td_p / f"f_{idx:02d}.png"
+            frame_png = td_p / f"f_{idx:02d}.png"
             res = subprocess.run(
                 [
                     "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
                     "-ss", f"{ts:.3f}", "-i", str(video_path),
                     "-frames:v", "1", "-vf", f"scale={thumb_width}:-2",
-                    str(frame_jpg),
+                    str(frame_png),
                 ],
                 capture_output=True, text=True,
             )
-            if res.returncode != 0 or not frame_jpg.exists():
+            if res.returncode != 0 or not frame_png.exists():
                 raise RuntimeError(f"FFmpeg frame extraction failed at t={ts}s: {res.stderr.strip()}")
-            im = Image.open(frame_jpg).convert("RGB")
-            thumbs.append((ts, int(round(ts * fps)), im))
-            sampled.append({"index": idx + 1, "timecode_sec": ts, "frame_number": int(round(ts * fps))})
+            fno = int(round(ts * fps))
+            if has_pil:
+                im = Image.open(frame_png).convert("RGB")
+                thumbs.append((ts, fno, im))
+            sampled.append({"index": idx + 1, "timecode_sec": ts, "frame_number": fno})
 
         cols = min(3, num_frames)
         rows = math.ceil(num_frames / cols)
-        tw, th = thumbs[0][2].size
-        header_h, label_h, pad = 54, 24, 12
-        sheet_w = cols * tw + (cols + 1) * pad
-        sheet_h = header_h + rows * (th + label_h + pad) + pad
-        sheet = Image.new("RGB", (sheet_w, sheet_h), (10, 15, 28))
-        draw = ImageDraw.Draw(sheet)
-        draw.text(
-            (pad, 12),
-            f"FIKRA V3.2 CONTACT SHEET | {ref_id} | {video_path.name} | {duration:.2f}s | STATUS: EXTRACTED_FRAME",
-            fill=(245, 158, 11),
-        )
-        for idx, (ts, fno, im) in enumerate(thumbs):
-            r_i, c_i = divmod(idx, cols)
-            x = pad + c_i * (tw + pad)
-            y = header_h + r_i * (th + label_h + pad)
-            sheet.paste(im, (x, y))
-            draw.text((x + 4, y + th + 4), f"t={ts:05.2f}s | f#{fno}", fill=(226, 232, 240))
-
         output_png.parent.mkdir(parents=True, exist_ok=True)
-        sheet.save(output_png)
+
+        if has_pil:
+            tw, th = thumbs[0][2].size
+            header_h, label_h, pad = 54, 24, 12
+            sheet_w = cols * tw + (cols + 1) * pad
+            sheet_h = header_h + rows * (th + label_h + pad) + pad
+            sheet = Image.new("RGB", (sheet_w, sheet_h), (10, 15, 28))
+            draw = ImageDraw.Draw(sheet)
+            draw.text(
+                (pad, 12),
+                f"FIKRA V3.3 CONTACT SHEET | {ref_id} | {video_path.name} | {duration:.2f}s | STATUS: EXTRACTED_FRAME",
+                fill=(245, 158, 11),
+            )
+            for idx, (ts, fno, im) in enumerate(thumbs):
+                r_i, c_i = divmod(idx, cols)
+                x = pad + c_i * (tw + pad)
+                y = header_h + r_i * (th + label_h + pad)
+                sheet.paste(im, (x, y))
+                draw.text((x + 4, y + th + 4), f"t={ts:05.2f}s | f#{fno}", fill=(226, 232, 240))
+            sheet.save(output_png)
+        else:
+            # Zero-dependency FFmpeg native tile fallback (works in clean CI without Pillow)
+            tile_res = subprocess.run(
+                [
+                    "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+                    "-framerate", "1", "-i", str(td_p / "f_%02d.png"),
+                    "-vf", f"tile={cols}x{rows}:padding=12:margin=12:color=0x0a0f1c",
+                    "-frames:v", "1", str(output_png),
+                ],
+                capture_output=True, text=True,
+            )
+            if tile_res.returncode != 0 or not output_png.exists():
+                raise RuntimeError(f"FFmpeg contact sheet tiling failed: {tile_res.stderr.strip()}")
 
     return {
         "reference_id": ref_id,
