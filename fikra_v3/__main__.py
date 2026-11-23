@@ -21,6 +21,7 @@ from .prompt_compiler import compile_production_prompt, compile_v32_production_p
 from .readiness_scorer import score_readiness
 from .regression_guard import run_regression_checks
 from .style_recommender import compare_styles, recommend_styles
+from .motion_craft import check_motion_craft_compliance, list_narrative_archetypes, list_reel_effects
 from .visual_intelligence import extract_contact_sheet, verify_reference_access
 
 
@@ -101,6 +102,12 @@ def main(argv: list[str] | None = None) -> int:
     p_cmp.add_argument("--topic", required=True)
     p_cmp.add_argument("--mode", default="UNIVERSAL_VIDEO_MODE")
     p_cmp.add_argument("--tool", default="remotion_motion")
+    p_pr = sub.add_parser("presets", help="List V3.4 Narrative Archetypes & Reel Effects")
+    p_pr.add_argument("--mode")
+    p_cc = sub.add_parser("craft-check", help="Run V3.4 Anti-Slide & No-Music compliance audit")
+    p_cc.add_argument("--file")
+    p_cc.add_argument("--text", default="")
+    p_cc.add_argument("--engine", default="remotion")
 
     args = parser.parse_args(argv)
     r = repo_root()
@@ -163,6 +170,13 @@ def main(argv: list[str] | None = None) -> int:
         _p(extract_contact_sheet(Path(args.video), Path(args.out), args.ref_id, num_frames=args.frames))
     elif args.cmd == "compare-styles":
         _p(compare_styles(args.topic, mode=args.mode, target_tool=args.tool, root=r))
+    elif args.cmd == "presets":
+        _p({"archetypes": list_narrative_archetypes(mode=args.mode, root=r), "reel_effects": list_reel_effects(root=r)})
+    elif args.cmd == "craft-check":
+        payload = Path(args.file).read_text(encoding="utf-8") if args.file else args.text
+        rep = check_motion_craft_compliance(payload, engine=args.engine)
+        _p(rep)
+        return 0 if rep["pass"] else 1
     return 0
 
 

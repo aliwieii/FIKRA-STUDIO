@@ -1,4 +1,4 @@
-# CLAUDE.md — Thin Agent Router for FIKRA STUDIO V3.0
+# CLAUDE.md — Thin Agent Router for FIKRA STUDIO V3.4
 
 > **Activation Charter:** [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md)
 

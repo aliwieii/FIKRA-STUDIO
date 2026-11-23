@@ -2,6 +2,29 @@
 
 All notable changes to this project are documented here.
 
+## [3.4.0] — 2026-11-23 (Branch: `feature/v3.4-motion-craft-and-presets`)
+### Added & Upgraded (Researched via `find-skills` / `skills.sh` & Open-Source Motion Repos)
+- **Motion Craft & Anti-Slide Engine (`fikra_v3/motion_craft.py` + `03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json`):**
+  - Enforces 6 Motion Craft rules (`MC-01`..`MC-06`): *Video, Not Slides* continuous world, deterministic `useCurrentFrame()`/`spring()` clock (banning `Math.random()` and CSS transitions in Remotion), `>=30px` mobile readability floor at `1080px`, living backgrounds, Render-Extract-Inspect-Fix loop, and strict **NO BACKGROUND MUSIC** across all 9 modes.
+- **8 Narrative Archetypes & 12 Zero-Music Reel Effects:** Added `VOX_SCRAPBOOK_COLLAGE`, `ARTICLE_TO_CHAPTER_EXPLAINER`, `HAND_DRAWN_INK_STEP`, `SHOTCRAFT_APP_PRODUCT_DEMO`, `CONTINUOUS_ACTION_EXPLAINER`, `VISUAL_JOURNALISM_DARK`, `WATERCOLOR_POETIC_ESSAY`, and `STAGE_2D_IN_3D_DEPTH` (`STY-014` Fake 3D), plus 12 music-free Reel Effects (`split-headline`, `checklist`, `timeline`, `tier-list`, `pause-trimming`, etc.).
+- **V3.4 Prompt Compiler & CLI (`compile_v34_production_prompt`, `presets`, `craft-check`):** Embeds Motion Craft rules, selected archetype, and Reel Effects into production prompts with strict `assert_no_music_leak()` gating.
+
+## [3.3.0] — 2026-11-22 (Merged to `main`, Release `v3.3.0`)
+### Added & Improved
+- **32-Style Arabic UX Catalog (`03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json`):** Plain-Arabic creative names, multi-category tags, and honest `STY-014` Fake 3D labeling.
+- **External Open-License Visual Gallery (`03_STYLE_LIBRARY/STYLE_EXTERNAL_GALLERY.json` & `FIKRA_STYLE_GALLERY_V33.html`):** Verified external Wikimedia Commons image links with zero heavy binary bloat in Git.
+- **Creative Experience Engine (`fikra_v3/creative_experience.py`):** 12-section `build_style_bible()`, `recommend_styles_v33()`, strict `assert_no_music_leak()` across all 9 modes, and `compile_v33_production_prompt()`.
+- **Zero-Dependency CI Contact Sheet Fallback:** `extract_contact_sheet()` falls back cleanly to native FFmpeg `tile` when `Pillow` is absent (50/50 tests green on GitHub Actions `ubuntu-latest`).
+- **Full V3.3 Documentation Sync:** Unified `GEMINI.md`, `CLAUDE.md`, `PROJECT_MAP.md`, `ARCHITECTURE.md`, `V3_ARCHITECTURE.md`, `AGENT_ONBOARDING_GUIDE.md`, `CHANGELOG.md`, and `fikra_v3/__init__.py` to V3.3.
+
+## [3.2.0] — 2026-11-22
+### Added
+- **Visual Intelligence Layer (`fikra_v3/visual_intelligence.py`):** 5-level `VISUAL_REVIEW_STATUS`, truthful reference access verification, real FFmpeg contact sheet extraction, 7-dimension analysis card, 6-criteria weighted style comparison, 15-point prompt QA scorer, and adaptive interview questions (`tests/test_v32_visual_intelligence.py`).
+
+## [3.1.1] — 2026-11-21
+### Fixed
+- Resolved `FIK-004`..`FIK-019` production-readiness issues: locked decision overwrite guard, strict state machine transitions, FFmpeg `blackdetect` + SHA-256 bound readiness QA, logo regex & registry sync, `music.py` quarantine guard, and Remotion TypeScript `^5.7.2` alignment.
+
 ## [3.1.0] — 2026-11-21 (Branch: `development/v3.0` / `main`)
 ### Added
 - **Interactive One-Question-at-a-Time Interview & Visual Hook Narrative Arc** (`Problem -> Escalation -> Resolution`) in `ACTIVATION_PROMPT.md` and `fikra_v3/prompt_compiler.py`.

@@ -322,3 +322,54 @@ def compile_v33_production_prompt(
         "prompt_qa_gate": base["prompt_qa_gate"],
         "prompt_markdown": final_prompt,
     }
+
+
+def compile_v34_production_prompt(
+    state: dict[str, Any],
+    root: Path | None = None,
+    target_tool: str | None = None,
+    reference_assets: list[dict[str, str]] | None = None,
+    sfx_direction: str = "Crisp justified SFX aligned with scene transitions and motion beats",
+    archetype_slug: str | None = None,
+    reel_effects: list[str] | None = None,
+) -> dict[str, Any]:
+    """V3.4 Production Prompt Compiler: embeds Anti-Slide Motion Craft rules, Narrative Archetype, and Reel Effects."""
+    from .motion_craft import load_motion_craft_catalog
+
+    base = compile_v33_production_prompt(
+        state,
+        target_tool=target_tool or "remotion_motion",
+        sfx_direction=sfx_direction,
+        root=root,
+    )
+    cat = load_motion_craft_catalog(root)
+    rules = cat.get("anti_slide_motion_rules", [])
+    rule_lines = [f"- **{r['id']} ({r['name']}):** {r['rule']}" for r in rules]
+
+    arch_line = "- **Narrative Archetype:** Standard FIKRA Visual Hook (Problem -> Escalation -> Resolution)"
+    if archetype_slug:
+        match = next((a for a in cat.get("narrative_archetypes", []) if a["slug"] == archetype_slug), None)
+        if match:
+            arch_line = f"- **Narrative Archetype ({match['slug']}):** {match['arabic_name']} — {match['visual_grammar']}"
+
+    fx_str = ", ".join(reel_effects) if reel_effects else "word-captions, split-headline, kinetic-callout"
+    v34_lines = [
+        "",
+        "## 10. V3.4 Motion Craft, Anti-Slide & Reel Effects Contract",
+        arch_line,
+        f"- **Selected Reel Effects (Music-Free):** {fx_str}",
+        *rule_lines,
+        "",
+    ]
+    final_prompt = base["prompt_markdown"] + "\n".join(v34_lines)
+    music_audit = assert_no_music_leak(final_prompt)
+    if not music_audit["pass"]:
+        raise ValueError(f"NO-MUSIC policy violation detected in V3.4 compiled prompt: {music_audit['leaks']}")
+    return {
+        "mode": base["mode"],
+        "target_tool": base["target_tool"],
+        "isolation_clean": base["isolation_clean"],
+        "music_audit": music_audit,
+        "prompt_qa_gate": base["prompt_qa_gate"],
+        "prompt_markdown": final_prompt,
+    }

@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0.0",
-  "generated_at_utc": "2026-11-22T15:33:05Z",
-  "total_assets": 353,
-  "total_bytes": 2451310,
+  "generated_at_utc": "2026-11-23T12:45:54Z",
+  "total_assets": 356,
+  "total_bytes": 2474541,
   "excluded_self_generated": [
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_INDEX.csv",
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.csv",
@@ -20,7 +20,7 @@
       "name": "ci.yml",
       "extension": ".yml",
       "size_bytes": 1637,
-      "sha256": "302f33b03c4f5b8683e8bff6850e0717e6b816e955bc76278dda22979fc43b7e",
+      "sha256": "08be56c7c0c93aabd06d7e9230941e8a57984a9e38e8867da0152f3381110543",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -316,6 +316,21 @@
     },
     {
       "asset_id": "AST-0021",
+      "path": "03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json",
+      "name": "MOTION_CRAFT_AND_REEL_PRESETS_V34.json",
+      "extension": ".json",
+      "size_bytes": 10576,
+      "sha256": "9ed42a75b88ea05b3ff6225bd5f3b8bf9eaf25f3e9d8e36dad726d64ec6cb068",
+      "category": "style_library",
+      "usage_type": "visual_direction",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0022",
       "path": "03_STYLE_LIBRARY/STYLE_EXTERNAL_GALLERY.json",
       "name": "STYLE_EXTERNAL_GALLERY.json",
       "extension": ".json",
@@ -330,7 +345,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0022",
+      "asset_id": "AST-0023",
       "path": "03_STYLE_LIBRARY/STYLE_INDEX.md",
       "name": "STYLE_INDEX.md",
       "extension": ".md",
@@ -345,7 +360,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0023",
+      "asset_id": "AST-0024",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/01_TYPOGRAPHY_FAMILY_PROMPT.md",
       "name": "01_TYPOGRAPHY_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -360,7 +375,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0024",
+      "asset_id": "AST-0025",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/02_2D_ILLUSTRATION_FAMILY_PROMPT.md",
       "name": "02_2D_ILLUSTRATION_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -375,7 +390,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0025",
+      "asset_id": "AST-0026",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/03_DATA_AND_MAPS_FAMILY_PROMPT.md",
       "name": "03_DATA_AND_MAPS_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -390,7 +405,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0026",
+      "asset_id": "AST-0027",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/04_DEPTH_AND_3D_FAMILY_PROMPT.md",
       "name": "04_DEPTH_AND_3D_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -405,7 +420,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0027",
+      "asset_id": "AST-0028",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
       "name": "05_PRODUCT_AND_UI_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -420,7 +435,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0028",
+      "asset_id": "AST-0029",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/06_ART_AND_IDENTITY_FAMILY_PROMPT.md",
       "name": "06_ART_AND_IDENTITY_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -435,7 +450,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0029",
+      "asset_id": "AST-0030",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/07_FIKRA_EXTENDED_FAMILY_PROMPT.md",
       "name": "07_FIKRA_EXTENDED_FAMILY_PROMPT.md",
       "extension": ".md",
@@ -450,7 +465,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0030",
+      "asset_id": "AST-0031",
       "path": "03_STYLE_LIBRARY/STYLE_PROMPTS/STYLE_PROMPT_GUIDE.md",
       "name": "STYLE_PROMPT_GUIDE.md",
       "extension": ".md",
@@ -465,7 +480,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0031",
+      "asset_id": "AST-0032",
       "path": "03_STYLE_LIBRARY/STYLE_REFERENCES/motalim_26_styles_gallery.html",
       "name": "motalim_26_styles_gallery.html",
       "extension": ".html",
@@ -480,7 +495,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0032",
+      "asset_id": "AST-0033",
       "path": "03_STYLE_LIBRARY/STYLE_REGISTRY.csv",
       "name": "STYLE_REGISTRY.csv",
       "extension": ".csv",
@@ -495,7 +510,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0033",
+      "asset_id": "AST-0034",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-001_kinetic.md",
       "name": "STY-001_kinetic.md",
       "extension": ".md",
@@ -512,7 +527,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0034",
+      "asset_id": "AST-0035",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-002_synced.md",
       "name": "STY-002_synced.md",
       "extension": ".md",
@@ -529,7 +544,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0035",
+      "asset_id": "AST-0036",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-003_flat.md",
       "name": "STY-003_flat.md",
       "extension": ".md",
@@ -546,7 +561,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0036",
+      "asset_id": "AST-0037",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-004_character.md",
       "name": "STY-004_character.md",
       "extension": ".md",
@@ -563,7 +578,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0037",
+      "asset_id": "AST-0038",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-005_doodle.md",
       "name": "STY-005_doodle.md",
       "extension": ".md",
@@ -580,7 +595,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0038",
+      "asset_id": "AST-0039",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-006_whiteboard.md",
       "name": "STY-006_whiteboard.md",
       "extension": ".md",
@@ -597,7 +612,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0039",
+      "asset_id": "AST-0040",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-007_chalk.md",
       "name": "STY-007_chalk.md",
       "extension": ".md",
@@ -614,7 +629,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0040",
+      "asset_id": "AST-0041",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-008_stick.md",
       "name": "STY-008_stick.md",
       "extension": ".md",
@@ -631,7 +646,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0041",
+      "asset_id": "AST-0042",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-009_line.md",
       "name": "STY-009_line.md",
       "extension": ".md",
@@ -648,7 +663,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0042",
+      "asset_id": "AST-0043",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-010_paper.md",
       "name": "STY-010_paper.md",
       "extension": ".md",
@@ -665,7 +680,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0043",
+      "asset_id": "AST-0044",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-011_info.md",
       "name": "STY-011_info.md",
       "extension": ".md",
@@ -682,7 +697,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0044",
+      "asset_id": "AST-0045",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-012_map.md",
       "name": "STY-012_map.md",
       "extension": ".md",
@@ -699,7 +714,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0045",
+      "asset_id": "AST-0046",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-013_iso.md",
       "name": "STY-013_iso.md",
       "extension": ".md",
@@ -716,7 +731,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0046",
+      "asset_id": "AST-0047",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-014_parallax.md",
       "name": "STY-014_parallax.md",
       "extension": ".md",
@@ -733,7 +748,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0047",
+      "asset_id": "AST-0048",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-015_cube.md",
       "name": "STY-015_cube.md",
       "extension": ".md",
@@ -750,7 +765,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0048",
+      "asset_id": "AST-0049",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-016_clay.md",
       "name": "STY-016_clay.md",
       "extension": ".md",
@@ -767,7 +782,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0049",
+      "asset_id": "AST-0050",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-017_glass.md",
       "name": "STY-017_glass.md",
       "extension": ".md",
@@ -784,7 +799,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0050",
+      "asset_id": "AST-0051",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-018_ui.md",
       "name": "STY-018_ui.md",
       "extension": ".md",
@@ -801,7 +816,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0051",
+      "asset_id": "AST-0052",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-019_apple.md",
       "name": "STY-019_apple.md",
       "extension": ".md",
@@ -818,7 +833,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0052",
+      "asset_id": "AST-0053",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-020_logo.md",
       "name": "STY-020_logo.md",
       "extension": ".md",
@@ -835,7 +850,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0053",
+      "asset_id": "AST-0054",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-021_morph.md",
       "name": "STY-021_morph.md",
       "extension": ".md",
@@ -852,7 +867,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0054",
+      "asset_id": "AST-0055",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-022_retro.md",
       "name": "STY-022_retro.md",
       "extension": ".md",
@@ -869,7 +884,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0055",
+      "asset_id": "AST-0056",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-023_neon.md",
       "name": "STY-023_neon.md",
       "extension": ".md",
@@ -886,7 +901,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0056",
+      "asset_id": "AST-0057",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-024_glitch.md",
       "name": "STY-024_glitch.md",
       "extension": ".md",
@@ -903,7 +918,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0057",
+      "asset_id": "AST-0058",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-025_pixel.md",
       "name": "STY-025_pixel.md",
       "extension": ".md",
@@ -920,7 +935,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0058",
+      "asset_id": "AST-0059",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-026_mixed.md",
       "name": "STY-026_mixed.md",
       "extension": ".md",
@@ -937,7 +952,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0059",
+      "asset_id": "AST-0060",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-027_quiet-night.md",
       "name": "STY-027_quiet-night.md",
       "extension": ".md",
@@ -954,7 +969,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0060",
+      "asset_id": "AST-0061",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-028_symbolic-weather.md",
       "name": "STY-028_symbolic-weather.md",
       "extension": ".md",
@@ -971,7 +986,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0061",
+      "asset_id": "AST-0062",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-029_code-editorial.md",
       "name": "STY-029_code-editorial.md",
       "extension": ".md",
@@ -988,7 +1003,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0062",
+      "asset_id": "AST-0063",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-030_scientific-3d.md",
       "name": "STY-030_scientific-3d.md",
       "extension": ".md",
@@ -1005,7 +1020,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0063",
+      "asset_id": "AST-0064",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-031_surreal-3d.md",
       "name": "STY-031_surreal-3d.md",
       "extension": ".md",
@@ -1022,7 +1037,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0064",
+      "asset_id": "AST-0065",
       "path": "03_STYLE_LIBRARY/STYLE_SPECIFICATIONS/STY-032_cinematic-ai-motion.md",
       "name": "STY-032_cinematic-ai-motion.md",
       "extension": ".md",
@@ -1039,7 +1054,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0065",
+      "asset_id": "AST-0066",
       "path": "03_STYLE_LIBRARY/STYLE_UX_CATALOG_V33.json",
       "name": "STYLE_UX_CATALOG_V33.json",
       "extension": ".json",
@@ -1054,7 +1069,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0066",
+      "asset_id": "AST-0067",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/00_LOGO_ANIMATION_SKILL_REFERENCE.md",
       "name": "00_LOGO_ANIMATION_SKILL_REFERENCE.md",
       "extension": ".md",
@@ -1069,7 +1084,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0067",
+      "asset_id": "AST-0068",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L01-LineDraw.md",
       "name": "L01-LineDraw.md",
       "extension": ".md",
@@ -1086,7 +1101,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0068",
+      "asset_id": "AST-0069",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L02-Handwriting.md",
       "name": "L02-Handwriting.md",
       "extension": ".md",
@@ -1103,7 +1118,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0069",
+      "asset_id": "AST-0070",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L03-Assembly.md",
       "name": "L03-Assembly.md",
       "extension": ".md",
@@ -1120,7 +1135,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0070",
+      "asset_id": "AST-0071",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L04-Morph.md",
       "name": "L04-Morph.md",
       "extension": ".md",
@@ -1137,7 +1152,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0071",
+      "asset_id": "AST-0072",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L05-Geometric.md",
       "name": "L05-Geometric.md",
       "extension": ".md",
@@ -1154,7 +1169,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0072",
+      "asset_id": "AST-0073",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L06-LiquidFill.md",
       "name": "L06-LiquidFill.md",
       "extension": ".md",
@@ -1171,7 +1186,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0073",
+      "asset_id": "AST-0074",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L07-MaskWipe.md",
       "name": "L07-MaskWipe.md",
       "extension": ".md",
@@ -1188,7 +1203,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0074",
+      "asset_id": "AST-0075",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L08-LightSweep.md",
       "name": "L08-LightSweep.md",
       "extension": ".md",
@@ -1205,7 +1220,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0075",
+      "asset_id": "AST-0076",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L09-Kinetic.md",
       "name": "L09-Kinetic.md",
       "extension": ".md",
@@ -1222,7 +1237,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0076",
+      "asset_id": "AST-0077",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L10-Elastic.md",
       "name": "L10-Elastic.md",
       "extension": ".md",
@@ -1239,7 +1254,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0077",
+      "asset_id": "AST-0078",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L11-Character.md",
       "name": "L11-Character.md",
       "extension": ".md",
@@ -1256,7 +1271,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0078",
+      "asset_id": "AST-0079",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L12-Flip3D.md",
       "name": "L12-Flip3D.md",
       "extension": ".md",
@@ -1273,7 +1288,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0079",
+      "asset_id": "AST-0080",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L13-Particles.md",
       "name": "L13-Particles.md",
       "extension": ".md",
@@ -1290,7 +1305,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0080",
+      "asset_id": "AST-0081",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L14-Glitch.md",
       "name": "L14-Glitch.md",
       "extension": ".md",
@@ -1307,7 +1322,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0081",
+      "asset_id": "AST-0082",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L15-Neon.md",
       "name": "L15-Neon.md",
       "extension": ".md",
@@ -1324,7 +1339,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0082",
+      "asset_id": "AST-0083",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L16-Hero.md",
       "name": "L16-Hero.md",
       "extension": ".md",
@@ -1341,7 +1356,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0083",
+      "asset_id": "AST-0084",
       "path": "04_LOGO_ANIMATION_LIBRARY/ANIMATION_SPECS/L17-Canvas.md",
       "name": "L17-Canvas.md",
       "extension": ".md",
@@ -1358,7 +1373,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0084",
+      "asset_id": "AST-0085",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_ANIMATION_INDEX.md",
       "name": "LOGO_ANIMATION_INDEX.md",
       "extension": ".md",
@@ -1373,7 +1388,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0085",
+      "asset_id": "AST-0086",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/LOGOS_SVG/motalim-logo-on-dark.svg",
       "name": "motalim-logo-on-dark.svg",
       "extension": ".svg",
@@ -1388,7 +1403,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0086",
+      "asset_id": "AST-0087",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/LOGOS_SVG/motalim-logo.svg",
       "name": "motalim-logo.svg",
       "extension": ".svg",
@@ -1403,7 +1418,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0087",
+      "asset_id": "AST-0088",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/build.py",
       "name": "build.py",
       "extension": ".py",
@@ -1418,7 +1433,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0088",
+      "asset_id": "AST-0089",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/motalim_17_logo_gallery.html",
       "name": "motalim_17_logo_gallery.html",
       "extension": ".html",
@@ -1433,7 +1448,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0089",
+      "asset_id": "AST-0090",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REFERENCES/page.css",
       "name": "page.css",
       "extension": ".css",
@@ -1448,7 +1463,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0090",
+      "asset_id": "AST-0091",
       "path": "04_LOGO_ANIMATION_LIBRARY/LOGO_REGISTRY.csv",
       "name": "LOGO_REGISTRY.csv",
       "extension": ".csv",
@@ -1463,7 +1478,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0091",
+      "asset_id": "AST-0092",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/fikra_v17_VIDEO_INGESTION_AND_ANALYSIS_PROTOCOL.md",
       "name": "fikra_v17_VIDEO_INGESTION_AND_ANALYSIS_PROTOCOL.md",
       "extension": ".md",
@@ -1478,7 +1493,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0092",
+      "asset_id": "AST-0093",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_logo_arabic.md",
       "name": "motalim_logo_arabic.md",
       "extension": ".md",
@@ -1493,7 +1508,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0093",
+      "asset_id": "AST-0094",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_logo_kit_STYLE_GUIDE.md",
       "name": "motalim_logo_kit_STYLE_GUIDE.md",
       "extension": ".md",
@@ -1508,7 +1523,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0094",
+      "asset_id": "AST-0095",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_logo_mockups.md",
       "name": "motalim_logo_mockups.md",
       "extension": ".md",
@@ -1523,7 +1538,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0095",
+      "asset_id": "AST-0096",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_logo_styles.md",
       "name": "motalim_logo_styles.md",
       "extension": ".md",
@@ -1538,7 +1553,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0096",
+      "asset_id": "AST-0097",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_arabic.md",
       "name": "motalim_video_arabic.md",
       "extension": ".md",
@@ -1553,7 +1568,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0097",
+      "asset_id": "AST-0098",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_audio.md",
       "name": "motalim_video_audio.md",
       "extension": ".md",
@@ -1568,7 +1583,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0098",
+      "asset_id": "AST-0099",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_questions.md",
       "name": "motalim_video_questions.md",
       "extension": ".md",
@@ -1583,7 +1598,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0099",
+      "asset_id": "AST-0100",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_remotion.md",
       "name": "motalim_video_remotion.md",
       "extension": ".md",
@@ -1598,7 +1613,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0100",
+      "asset_id": "AST-0101",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_review.md",
       "name": "motalim_video_review.md",
       "extension": ".md",
@@ -1613,7 +1628,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0101",
+      "asset_id": "AST-0102",
       "path": "05_IDEAS_AND_KNOWLEDGE/EDUCATIONAL_REFERENCES/motalim_video_style-bible.md",
       "name": "motalim_video_style-bible.md",
       "extension": ".md",
@@ -1628,7 +1643,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0102",
+      "asset_id": "AST-0103",
       "path": "05_IDEAS_AND_KNOWLEDGE/IDEAS_INDEX.md",
       "name": "IDEAS_INDEX.md",
       "extension": ".md",
@@ -1643,7 +1658,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0103",
+      "asset_id": "AST-0104",
       "path": "05_IDEAS_AND_KNOWLEDGE/IDEA_LIBRARY/FIKRA_10_CATEGORIES_AND_IDEA_ENGINE.md",
       "name": "FIKRA_10_CATEGORIES_AND_IDEA_ENGINE.md",
       "extension": ".md",
@@ -1658,7 +1673,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0104",
+      "asset_id": "AST-0105",
       "path": "05_IDEAS_AND_KNOWLEDGE/IDEA_LIBRARY/PODCAST_AND_QURAN_IDEA_PATTERNS.md",
       "name": "PODCAST_AND_QURAN_IDEA_PATTERNS.md",
       "extension": ".md",
@@ -1673,7 +1688,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0105",
+      "asset_id": "AST-0106",
       "path": "05_IDEAS_AND_KNOWLEDGE/IDEA_LIBRARY/UNIVERSAL_IDEA_ANGLES_AND_EXAMPLES.md",
       "name": "UNIVERSAL_IDEA_ANGLES_AND_EXAMPLES.md",
       "extension": ".md",
@@ -1688,7 +1703,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0106",
+      "asset_id": "AST-0107",
       "path": "05_IDEAS_AND_KNOWLEDGE/PRODUCTION_KNOWLEDGE/CORE_PRODUCTION_PRINCIPLES.md",
       "name": "CORE_PRODUCTION_PRINCIPLES.md",
       "extension": ".md",
@@ -1703,7 +1718,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0107",
+      "asset_id": "AST-0108",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
       "name": "FIKRA_CHANNEL_PRODUCTION_PROMPT_V1.md",
       "extension": ".md",
@@ -1718,7 +1733,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0108",
+      "asset_id": "AST-0109",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/LOGO_ANIMATION_PROMPT_V1.md",
       "name": "LOGO_ANIMATION_PROMPT_V1.md",
       "extension": ".md",
@@ -1733,7 +1748,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0109",
+      "asset_id": "AST-0110",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/STICKMAN_COMEDY_PROMPT_V1.md",
       "name": "STICKMAN_COMEDY_PROMPT_V1.md",
       "extension": ".md",
@@ -1748,7 +1763,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0110",
+      "asset_id": "AST-0111",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/UNIVERSAL_PRODUCTION_PROMPT_V1.md",
       "name": "UNIVERSAL_PRODUCTION_PROMPT_V1.md",
       "extension": ".md",
@@ -1763,7 +1778,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0111",
+      "asset_id": "AST-0112",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/VIDEO_REVIEW_AND_FIX_PROMPT_V1.md",
       "name": "VIDEO_REVIEW_AND_FIX_PROMPT_V1.md",
       "extension": ".md",
@@ -1778,7 +1793,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0112",
+      "asset_id": "AST-0113",
       "path": "06_PROMPT_LIBRARY/IMPROVED_PROMPTS/VISUAL_UPGRADE_PROMPT_V1.md",
       "name": "VISUAL_UPGRADE_PROMPT_V1.md",
       "extension": ".md",
@@ -1793,7 +1808,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0113",
+      "asset_id": "AST-0114",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S1_LEGACY_PROMPT_01_video_analysis.txt",
       "name": "S1_LEGACY_PROMPT_01_video_analysis.txt",
       "extension": ".txt",
@@ -1808,7 +1823,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0114",
+      "asset_id": "AST-0115",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S1_LEGACY_PROMPT_02_mixed_media_dedup_of_04.txt",
       "name": "S1_LEGACY_PROMPT_02_mixed_media_dedup_of_04.txt",
       "extension": ".txt",
@@ -1823,7 +1838,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0115",
+      "asset_id": "AST-0116",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S1_LEGACY_PROMPT_03_real_animation.txt",
       "name": "S1_LEGACY_PROMPT_03_real_animation.txt",
       "extension": ".txt",
@@ -1838,7 +1853,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0116",
+      "asset_id": "AST-0117",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S1_LEGACY_STICKMAN_SKILL.md",
       "name": "S1_LEGACY_STICKMAN_SKILL.md",
       "extension": ".md",
@@ -1853,7 +1868,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0117",
+      "asset_id": "AST-0118",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S1_V17_GEMINI_UNIFIED_EXECUTION_PROMPT.md",
       "name": "S1_V17_GEMINI_UNIFIED_EXECUTION_PROMPT.md",
       "extension": ".md",
@@ -1868,7 +1883,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0118",
+      "asset_id": "AST-0119",
       "path": "06_PROMPT_LIBRARY/ORIGINAL_PROMPTS/S2_MOTALIM_PROMPT_EXAMPLES.md",
       "name": "S2_MOTALIM_PROMPT_EXAMPLES.md",
       "extension": ".md",
@@ -1883,7 +1898,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0119",
+      "asset_id": "AST-0120",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/CHARACTER_BIBLE_TEMPLATE.md",
       "name": "CHARACTER_BIBLE_TEMPLATE.md",
       "extension": ".md",
@@ -1898,7 +1913,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0120",
+      "asset_id": "AST-0121",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/PROJECT_MEMORY_TEMPLATE.json",
       "name": "PROJECT_MEMORY_TEMPLATE.json",
       "extension": ".json",
@@ -1913,7 +1928,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0121",
+      "asset_id": "AST-0122",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/PUBLISHING_PACK_TEMPLATE.md",
       "name": "PUBLISHING_PACK_TEMPLATE.md",
       "extension": ".md",
@@ -1928,7 +1943,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0122",
+      "asset_id": "AST-0123",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STORYBOARD_TEMPLATE.md",
       "name": "STORYBOARD_TEMPLATE.md",
       "extension": ".md",
@@ -1943,7 +1958,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0123",
+      "asset_id": "AST-0124",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/STYLE_BIBLE_TEMPLATE.md",
       "name": "STYLE_BIBLE_TEMPLATE.md",
       "extension": ".md",
@@ -1958,7 +1973,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0124",
+      "asset_id": "AST-0125",
       "path": "06_PROMPT_LIBRARY/PRODUCTION_TEMPLATES/VIRAL_HOOKS_AND_PUBLISHING_COPY_V2.md",
       "name": "VIRAL_HOOKS_AND_PUBLISHING_COPY_V2.md",
       "extension": ".md",
@@ -1973,7 +1988,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0125",
+      "asset_id": "AST-0126",
       "path": "06_PROMPT_LIBRARY/PROMPT_INDEX.md",
       "name": "PROMPT_INDEX.md",
       "extension": ".md",
@@ -1988,7 +2003,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0126",
+      "asset_id": "AST-0127",
       "path": "06_PROMPT_LIBRARY/VOICE_PROMPTS/FIKRA_VOICE_01_TTS_PROMPT.md",
       "name": "FIKRA_VOICE_01_TTS_PROMPT.md",
       "extension": ".md",
@@ -2003,7 +2018,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0127",
+      "asset_id": "AST-0128",
       "path": "06_PROMPT_LIBRARY/VOICE_PROMPTS/UNIVERSAL_VOICE_PROMPT_TEMPLATE.md",
       "name": "UNIVERSAL_VOICE_PROMPT_TEMPLATE.md",
       "extension": ".md",
@@ -2018,7 +2033,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0128",
+      "asset_id": "AST-0129",
       "path": "07_REFERENCE_MEDIA/AUDIO/README.md",
       "name": "README.md",
       "extension": ".md",
@@ -2033,7 +2048,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0129",
+      "asset_id": "AST-0130",
       "path": "07_REFERENCE_MEDIA/GRAPHICS/motalim-logo-on-dark.svg",
       "name": "motalim-logo-on-dark.svg",
       "extension": ".svg",
@@ -2048,7 +2063,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0130",
+      "asset_id": "AST-0131",
       "path": "07_REFERENCE_MEDIA/GRAPHICS/motalim-logo.svg",
       "name": "motalim-logo.svg",
       "extension": ".svg",
@@ -2063,7 +2078,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0131",
+      "asset_id": "AST-0132",
       "path": "07_REFERENCE_MEDIA/MEDIA_INDEX.md",
       "name": "MEDIA_INDEX.md",
       "extension": ".md",
@@ -2078,7 +2093,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0132",
+      "asset_id": "AST-0133",
       "path": "07_REFERENCE_MEDIA/STORYBOARDS/FIKRA_VISUAL_STORYBOARD_V2_TEMPLATE.html",
       "name": "FIKRA_VISUAL_STORYBOARD_V2_TEMPLATE.html",
       "extension": ".html",
@@ -2093,7 +2108,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0133",
+      "asset_id": "AST-0134",
       "path": "07_REFERENCE_MEDIA/STORYBOARDS/README.md",
       "name": "README.md",
       "extension": ".md",
@@ -2108,7 +2123,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0134",
+      "asset_id": "AST-0135",
       "path": "07_REFERENCE_MEDIA/STORYBOARDS/SAMPLE_STORYBOARD_WORKED_EXAMPLE.md",
       "name": "SAMPLE_STORYBOARD_WORKED_EXAMPLE.md",
       "extension": ".md",
@@ -2123,7 +2138,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0135",
+      "asset_id": "AST-0136",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/ALL_52_VIDEOS_CATALOG.csv",
       "name": "ALL_52_VIDEOS_CATALOG.csv",
       "extension": ".csv",
@@ -2138,7 +2153,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0136",
+      "asset_id": "AST-0137",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/ALL_52_VIDEOS_TECHNICAL_METADATA.json",
       "name": "ALL_52_VIDEOS_TECHNICAL_METADATA.json",
       "extension": ".json",
@@ -2153,7 +2168,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0137",
+      "asset_id": "AST-0138",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-01.md",
       "name": "MLOGO-01.md",
       "extension": ".md",
@@ -2170,7 +2185,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0138",
+      "asset_id": "AST-0139",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-02.md",
       "name": "MLOGO-02.md",
       "extension": ".md",
@@ -2187,7 +2202,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0139",
+      "asset_id": "AST-0140",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-03.md",
       "name": "MLOGO-03.md",
       "extension": ".md",
@@ -2204,7 +2219,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0140",
+      "asset_id": "AST-0141",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-04.md",
       "name": "MLOGO-04.md",
       "extension": ".md",
@@ -2221,7 +2236,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0141",
+      "asset_id": "AST-0142",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-05.md",
       "name": "MLOGO-05.md",
       "extension": ".md",
@@ -2238,7 +2253,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0142",
+      "asset_id": "AST-0143",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-06.md",
       "name": "MLOGO-06.md",
       "extension": ".md",
@@ -2255,7 +2270,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0143",
+      "asset_id": "AST-0144",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-07.md",
       "name": "MLOGO-07.md",
       "extension": ".md",
@@ -2272,7 +2287,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0144",
+      "asset_id": "AST-0145",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-08.md",
       "name": "MLOGO-08.md",
       "extension": ".md",
@@ -2289,7 +2304,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0145",
+      "asset_id": "AST-0146",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-09.md",
       "name": "MLOGO-09.md",
       "extension": ".md",
@@ -2306,7 +2321,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0146",
+      "asset_id": "AST-0147",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-10.md",
       "name": "MLOGO-10.md",
       "extension": ".md",
@@ -2323,7 +2338,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0147",
+      "asset_id": "AST-0148",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-11.md",
       "name": "MLOGO-11.md",
       "extension": ".md",
@@ -2340,7 +2355,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0148",
+      "asset_id": "AST-0149",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-12.md",
       "name": "MLOGO-12.md",
       "extension": ".md",
@@ -2357,7 +2372,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0149",
+      "asset_id": "AST-0150",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-13.md",
       "name": "MLOGO-13.md",
       "extension": ".md",
@@ -2374,7 +2389,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0150",
+      "asset_id": "AST-0151",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-14.md",
       "name": "MLOGO-14.md",
       "extension": ".md",
@@ -2391,7 +2406,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0151",
+      "asset_id": "AST-0152",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-15.md",
       "name": "MLOGO-15.md",
       "extension": ".md",
@@ -2408,7 +2423,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0152",
+      "asset_id": "AST-0153",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-16.md",
       "name": "MLOGO-16.md",
       "extension": ".md",
@@ -2425,7 +2440,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0153",
+      "asset_id": "AST-0154",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-17.md",
       "name": "MLOGO-17.md",
       "extension": ".md",
@@ -2442,7 +2457,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0154",
+      "asset_id": "AST-0155",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-18.md",
       "name": "MLOGO-18.md",
       "extension": ".md",
@@ -2459,7 +2474,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0155",
+      "asset_id": "AST-0156",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-19.md",
       "name": "MLOGO-19.md",
       "extension": ".md",
@@ -2476,7 +2491,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0156",
+      "asset_id": "AST-0157",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MLOGO-20.md",
       "name": "MLOGO-20.md",
       "extension": ".md",
@@ -2493,7 +2508,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0157",
+      "asset_id": "AST-0158",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-01.md",
       "name": "MSTY-01.md",
       "extension": ".md",
@@ -2510,7 +2525,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0158",
+      "asset_id": "AST-0159",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-02.md",
       "name": "MSTY-02.md",
       "extension": ".md",
@@ -2527,7 +2542,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0159",
+      "asset_id": "AST-0160",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-03.md",
       "name": "MSTY-03.md",
       "extension": ".md",
@@ -2544,7 +2559,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0160",
+      "asset_id": "AST-0161",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-04.md",
       "name": "MSTY-04.md",
       "extension": ".md",
@@ -2561,7 +2576,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0161",
+      "asset_id": "AST-0162",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-05.md",
       "name": "MSTY-05.md",
       "extension": ".md",
@@ -2578,7 +2593,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0162",
+      "asset_id": "AST-0163",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-06.md",
       "name": "MSTY-06.md",
       "extension": ".md",
@@ -2595,7 +2610,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0163",
+      "asset_id": "AST-0164",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-07.md",
       "name": "MSTY-07.md",
       "extension": ".md",
@@ -2612,7 +2627,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0164",
+      "asset_id": "AST-0165",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-08.md",
       "name": "MSTY-08.md",
       "extension": ".md",
@@ -2629,7 +2644,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0165",
+      "asset_id": "AST-0166",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-09.md",
       "name": "MSTY-09.md",
       "extension": ".md",
@@ -2646,7 +2661,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0166",
+      "asset_id": "AST-0167",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/MSTY-10.md",
       "name": "MSTY-10.md",
       "extension": ".md",
@@ -2663,7 +2678,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0167",
+      "asset_id": "AST-0168",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-001.md",
       "name": "REF-001.md",
       "extension": ".md",
@@ -2680,7 +2695,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0168",
+      "asset_id": "AST-0169",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-002.md",
       "name": "REF-002.md",
       "extension": ".md",
@@ -2697,7 +2712,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0169",
+      "asset_id": "AST-0170",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-003.md",
       "name": "REF-003.md",
       "extension": ".md",
@@ -2714,7 +2729,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0170",
+      "asset_id": "AST-0171",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-004.md",
       "name": "REF-004.md",
       "extension": ".md",
@@ -2731,7 +2746,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0171",
+      "asset_id": "AST-0172",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-005.md",
       "name": "REF-005.md",
       "extension": ".md",
@@ -2748,7 +2763,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0172",
+      "asset_id": "AST-0173",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-006.md",
       "name": "REF-006.md",
       "extension": ".md",
@@ -2765,7 +2780,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0173",
+      "asset_id": "AST-0174",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-007.md",
       "name": "REF-007.md",
       "extension": ".md",
@@ -2782,7 +2797,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0174",
+      "asset_id": "AST-0175",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-008.md",
       "name": "REF-008.md",
       "extension": ".md",
@@ -2799,7 +2814,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0175",
+      "asset_id": "AST-0176",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-009.md",
       "name": "REF-009.md",
       "extension": ".md",
@@ -2816,7 +2831,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0176",
+      "asset_id": "AST-0177",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-010.md",
       "name": "REF-010.md",
       "extension": ".md",
@@ -2833,7 +2848,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0177",
+      "asset_id": "AST-0178",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-011.md",
       "name": "REF-011.md",
       "extension": ".md",
@@ -2850,7 +2865,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0178",
+      "asset_id": "AST-0179",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-012.md",
       "name": "REF-012.md",
       "extension": ".md",
@@ -2867,7 +2882,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0179",
+      "asset_id": "AST-0180",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-013.md",
       "name": "REF-013.md",
       "extension": ".md",
@@ -2884,7 +2899,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0180",
+      "asset_id": "AST-0181",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-014.md",
       "name": "REF-014.md",
       "extension": ".md",
@@ -2901,7 +2916,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0181",
+      "asset_id": "AST-0182",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-015.md",
       "name": "REF-015.md",
       "extension": ".md",
@@ -2918,7 +2933,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0182",
+      "asset_id": "AST-0183",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-016.md",
       "name": "REF-016.md",
       "extension": ".md",
@@ -2935,7 +2950,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0183",
+      "asset_id": "AST-0184",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-017.md",
       "name": "REF-017.md",
       "extension": ".md",
@@ -2952,7 +2967,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0184",
+      "asset_id": "AST-0185",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-018.md",
       "name": "REF-018.md",
       "extension": ".md",
@@ -2969,7 +2984,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0185",
+      "asset_id": "AST-0186",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-019.md",
       "name": "REF-019.md",
       "extension": ".md",
@@ -2986,7 +3001,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0186",
+      "asset_id": "AST-0187",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-020.md",
       "name": "REF-020.md",
       "extension": ".md",
@@ -3003,7 +3018,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0187",
+      "asset_id": "AST-0188",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-021.md",
       "name": "REF-021.md",
       "extension": ".md",
@@ -3020,7 +3035,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0188",
+      "asset_id": "AST-0189",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/CARDS/REF-022.md",
       "name": "REF-022.md",
       "extension": ".md",
@@ -3037,7 +3052,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0189",
+      "asset_id": "AST-0190",
       "path": "07_REFERENCE_MEDIA/VIDEO_ANALYSIS/VIDEO_ANALYSIS_STATUS_REPORT.md",
       "name": "VIDEO_ANALYSIS_STATUS_REPORT.md",
       "extension": ".md",
@@ -3052,7 +3067,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0190",
+      "asset_id": "AST-0191",
       "path": "08_PROJECT_ASSETS/BACKGROUNDS/BACKGROUND_AND_ENVIRONMENT_GUIDE.md",
       "name": "BACKGROUND_AND_ENVIRONMENT_GUIDE.md",
       "extension": ".md",
@@ -3067,7 +3082,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0191",
+      "asset_id": "AST-0192",
       "path": "08_PROJECT_ASSETS/CHARACTERS/CHARACTER_CONTINUITY_SYSTEM.md",
       "name": "CHARACTER_CONTINUITY_SYSTEM.md",
       "extension": ".md",
@@ -3082,7 +3097,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0192",
+      "asset_id": "AST-0193",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/README_HYPERFRAMES_AR.md",
       "name": "README_HYPERFRAMES_AR.md",
       "extension": ".md",
@@ -3097,7 +3112,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0193",
+      "asset_id": "AST-0194",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/design.md",
       "name": "design.md",
       "extension": ".md",
@@ -3112,7 +3127,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0194",
+      "asset_id": "AST-0195",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/index.html",
       "name": "index.html",
       "extension": ".html",
@@ -3127,7 +3142,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0195",
+      "asset_id": "AST-0196",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/HYPERFRAMES_HTML_VIDEO_TEMPLATE/variables.json",
       "name": "variables.json",
       "extension": ".json",
@@ -3142,7 +3157,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0196",
+      "asset_id": "AST-0197",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/align.py",
       "name": "align.py",
       "extension": ".py",
@@ -3157,7 +3172,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0197",
+      "asset_id": "AST-0198",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/analyze.py",
       "name": "analyze.py",
       "extension": ".py",
@@ -3172,7 +3187,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0198",
+      "asset_id": "AST-0199",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/fikra_media_qa_pipeline.py",
       "name": "fikra_media_qa_pipeline.py",
       "extension": ".py",
@@ -3187,7 +3202,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0199",
+      "asset_id": "AST-0200",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/music.py",
       "name": "music.py",
       "extension": ".py",
@@ -3202,7 +3217,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0200",
+      "asset_id": "AST-0201",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_PYTHON_SCRIPTS/sfx.py",
       "name": "sfx.py",
       "extension": ".py",
@@ -3217,7 +3232,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0201",
+      "asset_id": "AST-0202",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/.gitignore",
       "name": ".gitignore",
       "extension": "(none)",
@@ -3232,7 +3247,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0202",
+      "asset_id": "AST-0203",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/package.json",
       "name": "package.json",
       "extension": ".json",
@@ -3247,7 +3262,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0203",
+      "asset_id": "AST-0204",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/public/logo/logo.svg",
       "name": "logo.svg",
       "extension": ".svg",
@@ -3262,7 +3277,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0204",
+      "asset_id": "AST-0205",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/STYLE_GUIDE.md",
       "name": "STYLE_GUIDE.md",
       "extension": ".md",
@@ -3277,7 +3292,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0205",
+      "asset_id": "AST-0206",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/fx.tsx",
       "name": "fx.tsx",
       "extension": ".tsx",
@@ -3292,7 +3307,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0206",
+      "asset_id": "AST-0207",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/kit.tsx",
       "name": "kit.tsx",
       "extension": ".tsx",
@@ -3307,7 +3322,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0207",
+      "asset_id": "AST-0208",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/logo-data.ts",
       "name": "logo-data.ts",
       "extension": ".ts",
@@ -3322,7 +3337,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0208",
+      "asset_id": "AST-0209",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/logo.tsx",
       "name": "logo.tsx",
       "extension": ".tsx",
@@ -3337,7 +3352,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0209",
+      "asset_id": "AST-0210",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/skeleton.json",
       "name": "skeleton.json",
       "extension": ".json",
@@ -3352,7 +3367,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0210",
+      "asset_id": "AST-0211",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/kit/tokens.ts",
       "name": "tokens.ts",
       "extension": ".ts",
@@ -3367,7 +3382,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0211",
+      "asset_id": "AST-0212",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/motalim-logo-on-dark.svg",
       "name": "motalim-logo-on-dark.svg",
       "extension": ".svg",
@@ -3382,7 +3397,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0212",
+      "asset_id": "AST-0213",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/motalim-logo.svg",
       "name": "motalim-logo.svg",
       "extension": ".svg",
@@ -3397,7 +3412,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0213",
+      "asset_id": "AST-0214",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L01LineDraw.tsx",
       "name": "L01LineDraw.tsx",
       "extension": ".tsx",
@@ -3414,7 +3429,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0214",
+      "asset_id": "AST-0215",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L02Handwriting.tsx",
       "name": "L02Handwriting.tsx",
       "extension": ".tsx",
@@ -3431,7 +3446,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0215",
+      "asset_id": "AST-0216",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L03Assembly.tsx",
       "name": "L03Assembly.tsx",
       "extension": ".tsx",
@@ -3448,7 +3463,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0216",
+      "asset_id": "AST-0217",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L04Morph.tsx",
       "name": "L04Morph.tsx",
       "extension": ".tsx",
@@ -3465,7 +3480,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0217",
+      "asset_id": "AST-0218",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L05Geometric.tsx",
       "name": "L05Geometric.tsx",
       "extension": ".tsx",
@@ -3482,7 +3497,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0218",
+      "asset_id": "AST-0219",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L06LiquidFill.tsx",
       "name": "L06LiquidFill.tsx",
       "extension": ".tsx",
@@ -3499,7 +3514,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0219",
+      "asset_id": "AST-0220",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L07MaskWipe.tsx",
       "name": "L07MaskWipe.tsx",
       "extension": ".tsx",
@@ -3516,7 +3531,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0220",
+      "asset_id": "AST-0221",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L08LightSweep.tsx",
       "name": "L08LightSweep.tsx",
       "extension": ".tsx",
@@ -3533,7 +3548,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0221",
+      "asset_id": "AST-0222",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L09Kinetic.tsx",
       "name": "L09Kinetic.tsx",
       "extension": ".tsx",
@@ -3550,7 +3565,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0222",
+      "asset_id": "AST-0223",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L10Elastic.tsx",
       "name": "L10Elastic.tsx",
       "extension": ".tsx",
@@ -3567,7 +3582,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0223",
+      "asset_id": "AST-0224",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L11Character.tsx",
       "name": "L11Character.tsx",
       "extension": ".tsx",
@@ -3584,7 +3599,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0224",
+      "asset_id": "AST-0225",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L12Flip3D.tsx",
       "name": "L12Flip3D.tsx",
       "extension": ".tsx",
@@ -3601,7 +3616,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0225",
+      "asset_id": "AST-0226",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L13Particles.tsx",
       "name": "L13Particles.tsx",
       "extension": ".tsx",
@@ -3618,7 +3633,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0226",
+      "asset_id": "AST-0227",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L14Glitch.tsx",
       "name": "L14Glitch.tsx",
       "extension": ".tsx",
@@ -3635,7 +3650,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0227",
+      "asset_id": "AST-0228",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L15Neon.tsx",
       "name": "L15Neon.tsx",
       "extension": ".tsx",
@@ -3652,7 +3667,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0228",
+      "asset_id": "AST-0229",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L16Hero.tsx",
       "name": "L16Hero.tsx",
       "extension": ".tsx",
@@ -3669,7 +3684,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0229",
+      "asset_id": "AST-0230",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/reference/motalim/styles/L17Canvas.tsx",
       "name": "L17Canvas.tsx",
       "extension": ".tsx",
@@ -3686,7 +3701,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0230",
+      "asset_id": "AST-0231",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/remotion.config.ts",
       "name": "remotion.config.ts",
       "extension": ".ts",
@@ -3701,7 +3716,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0231",
+      "asset_id": "AST-0232",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/scripts/render.mjs",
       "name": "render.mjs",
       "extension": ".mjs",
@@ -3716,7 +3731,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0232",
+      "asset_id": "AST-0233",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/scripts/sfx.py",
       "name": "sfx.py",
       "extension": ".py",
@@ -3731,7 +3746,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0233",
+      "asset_id": "AST-0234",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/scripts/skeleton.py",
       "name": "skeleton.py",
       "extension": ".py",
@@ -3746,7 +3761,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0234",
+      "asset_id": "AST-0235",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/scripts/split-logo.mjs",
       "name": "split-logo.mjs",
       "extension": ".mjs",
@@ -3761,7 +3776,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0235",
+      "asset_id": "AST-0236",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/scripts/stills.mjs",
       "name": "stills.mjs",
       "extension": ".mjs",
@@ -3776,7 +3791,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0236",
+      "asset_id": "AST-0237",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/Parts.tsx",
       "name": "Parts.tsx",
       "extension": ".tsx",
@@ -3791,7 +3806,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0237",
+      "asset_id": "AST-0238",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/Root.tsx",
       "name": "Root.tsx",
       "extension": ".tsx",
@@ -3806,7 +3821,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0238",
+      "asset_id": "AST-0239",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/Skeleton.tsx",
       "name": "Skeleton.tsx",
       "extension": ".tsx",
@@ -3821,7 +3836,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0239",
+      "asset_id": "AST-0240",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/config.ts",
       "name": "config.ts",
       "extension": ".ts",
@@ -3836,7 +3851,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0240",
+      "asset_id": "AST-0241",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/fx.tsx",
       "name": "fx.tsx",
       "extension": ".tsx",
@@ -3851,7 +3866,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0241",
+      "asset_id": "AST-0242",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/groups.ts",
       "name": "groups.ts",
       "extension": ".ts",
@@ -3866,7 +3881,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0242",
+      "asset_id": "AST-0243",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/index.ts",
       "name": "index.ts",
       "extension": ".ts",
@@ -3881,7 +3896,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0243",
+      "asset_id": "AST-0244",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/logo-data.json",
       "name": "logo-data.json",
       "extension": ".json",
@@ -3896,7 +3911,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0244",
+      "asset_id": "AST-0245",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/logo.tsx",
       "name": "logo.tsx",
       "extension": ".tsx",
@@ -3911,7 +3926,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0245",
+      "asset_id": "AST-0246",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/morph.ts",
       "name": "morph.ts",
       "extension": ".ts",
@@ -3926,7 +3941,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0246",
+      "asset_id": "AST-0247",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/skeleton.json",
       "name": "skeleton.json",
       "extension": ".json",
@@ -3941,7 +3956,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0247",
+      "asset_id": "AST-0248",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/strokes.ts",
       "name": "strokes.ts",
       "extension": ".ts",
@@ -3956,7 +3971,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0248",
+      "asset_id": "AST-0249",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/styles/LightSweep.tsx",
       "name": "LightSweep.tsx",
       "extension": ".tsx",
@@ -3971,7 +3986,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0249",
+      "asset_id": "AST-0250",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/src/styles/index.ts",
       "name": "index.ts",
       "extension": ".ts",
@@ -3986,7 +4001,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0250",
+      "asset_id": "AST-0251",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_LOGO_PROJECT/tsconfig.json",
       "name": "tsconfig.json",
       "extension": ".json",
@@ -4001,7 +4016,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0251",
+      "asset_id": "AST-0252",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/REMOTION_V2_BEST_PRACTICES.md",
       "name": "REMOTION_V2_BEST_PRACTICES.md",
       "extension": ".md",
@@ -4016,7 +4031,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0252",
+      "asset_id": "AST-0253",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/package.json",
       "name": "package.json",
       "extension": ".json",
@@ -4031,7 +4046,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0253",
+      "asset_id": "AST-0254",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/public/.gitkeep",
       "name": ".gitkeep",
       "extension": "(none)",
@@ -4046,7 +4061,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0254",
+      "asset_id": "AST-0255",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/remotion.config.ts",
       "name": "remotion.config.ts",
       "extension": ".ts",
@@ -4061,7 +4076,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0255",
+      "asset_id": "AST-0256",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/scripts/render.mjs",
       "name": "render.mjs",
       "extension": ".mjs",
@@ -4076,7 +4091,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0256",
+      "asset_id": "AST-0257",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/scripts/stills.mjs",
       "name": "stills.mjs",
       "extension": ".mjs",
@@ -4091,7 +4106,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0257",
+      "asset_id": "AST-0258",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/scripts/validate-timeline.mjs",
       "name": "validate-timeline.mjs",
       "extension": ".mjs",
@@ -4106,7 +4121,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0258",
+      "asset_id": "AST-0259",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/Root.tsx",
       "name": "Root.tsx",
       "extension": ".tsx",
@@ -4121,7 +4136,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0259",
+      "asset_id": "AST-0260",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/Video.tsx",
       "name": "Video.tsx",
       "extension": ".tsx",
@@ -4136,7 +4151,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0260",
+      "asset_id": "AST-0261",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/components/ArabicCaptionOverlay.tsx",
       "name": "ArabicCaptionOverlay.tsx",
       "extension": ".tsx",
@@ -4151,7 +4166,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0261",
+      "asset_id": "AST-0262",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/components/AudioSpectrumBar.tsx",
       "name": "AudioSpectrumBar.tsx",
       "extension": ".tsx",
@@ -4166,7 +4181,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0262",
+      "asset_id": "AST-0263",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/components/FikraChannelOutro.tsx",
       "name": "FikraChannelOutro.tsx",
       "extension": ".tsx",
@@ -4181,7 +4196,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0263",
+      "asset_id": "AST-0264",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/components/SceneTransition.tsx",
       "name": "SceneTransition.tsx",
       "extension": ".tsx",
@@ -4196,7 +4211,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0264",
+      "asset_id": "AST-0265",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/config.ts",
       "name": "config.ts",
       "extension": ".ts",
@@ -4211,7 +4226,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0265",
+      "asset_id": "AST-0266",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/data/words.json",
       "name": "words.json",
       "extension": ".json",
@@ -4226,7 +4241,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0266",
+      "asset_id": "AST-0267",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/index.ts",
       "name": "index.ts",
       "extension": ".ts",
@@ -4241,7 +4256,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0267",
+      "asset_id": "AST-0268",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/scenes/.gitkeep",
       "name": ".gitkeep",
       "extension": "(none)",
@@ -4256,7 +4271,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0268",
+      "asset_id": "AST-0269",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/scenes/SampleFikraHook.tsx",
       "name": "SampleFikraHook.tsx",
       "extension": ".tsx",
@@ -4271,7 +4286,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0269",
+      "asset_id": "AST-0270",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/timing.ts",
       "name": "timing.ts",
       "extension": ".ts",
@@ -4286,7 +4301,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0270",
+      "asset_id": "AST-0271",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/utils/rtl.ts",
       "name": "rtl.ts",
       "extension": ".ts",
@@ -4301,7 +4316,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0271",
+      "asset_id": "AST-0272",
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/tsconfig.json",
       "name": "tsconfig.json",
       "extension": ".json",
@@ -4316,7 +4331,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0272",
+      "asset_id": "AST-0273",
       "path": "08_PROJECT_ASSETS/FONTS_AND_RESOURCES/ARABIC_TYPOGRAPHY_AND_FONTS_GUIDE.md",
       "name": "ARABIC_TYPOGRAPHY_AND_FONTS_GUIDE.md",
       "extension": ".md",
@@ -4331,7 +4346,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0273",
+      "asset_id": "AST-0274",
       "path": "08_PROJECT_ASSETS/OBJECTS/OBJECT_CONTINUITY_RULES.md",
       "name": "OBJECT_CONTINUITY_RULES.md",
       "extension": ".md",
@@ -4346,7 +4361,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0274",
+      "asset_id": "AST-0275",
       "path": "08_PROJECT_ASSETS/OTHER_ASSETS/README.md",
       "name": "README.md",
       "extension": ".md",
@@ -4361,7 +4376,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0275",
+      "asset_id": "AST-0276",
       "path": "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_METADATA.json",
       "name": "ASSET_METADATA.json",
       "extension": ".json",
@@ -4376,7 +4391,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0276",
+      "asset_id": "AST-0277",
       "path": "09_ASSET_AND_RIGHTS_REGISTRY/RIGHTS_REGISTER.md",
       "name": "RIGHTS_REGISTER.md",
       "extension": ".md",
@@ -4391,7 +4406,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0277",
+      "asset_id": "AST-0278",
       "path": "10_QA_AND_TESTING/KNOWN_LIMITATIONS.md",
       "name": "KNOWN_LIMITATIONS.md",
       "extension": ".md",
@@ -4406,7 +4421,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0278",
+      "asset_id": "AST-0279",
       "path": "10_QA_AND_TESTING/PRODUCTION_VERIFICATION_GATE_V2.md",
       "name": "PRODUCTION_VERIFICATION_GATE_V2.md",
       "extension": ".md",
@@ -4421,7 +4436,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0279",
+      "asset_id": "AST-0280",
       "path": "10_QA_AND_TESTING/QA_SYSTEM.md",
       "name": "QA_SYSTEM.md",
       "extension": ".md",
@@ -4436,7 +4451,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0280",
+      "asset_id": "AST-0281",
       "path": "10_QA_AND_TESTING/REGRESSION_REPORT.md",
       "name": "REGRESSION_REPORT.md",
       "extension": ".md",
@@ -4451,7 +4466,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0281",
+      "asset_id": "AST-0282",
       "path": "10_QA_AND_TESTING/TEST_PLAN.md",
       "name": "TEST_PLAN.md",
       "extension": ".md",
@@ -4466,7 +4481,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0282",
+      "asset_id": "AST-0283",
       "path": "10_QA_AND_TESTING/TEST_RESULTS.md",
       "name": "TEST_RESULTS.md",
       "extension": ".md",
@@ -4481,7 +4496,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0283",
+      "asset_id": "AST-0284",
       "path": "10_QA_AND_TESTING/TEST_STRATEGY.md",
       "name": "TEST_STRATEGY.md",
       "extension": ".md",
@@ -4496,7 +4511,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0284",
+      "asset_id": "AST-0285",
       "path": "10_QA_AND_TESTING/V2_FORENSIC_QA_REPORT.md",
       "name": "V2_FORENSIC_QA_REPORT.md",
       "extension": ".md",
@@ -4511,7 +4526,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0285",
+      "asset_id": "AST-0286",
       "path": "11_VERSIONING_AND_DOCUMENTATION/ARCHITECTURE.md",
       "name": "ARCHITECTURE.md",
       "extension": ".md",
@@ -4526,7 +4541,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0286",
+      "asset_id": "AST-0287",
       "path": "11_VERSIONING_AND_DOCUMENTATION/CHANGELOG.md",
       "name": "CHANGELOG.md",
       "extension": ".md",
@@ -4541,7 +4556,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0287",
+      "asset_id": "AST-0288",
       "path": "11_VERSIONING_AND_DOCUMENTATION/CHANGELOG_V1_TO_V2.md",
       "name": "CHANGELOG_V1_TO_V2.md",
       "extension": ".md",
@@ -4556,7 +4571,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0288",
+      "asset_id": "AST-0289",
       "path": "11_VERSIONING_AND_DOCUMENTATION/DEVELOPMENT_GUIDE.md",
       "name": "DEVELOPMENT_GUIDE.md",
       "extension": ".md",
@@ -4571,7 +4586,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0289",
+      "asset_id": "AST-0290",
       "path": "11_VERSIONING_AND_DOCUMENTATION/MIGRATION_REPORT.md",
       "name": "MIGRATION_REPORT.md",
       "extension": ".md",
@@ -4586,7 +4601,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0290",
+      "asset_id": "AST-0291",
       "path": "99_SOURCE_ORIGINALS/ORIGINAL_SOURCE_01/SOURCE_01_MANIFEST.md",
       "name": "SOURCE_01_MANIFEST.md",
       "extension": ".md",
@@ -4601,7 +4616,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0291",
+      "asset_id": "AST-0292",
       "path": "99_SOURCE_ORIGINALS/ORIGINAL_SOURCE_02/SOURCE_02_MANIFEST.md",
       "name": "SOURCE_02_MANIFEST.md",
       "extension": ".md",
@@ -4616,27 +4631,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0292",
+      "asset_id": "AST-0293",
       "path": "ACTIVATION_PROMPT.md",
       "name": "ACTIVATION_PROMPT.md",
       "extension": ".md",
       "size_bytes": 6026,
-      "sha256": "be91d93c00a7997609caf51bc9e8e3515f59de94f81b7ecbff2c519e31d35bbc",
-      "category": "root_documentation",
-      "usage_type": "agent_entrypoint",
-      "rights_status": "Internal/Open-Source",
-      "style_ids": [],
-      "logo_ids": [],
-      "ref_ids": [],
-      "verified": true
-    },
-    {
-      "asset_id": "AST-0293",
-      "path": "AGENTS.md",
-      "name": "AGENTS.md",
-      "extension": ".md",
-      "size_bytes": 4527,
-      "sha256": "7cce7ff88a75ef7cdcc4de29c5145873c4cbb922b84e0dd88bc761e12a044769",
+      "sha256": "e467b7f4f74fd83c3b2e6f39a0ea74ab06e119c1fed1831e09a693ebc6d38171",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4647,11 +4647,11 @@
     },
     {
       "asset_id": "AST-0294",
-      "path": "AGENT_ONBOARDING_GUIDE.md",
-      "name": "AGENT_ONBOARDING_GUIDE.md",
+      "path": "AGENTS.md",
+      "name": "AGENTS.md",
       "extension": ".md",
-      "size_bytes": 2618,
-      "sha256": "d3cfcecf0a2b4da52a7f114cde13bce8f8b4e3e73b605be182202a2e256c8729",
+      "size_bytes": 4527,
+      "sha256": "a4b5402428bc99f78fb6a20b19140ff1b2fde3595d93be4ce63a0a10943b9816",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4662,11 +4662,11 @@
     },
     {
       "asset_id": "AST-0295",
-      "path": "ARCHITECTURE.md",
-      "name": "ARCHITECTURE.md",
+      "path": "AGENT_ONBOARDING_GUIDE.md",
+      "name": "AGENT_ONBOARDING_GUIDE.md",
       "extension": ".md",
-      "size_bytes": 5916,
-      "sha256": "0eb23542d53e610b83b0be77d7f62e0cfe7054125fdf193dcdaf93df4fc9d087",
+      "size_bytes": 2618,
+      "sha256": "650af164e2b425c68a0c9aec8b2fa2eddfbee331463c903dbc1983e59d60cbba",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4677,11 +4677,11 @@
     },
     {
       "asset_id": "AST-0296",
-      "path": "CHANGELOG.md",
-      "name": "CHANGELOG.md",
+      "path": "ARCHITECTURE.md",
+      "name": "ARCHITECTURE.md",
       "extension": ".md",
-      "size_bytes": 3732,
-      "sha256": "694ef040c526cd02fc3945db9ff6320b4cd0507b08d56eb865a7e5f33d1e85f4",
+      "size_bytes": 5916,
+      "sha256": "e8fe663ed004b5e1e2cdc1de65683daed0bd8ccdd86b0aa92d7a49441bfa7005",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4692,11 +4692,11 @@
     },
     {
       "asset_id": "AST-0297",
-      "path": "CLAUDE.md",
-      "name": "CLAUDE.md",
+      "path": "CHANGELOG.md",
+      "name": "CHANGELOG.md",
       "extension": ".md",
-      "size_bytes": 670,
-      "sha256": "e35f8c33bd6cb5ad395f901b0a76d74452daf8ab5bd505bc89bdac903fac8a6d",
+      "size_bytes": 6831,
+      "sha256": "23c21a9ef35f1cff264feec39d1bd34e64cf9ca958939d98b049bf9c0be2f9c1",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4707,6 +4707,21 @@
     },
     {
       "asset_id": "AST-0298",
+      "path": "CLAUDE.md",
+      "name": "CLAUDE.md",
+      "extension": ".md",
+      "size_bytes": 670,
+      "sha256": "b672a34cdbccc7b913af5c5ec8deda000507df1eb4fe3c9381dd244d21baa0cb",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0299",
       "path": "CONTRIBUTING.md",
       "name": "CONTRIBUTING.md",
       "extension": ".md",
@@ -4721,7 +4736,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0299",
+      "asset_id": "AST-0300",
       "path": "FIKRA_STUDIO_V3_2_CHANGELOG.md",
       "name": "FIKRA_STUDIO_V3_2_CHANGELOG.md",
       "extension": ".md",
@@ -4736,7 +4751,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0300",
+      "asset_id": "AST-0301",
       "path": "FIKRA_STUDIO_V3_2_ENHANCEMENT_REPORT.md",
       "name": "FIKRA_STUDIO_V3_2_ENHANCEMENT_REPORT.md",
       "extension": ".md",
@@ -4751,7 +4766,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0301",
+      "asset_id": "AST-0302",
       "path": "FIKRA_STUDIO_V3_3_CHANGELOG.md",
       "name": "FIKRA_STUDIO_V3_3_CHANGELOG.md",
       "extension": ".md",
@@ -4766,7 +4781,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0302",
+      "asset_id": "AST-0303",
       "path": "FIKRA_STUDIO_V3_3_ENHANCEMENT_REPORT.md",
       "name": "FIKRA_STUDIO_V3_3_ENHANCEMENT_REPORT.md",
       "extension": ".md",
@@ -4781,7 +4796,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0303",
+      "asset_id": "AST-0304",
       "path": "FIKRA_STYLE_GALLERY_GUIDE.md",
       "name": "FIKRA_STYLE_GALLERY_GUIDE.md",
       "extension": ".md",
@@ -4796,7 +4811,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0304",
+      "asset_id": "AST-0305",
       "path": "FIKRA_STYLE_NAMING_MAP.md",
       "name": "FIKRA_STYLE_NAMING_MAP.md",
       "extension": ".md",
@@ -4811,12 +4826,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0305",
+      "asset_id": "AST-0306",
       "path": "GEMINI.md",
       "name": "GEMINI.md",
       "extension": ".md",
       "size_bytes": 684,
-      "sha256": "eb7ee5618dceac53d04393ec379e9f4ecd5aaeab07cf07000ca3d48a36f8f627",
+      "sha256": "43358ecfefb4e7ef2d602e79c696a675508bede02b532628e0634c44637a18bc",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4826,7 +4841,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0306",
+      "asset_id": "AST-0307",
       "path": "ISSUES_REGISTER.md",
       "name": "ISSUES_REGISTER.md",
       "extension": ".md",
@@ -4841,7 +4856,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0307",
+      "asset_id": "AST-0308",
       "path": "MIGRATION_MAP.md",
       "name": "MIGRATION_MAP.md",
       "extension": ".md",
@@ -4856,27 +4871,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0308",
+      "asset_id": "AST-0309",
       "path": "PROJECT_MAP.md",
       "name": "PROJECT_MAP.md",
       "extension": ".md",
       "size_bytes": 3243,
-      "sha256": "35d684c6d859055b71c04309f070e77167fbda15052fc95447c93b24b50acd4b",
-      "category": "root_documentation",
-      "usage_type": "agent_entrypoint",
-      "rights_status": "Internal/Open-Source",
-      "style_ids": [],
-      "logo_ids": [],
-      "ref_ids": [],
-      "verified": true
-    },
-    {
-      "asset_id": "AST-0309",
-      "path": "README.md",
-      "name": "README.md",
-      "extension": ".md",
-      "size_bytes": 3264,
-      "sha256": "695da855470c7e67d885cb1d12525030ffeabd3d48573c19982e502981328e06",
+      "sha256": "a583e3c60c0f375ba8e3bde87e314cbd88cdf035086b5d5420d177b62d3d6a33",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4887,6 +4887,21 @@
     },
     {
       "asset_id": "AST-0310",
+      "path": "README.md",
+      "name": "README.md",
+      "extension": ".md",
+      "size_bytes": 3264,
+      "sha256": "eeeab310890349c00491e7973a985ec854509a4da2e9f136562ed9208d3ac5aa",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0311",
       "path": "REGRESSION_REPORT.md",
       "name": "REGRESSION_REPORT.md",
       "extension": ".md",
@@ -4901,7 +4916,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0311",
+      "asset_id": "AST-0312",
       "path": "SECURITY.md",
       "name": "SECURITY.md",
       "extension": ".md",
@@ -4916,7 +4931,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0312",
+      "asset_id": "AST-0313",
       "path": "SKILLS_AUDIT.md",
       "name": "SKILLS_AUDIT.md",
       "extension": ".md",
@@ -4931,7 +4946,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0313",
+      "asset_id": "AST-0314",
       "path": "TEST_RESULTS.md",
       "name": "TEST_RESULTS.md",
       "extension": ".md",
@@ -4946,7 +4961,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0314",
+      "asset_id": "AST-0315",
       "path": "TEST_STRATEGY.md",
       "name": "TEST_STRATEGY.md",
       "extension": ".md",
@@ -4961,12 +4976,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0315",
+      "asset_id": "AST-0316",
       "path": "V3_ARCHITECTURE.md",
       "name": "V3_ARCHITECTURE.md",
       "extension": ".md",
       "size_bytes": 5916,
-      "sha256": "0eb23542d53e610b83b0be77d7f62e0cfe7054125fdf193dcdaf93df4fc9d087",
+      "sha256": "e8fe663ed004b5e1e2cdc1de65683daed0bd8ccdd86b0aa92d7a49441bfa7005",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -4976,7 +4991,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0316",
+      "asset_id": "AST-0317",
       "path": "V3_DEVELOPMENT_PLAN.md",
       "name": "V3_DEVELOPMENT_PLAN.md",
       "extension": ".md",
@@ -4991,7 +5006,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0317",
+      "asset_id": "AST-0318",
       "path": "V3_READINESS_REPORT.md",
       "name": "V3_READINESS_REPORT.md",
       "extension": ".md",
@@ -5006,7 +5021,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0318",
+      "asset_id": "AST-0319",
       "path": "archive/baseline_manifests/v1_audit_sha256_manifest.json",
       "name": "v1_audit_sha256_manifest.json",
       "extension": ".json",
@@ -5021,7 +5036,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0319",
+      "asset_id": "AST-0320",
       "path": "archive/baseline_manifests/v1_core_sha256_manifest.json",
       "name": "v1_core_sha256_manifest.json",
       "extension": ".json",
@@ -5036,7 +5051,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0320",
+      "asset_id": "AST-0321",
       "path": "archive/baseline_manifests/v1_to_v2_diff_summary.json",
       "name": "v1_to_v2_diff_summary.json",
       "extension": ".json",
@@ -5051,7 +5066,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0321",
+      "asset_id": "AST-0322",
       "path": "archive/baseline_manifests/v2_core_sha256_manifest.json",
       "name": "v2_core_sha256_manifest.json",
       "extension": ".json",
@@ -5066,7 +5081,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0322",
+      "asset_id": "AST-0323",
       "path": "archive/baseline_manifests/v2_pro_sha256_manifest.json",
       "name": "v2_pro_sha256_manifest.json",
       "extension": ".json",
@@ -5081,7 +5096,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0323",
+      "asset_id": "AST-0324",
       "path": "archive/baseline_manifests/v3_1_1_pre_v32_sha256.json",
       "name": "v3_1_1_pre_v32_sha256.json",
       "extension": ".json",
@@ -5096,7 +5111,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0324",
+      "asset_id": "AST-0325",
       "path": "archive/baseline_manifests/v3_2_0_pre_v33_sha256.json",
       "name": "v3_2_0_pre_v33_sha256.json",
       "extension": ".json",
@@ -5111,27 +5126,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0325",
+      "asset_id": "AST-0326",
       "path": "fikra_v3/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
       "size_bytes": 817,
-      "sha256": "2e02de2cdf7e84eacdf5a3bda43c676de976db1aab7c9b348b4f5bc9385777fa",
-      "category": "v3_runtime",
-      "usage_type": "executable_engine",
-      "rights_status": "Internal/MIT",
-      "style_ids": [],
-      "logo_ids": [],
-      "ref_ids": [],
-      "verified": true
-    },
-    {
-      "asset_id": "AST-0326",
-      "path": "fikra_v3/__main__.py",
-      "name": "__main__.py",
-      "extension": ".py",
-      "size_bytes": 8015,
-      "sha256": "569df9393b856b43891295cb08b00a46e42a1f07f349ac7aeb0dcf45072ea628",
+      "sha256": "be9247cb0f5f9cba87a861ad61cf87ca22c796384a5e6b8596ca52e9502ef730",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -5142,6 +5142,21 @@
     },
     {
       "asset_id": "AST-0327",
+      "path": "fikra_v3/__main__.py",
+      "name": "__main__.py",
+      "extension": ".py",
+      "size_bytes": 8874,
+      "sha256": "b4a48db6abe3f31529651decf9cd314942b2f59d61a12b1d27b4b526b8f8b0db",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0328",
       "path": "fikra_v3/approval_guard.py",
       "name": "approval_guard.py",
       "extension": ".py",
@@ -5156,7 +5171,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0328",
+      "asset_id": "AST-0329",
       "path": "fikra_v3/arabic_qa.py",
       "name": "arabic_qa.py",
       "extension": ".py",
@@ -5171,7 +5186,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0329",
+      "asset_id": "AST-0330",
       "path": "fikra_v3/asset_intelligence.py",
       "name": "asset_intelligence.py",
       "extension": ".py",
@@ -5186,7 +5201,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0330",
+      "asset_id": "AST-0331",
       "path": "fikra_v3/context_loader.py",
       "name": "context_loader.py",
       "extension": ".py",
@@ -5201,7 +5216,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0331",
+      "asset_id": "AST-0332",
       "path": "fikra_v3/integrity_validator.py",
       "name": "integrity_validator.py",
       "extension": ".py",
@@ -5216,7 +5231,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0332",
+      "asset_id": "AST-0333",
       "path": "fikra_v3/knowledge_graph.py",
       "name": "knowledge_graph.py",
       "extension": ".py",
@@ -5231,7 +5246,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0333",
+      "asset_id": "AST-0334",
       "path": "fikra_v3/media_intelligence.py",
       "name": "media_intelligence.py",
       "extension": ".py",
@@ -5246,7 +5261,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0334",
+      "asset_id": "AST-0335",
       "path": "fikra_v3/model_adapter.py",
       "name": "model_adapter.py",
       "extension": ".py",
@@ -5261,7 +5276,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0335",
+      "asset_id": "AST-0336",
+      "path": "fikra_v3/motion_craft.py",
+      "name": "motion_craft.py",
+      "extension": ".py",
+      "size_bytes": 2828,
+      "sha256": "f26c4ce2b87f24e92b8b4b5ffaecf7226d2a8666acb627bbb7b5bead7ea251f5",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0337",
       "path": "fikra_v3/multi_agent_review.py",
       "name": "multi_agent_review.py",
       "extension": ".py",
@@ -5276,7 +5306,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0336",
+      "asset_id": "AST-0338",
       "path": "fikra_v3/project_bootstrap.py",
       "name": "project_bootstrap.py",
       "extension": ".py",
@@ -5291,7 +5321,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0337",
+      "asset_id": "AST-0339",
       "path": "fikra_v3/project_state.py",
       "name": "project_state.py",
       "extension": ".py",
@@ -5306,12 +5336,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0338",
+      "asset_id": "AST-0340",
       "path": "fikra_v3/prompt_compiler.py",
       "name": "prompt_compiler.py",
       "extension": ".py",
-      "size_bytes": 16496,
-      "sha256": "eb22e1812b0712a31e00859bc507b6c4643c690830cfb1cc0c07393682f4d50b",
+      "size_bytes": 18657,
+      "sha256": "160a15054fe18c708845dea46c498fa92cb29c1e83c02e561090451078f706fe",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -5321,7 +5351,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0339",
+      "asset_id": "AST-0341",
       "path": "fikra_v3/readiness_scorer.py",
       "name": "readiness_scorer.py",
       "extension": ".py",
@@ -5336,7 +5366,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0340",
+      "asset_id": "AST-0342",
       "path": "fikra_v3/regression_guard.py",
       "name": "regression_guard.py",
       "extension": ".py",
@@ -5351,7 +5381,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0341",
+      "asset_id": "AST-0343",
       "path": "fikra_v3/style_recommender.py",
       "name": "style_recommender.py",
       "extension": ".py",
@@ -5366,7 +5396,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0342",
+      "asset_id": "AST-0344",
       "path": "fikra_v3/visual_intelligence.py",
       "name": "visual_intelligence.py",
       "extension": ".py",
@@ -5381,7 +5411,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0343",
+      "asset_id": "AST-0345",
       "path": "tests/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
@@ -5396,7 +5426,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0344",
+      "asset_id": "AST-0346",
       "path": "tests/test_arabic_qa.py",
       "name": "test_arabic_qa.py",
       "extension": ".py",
@@ -5411,7 +5441,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0345",
+      "asset_id": "AST-0347",
       "path": "tests/test_asset_and_graph.py",
       "name": "test_asset_and_graph.py",
       "extension": ".py",
@@ -5426,7 +5456,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0346",
+      "asset_id": "AST-0348",
       "path": "tests/test_context_and_modes.py",
       "name": "test_context_and_modes.py",
       "extension": ".py",
@@ -5441,7 +5471,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0347",
+      "asset_id": "AST-0349",
       "path": "tests/test_engines_and_regression.py",
       "name": "test_engines_and_regression.py",
       "extension": ".py",
@@ -5456,7 +5486,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0348",
+      "asset_id": "AST-0350",
       "path": "tests/test_media_intelligence.py",
       "name": "test_media_intelligence.py",
       "extension": ".py",
@@ -5471,7 +5501,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0349",
+      "asset_id": "AST-0351",
       "path": "tests/test_production_readiness_fixes.py",
       "name": "test_production_readiness_fixes.py",
       "extension": ".py",
@@ -5486,7 +5516,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0350",
+      "asset_id": "AST-0352",
       "path": "tests/test_state_approvals_prompt.py",
       "name": "test_state_approvals_prompt.py",
       "extension": ".py",
@@ -5501,7 +5531,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0351",
+      "asset_id": "AST-0353",
       "path": "tests/test_v31_upgrades.py",
       "name": "test_v31_upgrades.py",
       "extension": ".py",
@@ -5516,7 +5546,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0352",
+      "asset_id": "AST-0354",
       "path": "tests/test_v32_visual_intelligence.py",
       "name": "test_v32_visual_intelligence.py",
       "extension": ".py",
@@ -5531,12 +5561,27 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0353",
+      "asset_id": "AST-0355",
       "path": "tests/test_v33_creative_experience.py",
       "name": "test_v33_creative_experience.py",
       "extension": ".py",
       "size_bytes": 5708,
       "sha256": "34229a15a90b09de1d18c090d91afa2262fd0dbf825e18536964332a96c92ccb",
+      "category": "qa_tests",
+      "usage_type": "automated_verification",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0356",
+      "path": "tests/test_v34_motion_craft.py",
+      "name": "test_v34_motion_craft.py",
+      "extension": ".py",
+      "size_bytes": 3708,
+      "sha256": "233804892bbc3732af0c0b2f70e1b726277619ec196e70926eedc23f37e5f141",
       "category": "qa_tests",
       "usage_type": "automated_verification",
       "rights_status": "Internal/MIT",

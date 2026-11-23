@@ -1,0 +1,156 @@
+{
+  "version": "3.4.0",
+  "inspired_by": [
+    {
+      "name": "remotion-dev/skills (remotion-best-practices)",
+      "url": "https://github.com/remotion-dev/skills",
+      "license": "MIT",
+      "adopted_ideas": ["useCurrentFrame() determinism", "spring() physics", "zero CSS transitions in Remotion"]
+    },
+    {
+      "name": "bangtutorial/bang-motion",
+      "url": "https://github.com/bangtutorial/bang-motion",
+      "license": "MIT",
+      "adopted_ideas": ["Video-Not-Slides continuous world", ">=30px mobile font floor at 1080w", "living backgrounds", "6 explainer archetypes"]
+    },
+    {
+      "name": "haidrrrry/claude-remotion-skill",
+      "url": "https://github.com/haidrrrry/claude-remotion-skill",
+      "license": "MIT",
+      "adopted_ideas": ["Render -> Extract Frames -> Inspect -> Fix loop", "staggered choreography", "film grain polish"]
+    },
+    {
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "license": "Apache-2.0",
+      "adopted_ideas": ["Anti-AI-slop design discipline", "explicit palette and typography briefs"]
+    }
+  ],
+  "strict_music_policy": "NO BACKGROUND MUSIC across ALL 9 FIKRA STUDIO modes. Only clean voiceover, justified SFX, subtle ambience, or intentional silence.",
+  "anti_slide_motion_rules": [
+    {
+      "id": "MC-01",
+      "name": "Video, Not Slides",
+      "rule": "Scenes must flow as one continuous world with motivated camera movement (push, pan, whip, zoom-to-subject) and a persistent visual thread. Never build flat fade-between-slides.",
+      "arabic_summary": "فيديو متصل وليس شرائح باوربوينت: حركة كاميرا مستمرة وربط بصري بين المشاهد بدون انتقالات باهتة متكررة."
+    },
+    {
+      "id": "MC-02",
+      "name": "Deterministic Frame Clock",
+      "rule": "In Remotion, drive 100% of motion via useCurrentFrame(), spring(), and interpolate(). CSS transitions, Tailwind animate-* classes, and Math.random() are forbidden.",
+      "arabic_summary": "توقيت حتمي مرتبط بالإطار: استخدام useCurrentFrame وspring فقط في Remotion ومنع Math.random أو CSS transitions."
+    },
+    {
+      "id": "MC-03",
+      "name": "Mobile Readability Floor",
+      "rule": "Never render on-screen text smaller than 30px on a 1080px-wide canvas. Keep at most 2 text hierarchy levels per scene.",
+      "arabic_summary": "وضوح القراءة على الجوال: لا يقل حجم الخط عن 30px في عرض 1080px مع مستويين نصيين كحد أقصى في المشهد."
+    },
+    {
+      "id": "MC-04",
+      "name": "Living Background",
+      "rule": "Backgrounds must never sit static. Use subtle parallax drift, fine film grain, or motivated palette shifts tied to story beats.",
+      "arabic_summary": "خلفية حية غير جامدة: حركة خفيفة أو ملمس حبيبي (Film Grain) أو تغير لوني مبرر مع تصاعد القصة."
+    },
+    {
+      "id": "MC-05",
+      "name": "Render-Inspect-Fix Loop",
+      "rule": "After rendering, always extract a labeled contact sheet and run FFmpeg blackdetect + Arabic RTL check before final delivery.",
+      "arabic_summary": "حلقة الفحص قبل التسليم: استخراج لقطات الشاشة وفحص الإطارات السوداء وسلامة العربية RTL قبل الاعتماد."
+    },
+    {
+      "id": "MC-06",
+      "name": "Zero Background Music",
+      "rule": "Background music and music generation are strictly forbidden in all 9 modes. Pair motion beats with justified SFX, voiceover, or intentional silence.",
+      "arabic_summary": "حظر الموسيقى بالكامل في الأوضاع التسعة: الاعتماد على التعليق الصوتي والمؤثرات الصوتية المبررة (SFX) أو الصمت المقصود فقط."
+    }
+  ],
+  "narrative_archetypes": [
+    {
+      "id": "ARC-01",
+      "slug": "VOX_SCRAPBOOK_COLLAGE",
+      "arabic_name": "الوثائقي الورقي وقصاصات الصحف (Vox Collage)",
+      "recommended_styles": ["STY-009", "STY-001"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Paper texture background, ripped newspaper cutouts, bold highlighter sweeps, dashed callouts, and spring-snapped archival cards.",
+      "audio_direction": "Crisp paper rustle and marker-sweep SFX paired with documentary voiceover; zero background music."
+    },
+    {
+      "id": "ARC-02",
+      "slug": "ARTICLE_TO_CHAPTER_EXPLAINER",
+      "arabic_name": "تحويل المقال إلى فصول ومخططات (Article2Explainer)",
+      "recommended_styles": ["STY-003", "STY-006"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Structured chapter progress bar, clean modular diagram cards, animated connector arrows, and camera focus shifts between concepts.",
+      "audio_direction": "Subtle UI click and chapter whoosh SFX paired with clear explanatory narration; zero background music."
+    },
+    {
+      "id": "ARC-03",
+      "slug": "HAND_DRAWN_INK_STEP",
+      "arabic_name": "الرسم اليدوي بالحبر خطوة بخطوة (Hand-Drawn Explainer)",
+      "recommended_styles": ["STY-008", "STY-002"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Warm paper canvas, progressive SVG stroke-dashoffset ink drawing, hand-sketched underlines, and concise Arabic annotations.",
+      "audio_direction": "Gentle pen-on-paper scratch SFX synchronized with line reveals; zero background music."
+    },
+    {
+      "id": "ARC-04",
+      "slug": "SHOTCRAFT_APP_PRODUCT_DEMO",
+      "arabic_name": "عرض التطبيقات والمواقع السينمائي (Shotcraft Demo)",
+      "recommended_styles": ["STY-010", "STY-014"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Real app or website screenshots placed inside clean 2.5D Fake-3D device frames, cursor-guided camera zooms, and crisp feature callout pills.",
+      "audio_direction": "Clean mechanical click and soft interface pop SFX; zero background music."
+    },
+    {
+      "id": "ARC-05",
+      "slug": "CONTINUOUS_ACTION_EXPLAINER",
+      "arabic_name": "الشرح بالحركة المتصلة (Continuous Action)",
+      "recommended_styles": ["STY-005", "STY-001"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "One persistent vector subject or camera path traveling continuously through maps, timelines, and live counters without hard slide resets.",
+      "audio_direction": "Motivated movement whooshes and counter tick SFX; zero background music."
+    },
+    {
+      "id": "ARC-06",
+      "slug": "VISUAL_JOURNALISM_DARK",
+      "arabic_name": "الصحافة البصرية الداكنة (Visual Journalism)",
+      "recommended_styles": ["STY-021", "STY-001"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Deep obsidian canvas, verified source-tagged evidence cards, glowing amber/red highlights, and precision camera push-ins.",
+      "audio_direction": "Low ambient room tone and crisp card-lock SFX; zero background music."
+    },
+    {
+      "id": "ARC-07",
+      "slug": "WATERCOLOR_POETIC_ESSAY",
+      "arabic_name": "الألوان المائية التأملية (Watercolor Essay)",
+      "recommended_styles": ["STY-018", "STY-027"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "FIKRA_CHANNEL_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "Soft watercolor wash transitions, organic brush-edge reveals, calm breathing camera drift, and clean gold/cream typography.",
+      "audio_direction": "Natural wind/ambience SFX and unhurried contemplative narration; zero background music."
+    },
+    {
+      "id": "ARC-08",
+      "slug": "STAGE_2D_IN_3D_DEPTH",
+      "arabic_name": "شخصيات 2D في مسرح عمق 2.5D (Fake 3D Stage)",
+      "recommended_styles": ["STY-014", "STY-004"],
+      "allowed_modes": ["UNIVERSAL_VIDEO_MODE", "STICKMAN_COMEDY_MODE", "PROMPT_ONLY_MODE"],
+      "visual_grammar": "2D illustrated or Stickman characters placed across multi-plane 2.5D Fake-3D parallax stage layers; zero photorealistic 3D humans.",
+      "audio_direction": "Expressive cartoon/foley SFX and crisp cuts; zero background music."
+    }
+  ],
+  "reel_effects_catalog": [
+    {"id": "RFX-01", "slug": "split-headline", "arabic_name": "عنوان منقسم ثنائي اللون", "use_case": "Visual Hook opener", "sfx": "crisp_whoosh"},
+    {"id": "RFX-02", "slug": "red-collage", "arabic_name": "كولاج أحمر عاجل", "use_case": "Problem escalation beat", "sfx": "paper_snap"},
+    {"id": "RFX-03", "slug": "pastel-card", "arabic_name": "بطاقة توضيحية ناعمة", "use_case": "Key takeaway highlight", "sfx": "soft_pop"},
+    {"id": "RFX-04", "slug": "logo-link", "arabic_name": "ربط الشعار بالمشهد", "use_case": "Brand or source attribution", "sfx": "subtle_chime_sfx"},
+    {"id": "RFX-05", "slug": "tier-list", "arabic_name": "تصنيف تراتبي (Tier List)", "use_case": "Comparing options or levels", "sfx": "card_place"},
+    {"id": "RFX-06", "slug": "checklist", "arabic_name": "قائمة تحقق متحركة", "use_case": "Actionable steps & summaries", "sfx": "tick_confirm"},
+    {"id": "RFX-07", "slug": "timeline", "arabic_name": "خط زمني متحرك", "use_case": "Historical or process progression", "sfx": "tick_sweep"},
+    {"id": "RFX-08", "slug": "place-in-grid", "arabic_name": "تثبيت العناصر في شبكة", "use_case": "Multi-item showcase", "sfx": "grid_lock"},
+    {"id": "RFX-09", "slug": "word-captions", "arabic_name": "ترجمة عربية متزامنة بدون قص", "use_case": "Rolling RTL caption overlay", "sfx": "none"},
+    {"id": "RFX-10", "slug": "pause-trimming", "arabic_name": "قص فجوات الصمت الزائدة", "use_case": "Tightening voiceover pacing", "sfx": "none"},
+    {"id": "RFX-11", "slug": "cover-star", "arabic_name": "إطار غلاف بارز للنهاية/البداية", "use_case": "Thumbnail & hook anchor", "sfx": "impact_thud"},
+    {"id": "RFX-12", "slug": "kinetic-callout", "arabic_name": "نداء رقمي/إحصائي متحرك", "use_case": "Emphasizing verified numbers", "sfx": "counter_click"}
+  ]
+}
