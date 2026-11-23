@@ -1,7 +1,7 @@
-"""FIKRA STUDIO V3.0 — Agent-First Universal Creative Production System."""
+"""FIKRA STUDIO V3.4 — Agent-First Universal Creative Production System."""
 from pathlib import Path
 
-__version__ = "3.3.0"
+__version__ = "3.4.0"
 
 MODES = (
     "UNIVERSAL_VIDEO_MODE",

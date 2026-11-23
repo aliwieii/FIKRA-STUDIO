@@ -1,6 +1,6 @@
 {
   "name": "FIKRA STUDIO",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "identity": "AGENT-FIRST UNIVERSAL CREATIVE PRODUCTION SYSTEM",
   "branch": "feature/v3.3-creative-experience",
   "source_of_truth": "AGENTS.md",
@@ -57,5 +57,18 @@
     "external_gallery": "03_STYLE_LIBRARY/STYLE_EXTERNAL_GALLERY.json",
     "html_gallery": "03_STYLE_LIBRARY/FIKRA_STYLE_GALLERY_V33.html",
     "naming_map": "FIKRA_STYLE_NAMING_MAP.md"
+  },
+  "release_tag": "v3.4.0",
+  "v3_4_upgrades": {
+    "motion_craft_catalog": "03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json",
+    "motion_craft_module": "fikra_v3/motion_craft.py",
+    "prompt_compiler": "compile_v34_production_prompt",
+    "cli_commands": [
+      "presets",
+      "craft-check"
+    ],
+    "anti_slide_rules": 6,
+    "narrative_archetypes": 8,
+    "reel_effects": 12
   }
 }
