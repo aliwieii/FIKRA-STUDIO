@@ -1,7 +1,6 @@
 // FIKRA STUDIO V2.0 — Sample 9:16 Vertical Scene (Frame-Driven Push-In + RTL Kinetic Title)
 import React from 'react';
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
-import { ArabicCaptionOverlay } from '../components/ArabicCaptionOverlay';
 import { AudioSpectrumBar } from '../components/AudioSpectrumBar';
 import { FIKRA_COLORS, FIKRA_FONTS, SAFE_ZONE_9_16, rtlStyle } from '../utils/rtl';
 
@@ -49,7 +48,6 @@ export const SampleFikraHook: React.FC<{ from: number; headline?: string }> = ({
         </div>
         <AudioSpectrumBar bars={20} color={FIKRA_COLORS.accentCyan} height={56} />
       </div>
-      <ArabicCaptionOverlay mode="narrative" />
     </AbsoluteFill>
   );
 };

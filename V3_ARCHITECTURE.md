@@ -1,4 +1,4 @@
-# ARCHITECTURE — FIKRA STUDIO V3.5 (Agent-First Universal Creative Production System)
+# ARCHITECTURE — FIKRA STUDIO V3.6 (Agent-First Universal Creative Production System)
 
 ## 1. Architectural Principles
 1. **Single Source of Truth:** `AGENTS.md` + `SYSTEM_MANIFEST.json` govern all agents; `GEMINI.md` and `CLAUDE.md` are thin pointers.

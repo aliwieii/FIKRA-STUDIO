@@ -160,3 +160,60 @@ def detect_black_frames(media_path: Path, min_duration: float = 0.2, pix_th: flo
         "black_intervals": intervals,
         "pass": len(intervals) == 0,
     }
+
+
+def analyze_audio_mastering(media_path: Path, video_duration_sec: float | None = None) -> dict[str, Any]:
+    """V3.6 Real FFmpeg Audio Mastering audit: LUFS integrated loudness, true peak, clipping, channel/SR & sync."""
+    base = analyze_audio_real(media_path)
+    if not base.get("has_audio"):
+        return {
+            "pass": False,
+            "file": media_path.name,
+            "has_audio": False,
+            "reason": "No audio stream found for mastering check.",
+        }
+
+    # Measure EBU R128 integrated loudness & true peak via ffmpeg
+    cmd = ["ffmpeg", "-hide_banner", "-i", str(media_path), "-af", "ebur128=peak=true", "-f", "null", "-"]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    lufs, true_peak = None, None
+    for line in res.stderr.splitlines():
+        s = line.strip()
+        if s.startswith("I:") and "LUFS" in s:
+            try:
+                lufs = float(s.split("I:")[1].split("LUFS")[0].strip())
+            except ValueError:
+                pass
+        elif s.startswith("Peak:") and "dBFS" in s:
+            try:
+                true_peak = float(s.split("Peak:")[1].split("dBFS")[0].strip())
+            except ValueError:
+                pass
+
+    dur = float(base.get("duration_sec", 0.0))
+    av_sync_diff = round(abs(dur - video_duration_sec), 3) if video_duration_sec is not None else 0.0
+    blocking = []
+    if base.get("clipping_risk"):
+        blocking.append("Peak clipping risk (>= -0.5 dB).")
+    if true_peak is not None and true_peak > -1.0:
+        blocking.append(f"True peak {true_peak} dBFS exceeds -1.0 dBFS ceiling.")
+    if av_sync_diff > 1.5:
+        blocking.append(f"Audio/video duration mismatch ({av_sync_diff}s).")
+
+    return {
+        "pass": len(blocking) == 0,
+        "measurement_type": "REAL_FFMPEG_EBUR128_MASTERING",
+        "file": media_path.name,
+        "sha256": base.get("sha256"),
+        "sample_rate": base.get("sample_rate"),
+        "channels": base.get("channels"),
+        "duration_sec": dur,
+        "integrated_loudness_lufs": lufs,
+        "true_peak_dbfs": true_peak,
+        "mean_volume_db": base.get("mean_volume_db"),
+        "max_volume_db": base.get("max_volume_db"),
+        "clipping_risk": base.get("clipping_risk"),
+        "silence_intervals": base.get("silence_intervals", []),
+        "av_sync_diff_sec": av_sync_diff,
+        "blocking_failures": blocking,
+    }

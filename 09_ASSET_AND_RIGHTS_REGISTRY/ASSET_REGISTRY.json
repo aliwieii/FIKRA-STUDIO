@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0.0",
-  "generated_at_utc": "2026-11-28T13:51:56Z",
-  "total_assets": 420,
-  "total_bytes": 183279737,
+  "generated_at_utc": "2026-11-28T14:35:26Z",
+  "total_assets": 429,
+  "total_bytes": 183324629,
   "excluded_self_generated": [
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_INDEX.csv",
     "09_ASSET_AND_RIGHTS_REGISTRY/ASSET_REGISTRY.csv",
@@ -20,7 +20,7 @@
       "name": "ci.yml",
       "extension": ".yml",
       "size_bytes": 1637,
-      "sha256": "e6684e564bc28bc1e4acdd220938f1380f5e6a9829edc2669c2d3d08b93b5f8a",
+      "sha256": "4eed9b2117d87614f108da23f2029f0851fdbebbf10e565015cbffa8bde4ba49",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -289,8 +289,8 @@
       "path": "02_WORKFLOWS/UNIVERSAL_VIDEO_WORKFLOW.md",
       "name": "UNIVERSAL_VIDEO_WORKFLOW.md",
       "extension": ".md",
-      "size_bytes": 5774,
-      "sha256": "56816bc23ab15cc7f2b9873b0bb9656f8461ee09d4fb81109471791e138c32e8",
+      "size_bytes": 6007,
+      "sha256": "f5ffd2bfd58b11c5c52563925ab8d33404af24d463b1f3a8d038782c202b3b26",
       "category": "system_core",
       "usage_type": "agent_governance",
       "rights_status": "Internal/Core",
@@ -5246,8 +5246,8 @@
       "path": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/MOTALIM_REMOTION_VIDEO_TEMPLATE/src/scenes/SampleFikraHook.tsx",
       "name": "SampleFikraHook.tsx",
       "extension": ".tsx",
-      "size_bytes": 2014,
-      "sha256": "fefccf76a0c6068bc12f815e514678bbf7b430c81f84a80ce93046c8383c1423",
+      "size_bytes": 1891,
+      "sha256": "f13c5117897ead7925852179cca0287f77989b8338f2b2a9723edf545e672b00",
       "category": "production_engine",
       "usage_type": "code_and_templates",
       "rights_status": "Internal/MIT-Compatible",
@@ -5381,8 +5381,8 @@
       "path": "10_QA_AND_TESTING/KNOWN_LIMITATIONS.md",
       "name": "KNOWN_LIMITATIONS.md",
       "extension": ".md",
-      "size_bytes": 2671,
-      "sha256": "b2d2c89ec7ef2679b4b36aaaa2176e306b010d3ffbd7c23deab6a812426bcd97",
+      "size_bytes": 2880,
+      "sha256": "da9702af45c88b003937a017eda248a8384183379c0c8f15d20a0741e56ec664",
       "category": "governance_qa",
       "usage_type": "audit_and_registry",
       "rights_status": "Internal/Governance",
@@ -5456,8 +5456,8 @@
       "path": "10_QA_AND_TESTING/TEST_RESULTS.md",
       "name": "TEST_RESULTS.md",
       "extension": ".md",
-      "size_bytes": 4065,
-      "sha256": "ac2838f4b27e645f949ee85cdc36abba03b8c6578a6826b12508e6cfb61a1dc1",
+      "size_bytes": 4244,
+      "sha256": "85da2153b3def8ca7bfd93477b88fc63bb792baa5e003ebed38e7866fc323181",
       "category": "governance_qa",
       "usage_type": "audit_and_registry",
       "rights_status": "Internal/Governance",
@@ -5471,8 +5471,8 @@
       "path": "10_QA_AND_TESTING/TEST_STRATEGY.md",
       "name": "TEST_STRATEGY.md",
       "extension": ".md",
-      "size_bytes": 2068,
-      "sha256": "1fb86a33be9580a7a4e66d5d37afdfb91e0dadc103a4a6dd8d91dc84477f5a7c",
+      "size_bytes": 2371,
+      "sha256": "6e8b13cc6f363a94dcc99c9f9ff35260fe0d406df14ce8459afa3fbfc90ce7e4",
       "category": "governance_qa",
       "usage_type": "audit_and_registry",
       "rights_status": "Internal/Governance",
@@ -5498,6 +5498,21 @@
     },
     {
       "asset_id": "AST-0347",
+      "path": "10_QA_AND_TESTING/V36_BASELINE_AUDIT.md",
+      "name": "V36_BASELINE_AUDIT.md",
+      "extension": ".md",
+      "size_bytes": 2307,
+      "sha256": "f1bf4672db17036a39d1ec74d9a6f78c94ffc9bfc37431bc6dd9add54d047865",
+      "category": "governance_qa",
+      "usage_type": "audit_and_registry",
+      "rights_status": "Internal/Governance",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0348",
       "path": "11_VERSIONING_AND_DOCUMENTATION/ARCHITECTURE.md",
       "name": "ARCHITECTURE.md",
       "extension": ".md",
@@ -5512,7 +5527,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0348",
+      "asset_id": "AST-0349",
       "path": "11_VERSIONING_AND_DOCUMENTATION/CHANGELOG.md",
       "name": "CHANGELOG.md",
       "extension": ".md",
@@ -5527,7 +5542,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0349",
+      "asset_id": "AST-0350",
       "path": "11_VERSIONING_AND_DOCUMENTATION/CHANGELOG_V1_TO_V2.md",
       "name": "CHANGELOG_V1_TO_V2.md",
       "extension": ".md",
@@ -5542,7 +5557,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0350",
+      "asset_id": "AST-0351",
       "path": "11_VERSIONING_AND_DOCUMENTATION/DEVELOPMENT_GUIDE.md",
       "name": "DEVELOPMENT_GUIDE.md",
       "extension": ".md",
@@ -5557,7 +5572,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0351",
+      "asset_id": "AST-0352",
       "path": "11_VERSIONING_AND_DOCUMENTATION/MIGRATION_REPORT.md",
       "name": "MIGRATION_REPORT.md",
       "extension": ".md",
@@ -5572,7 +5587,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0352",
+      "asset_id": "AST-0353",
       "path": "99_SOURCE_ORIGINALS/ORIGINAL_SOURCE_01/SOURCE_01_MANIFEST.md",
       "name": "SOURCE_01_MANIFEST.md",
       "extension": ".md",
@@ -5587,7 +5602,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0353",
+      "asset_id": "AST-0354",
       "path": "99_SOURCE_ORIGINALS/ORIGINAL_SOURCE_02/SOURCE_02_MANIFEST.md",
       "name": "SOURCE_02_MANIFEST.md",
       "extension": ".md",
@@ -5602,27 +5617,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0354",
+      "asset_id": "AST-0355",
       "path": "ACTIVATION_PROMPT.md",
       "name": "ACTIVATION_PROMPT.md",
       "extension": ".md",
       "size_bytes": 6026,
-      "sha256": "e9a6bf4190d2fe0d5c7306037a2cceeb78b99e6e6906710a7bc8a4723dd1c3a1",
-      "category": "root_documentation",
-      "usage_type": "agent_entrypoint",
-      "rights_status": "Internal/Open-Source",
-      "style_ids": [],
-      "logo_ids": [],
-      "ref_ids": [],
-      "verified": true
-    },
-    {
-      "asset_id": "AST-0355",
-      "path": "AGENTS.md",
-      "name": "AGENTS.md",
-      "extension": ".md",
-      "size_bytes": 4527,
-      "sha256": "0e6bfe99ac2ba0a28f23b50915d79bbe1d4a53e6322059cb1e2558b32e4dfc22",
+      "sha256": "f496b4fe6dfc6f025b628b1eabc0ce94d9955cad96956b28f4556e8fef224811",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -5633,11 +5633,11 @@
     },
     {
       "asset_id": "AST-0356",
-      "path": "AGENT_ONBOARDING_GUIDE.md",
-      "name": "AGENT_ONBOARDING_GUIDE.md",
+      "path": "AGENTS.md",
+      "name": "AGENTS.md",
       "extension": ".md",
-      "size_bytes": 2618,
-      "sha256": "f67d4d2dd5fe96d1908ddc5aad309ba08aaf600d8094d3f089c5c086a7499984",
+      "size_bytes": 4527,
+      "sha256": "b00e730f1d5387167b1246df265c45caa89f269b0f6cdf694a5003c1de1ae9c5",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -5648,6 +5648,21 @@
     },
     {
       "asset_id": "AST-0357",
+      "path": "AGENT_ONBOARDING_GUIDE.md",
+      "name": "AGENT_ONBOARDING_GUIDE.md",
+      "extension": ".md",
+      "size_bytes": 2618,
+      "sha256": "7f76a086920902277e717339f38587b5e7ca40c26bd4912cf92f0d1fc5f3b29c",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0358",
       "path": "ARCHITECTURE.md",
       "name": "ARCHITECTURE.md",
       "extension": ".md",
@@ -5662,12 +5677,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0358",
+      "asset_id": "AST-0359",
       "path": "CHANGELOG.md",
       "name": "CHANGELOG.md",
       "extension": ".md",
-      "size_bytes": 8157,
-      "sha256": "5c001c4193528ae784744b8c19878e384137a7194c0bbd100ba61924493e5284",
+      "size_bytes": 9437,
+      "sha256": "84b2245b796015dd354992eb7c012a4e49d13a3ceb435acbf261863d7c69812b",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -5677,7 +5692,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0359",
+      "asset_id": "AST-0360",
       "path": "CLAUDE.md",
       "name": "CLAUDE.md",
       "extension": ".md",
@@ -5692,7 +5707,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0360",
+      "asset_id": "AST-0361",
       "path": "CONTRIBUTING.md",
       "name": "CONTRIBUTING.md",
       "extension": ".md",
@@ -5707,7 +5722,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0361",
+      "asset_id": "AST-0362",
       "path": "FIKRA_STUDIO_V3_2_CHANGELOG.md",
       "name": "FIKRA_STUDIO_V3_2_CHANGELOG.md",
       "extension": ".md",
@@ -5722,7 +5737,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0362",
+      "asset_id": "AST-0363",
       "path": "FIKRA_STUDIO_V3_2_ENHANCEMENT_REPORT.md",
       "name": "FIKRA_STUDIO_V3_2_ENHANCEMENT_REPORT.md",
       "extension": ".md",
@@ -5737,7 +5752,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0363",
+      "asset_id": "AST-0364",
       "path": "FIKRA_STUDIO_V3_3_CHANGELOG.md",
       "name": "FIKRA_STUDIO_V3_3_CHANGELOG.md",
       "extension": ".md",
@@ -5752,7 +5767,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0364",
+      "asset_id": "AST-0365",
       "path": "FIKRA_STUDIO_V3_3_ENHANCEMENT_REPORT.md",
       "name": "FIKRA_STUDIO_V3_3_ENHANCEMENT_REPORT.md",
       "extension": ".md",
@@ -5767,7 +5782,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0365",
+      "asset_id": "AST-0366",
       "path": "FIKRA_STYLE_GALLERY_GUIDE.md",
       "name": "FIKRA_STYLE_GALLERY_GUIDE.md",
       "extension": ".md",
@@ -5782,7 +5797,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0366",
+      "asset_id": "AST-0367",
       "path": "FIKRA_STYLE_NAMING_MAP.md",
       "name": "FIKRA_STYLE_NAMING_MAP.md",
       "extension": ".md",
@@ -5797,7 +5812,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0367",
+      "asset_id": "AST-0368",
       "path": "GEMINI.md",
       "name": "GEMINI.md",
       "extension": ".md",
@@ -5812,7 +5827,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0368",
+      "asset_id": "AST-0369",
       "path": "ISSUES_REGISTER.md",
       "name": "ISSUES_REGISTER.md",
       "extension": ".md",
@@ -5827,7 +5842,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0369",
+      "asset_id": "AST-0370",
       "path": "MIGRATION_MAP.md",
       "name": "MIGRATION_MAP.md",
       "extension": ".md",
@@ -5842,27 +5857,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0370",
+      "asset_id": "AST-0371",
       "path": "PROJECT_MAP.md",
       "name": "PROJECT_MAP.md",
       "extension": ".md",
       "size_bytes": 3243,
-      "sha256": "4ccd8039f07fced1ee8d7ec6f4eca455a6a18558253a217d0d0f35bc054b566f",
-      "category": "root_documentation",
-      "usage_type": "agent_entrypoint",
-      "rights_status": "Internal/Open-Source",
-      "style_ids": [],
-      "logo_ids": [],
-      "ref_ids": [],
-      "verified": true
-    },
-    {
-      "asset_id": "AST-0371",
-      "path": "README.md",
-      "name": "README.md",
-      "extension": ".md",
-      "size_bytes": 3264,
-      "sha256": "38a7a5c2c882f6c08a88e0598f58daa91ad7a46019d7739bdb857cb2c0befafc",
+      "sha256": "8f69764514e240661d5df7519cfc58196e0471b05537f944f5fcccefa01249ea",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -5873,6 +5873,21 @@
     },
     {
       "asset_id": "AST-0372",
+      "path": "README.md",
+      "name": "README.md",
+      "extension": ".md",
+      "size_bytes": 3264,
+      "sha256": "6eb413b573ae6e6f7e4d7321c0f4cadf677b12dd166f27c445315d7930f9b182",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0373",
       "path": "REGRESSION_REPORT.md",
       "name": "REGRESSION_REPORT.md",
       "extension": ".md",
@@ -5887,7 +5902,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0373",
+      "asset_id": "AST-0374",
       "path": "SECURITY.md",
       "name": "SECURITY.md",
       "extension": ".md",
@@ -5902,7 +5917,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0374",
+      "asset_id": "AST-0375",
       "path": "SKILLS_AUDIT.md",
       "name": "SKILLS_AUDIT.md",
       "extension": ".md",
@@ -5917,7 +5932,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0375",
+      "asset_id": "AST-0376",
       "path": "TEST_RESULTS.md",
       "name": "TEST_RESULTS.md",
       "extension": ".md",
@@ -5932,7 +5947,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0376",
+      "asset_id": "AST-0377",
       "path": "TEST_STRATEGY.md",
       "name": "TEST_STRATEGY.md",
       "extension": ".md",
@@ -5947,12 +5962,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0377",
-      "path": "V3_ARCHITECTURE.md",
-      "name": "V3_ARCHITECTURE.md",
+      "asset_id": "AST-0378",
+      "path": "V3_6_MIGRATION_AND_COMPATIBILITY.md",
+      "name": "V3_6_MIGRATION_AND_COMPATIBILITY.md",
       "extension": ".md",
-      "size_bytes": 5916,
-      "sha256": "e22df521d1a2aadfc171e52364de83816019181557f215b3443c00ce47992340",
+      "size_bytes": 768,
+      "sha256": "ac8950ca2b22ed64f04e4f327e464addbfabcdb99e66bc5154ec4b17a0feb1d4",
       "category": "root_documentation",
       "usage_type": "agent_entrypoint",
       "rights_status": "Internal/Open-Source",
@@ -5962,7 +5977,37 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0378",
+      "asset_id": "AST-0379",
+      "path": "V3_6_QUALITY_EVOLUTION_REPORT.md",
+      "name": "V3_6_QUALITY_EVOLUTION_REPORT.md",
+      "extension": ".md",
+      "size_bytes": 2046,
+      "sha256": "2938dff4eccf3523851e173a22e794bff0c63327840513993b7a5a33bb6157e9",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0380",
+      "path": "V3_ARCHITECTURE.md",
+      "name": "V3_ARCHITECTURE.md",
+      "extension": ".md",
+      "size_bytes": 5916,
+      "sha256": "8436411d90c45748407088c26137292853ac0acced6e55a1f1e97890f316de63",
+      "category": "root_documentation",
+      "usage_type": "agent_entrypoint",
+      "rights_status": "Internal/Open-Source",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0381",
       "path": "V3_DEVELOPMENT_PLAN.md",
       "name": "V3_DEVELOPMENT_PLAN.md",
       "extension": ".md",
@@ -5977,7 +6022,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0379",
+      "asset_id": "AST-0382",
       "path": "V3_READINESS_REPORT.md",
       "name": "V3_READINESS_REPORT.md",
       "extension": ".md",
@@ -5992,7 +6037,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0380",
+      "asset_id": "AST-0383",
       "path": "archive/baseline_manifests/v1_audit_sha256_manifest.json",
       "name": "v1_audit_sha256_manifest.json",
       "extension": ".json",
@@ -6007,7 +6052,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0381",
+      "asset_id": "AST-0384",
       "path": "archive/baseline_manifests/v1_core_sha256_manifest.json",
       "name": "v1_core_sha256_manifest.json",
       "extension": ".json",
@@ -6022,7 +6067,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0382",
+      "asset_id": "AST-0385",
       "path": "archive/baseline_manifests/v1_to_v2_diff_summary.json",
       "name": "v1_to_v2_diff_summary.json",
       "extension": ".json",
@@ -6037,7 +6082,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0383",
+      "asset_id": "AST-0386",
       "path": "archive/baseline_manifests/v2_core_sha256_manifest.json",
       "name": "v2_core_sha256_manifest.json",
       "extension": ".json",
@@ -6052,7 +6097,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0384",
+      "asset_id": "AST-0387",
       "path": "archive/baseline_manifests/v2_pro_sha256_manifest.json",
       "name": "v2_pro_sha256_manifest.json",
       "extension": ".json",
@@ -6067,7 +6112,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0385",
+      "asset_id": "AST-0388",
       "path": "archive/baseline_manifests/v3_1_1_pre_v32_sha256.json",
       "name": "v3_1_1_pre_v32_sha256.json",
       "extension": ".json",
@@ -6082,7 +6127,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0386",
+      "asset_id": "AST-0389",
       "path": "archive/baseline_manifests/v3_2_0_pre_v33_sha256.json",
       "name": "v3_2_0_pre_v33_sha256.json",
       "extension": ".json",
@@ -6097,12 +6142,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0387",
+      "asset_id": "AST-0390",
       "path": "fikra_v3/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
       "size_bytes": 817,
-      "sha256": "fd080d6faf769635430a9df1a21f6e2444f25a8996ee55ef521d5dbcb4e0f16e",
+      "sha256": "f583dcc00f5eed3b2cf55865e4036b4397d867fe8b1abd164739a16434184cf6",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -6112,12 +6157,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0388",
+      "asset_id": "AST-0391",
       "path": "fikra_v3/__main__.py",
       "name": "__main__.py",
       "extension": ".py",
-      "size_bytes": 10630,
-      "sha256": "64511bb3b9ce0aeb95f16c5e81bdf12544628c7604555558fe15421f8fa1e512",
+      "size_bytes": 11243,
+      "sha256": "21d1d02c8d75aecc5b8979acfc07caea5c8cd86a61a43954c191ee5f9064820e",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -6127,7 +6172,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0389",
+      "asset_id": "AST-0392",
       "path": "fikra_v3/approval_guard.py",
       "name": "approval_guard.py",
       "extension": ".py",
@@ -6142,12 +6187,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0390",
+      "asset_id": "AST-0393",
       "path": "fikra_v3/arabic_qa.py",
       "name": "arabic_qa.py",
       "extension": ".py",
-      "size_bytes": 5124,
-      "sha256": "5e7625cd4228a5138a78cdee49a2164273fc980089526ca3da68e67b80484d4e",
+      "size_bytes": 8026,
+      "sha256": "e3ebd373a26c14fd7681d3dc1269be530c74366049ea6fed2e4411ed8bef983f",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -6157,7 +6202,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0391",
+      "asset_id": "AST-0394",
       "path": "fikra_v3/asset_intelligence.py",
       "name": "asset_intelligence.py",
       "extension": ".py",
@@ -6172,7 +6217,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0392",
+      "asset_id": "AST-0395",
+      "path": "fikra_v3/consistency_engine.py",
+      "name": "consistency_engine.py",
+      "extension": ".py",
+      "size_bytes": 1898,
+      "sha256": "89a6a1a8303ca83a3dcd98d878353fd7b0cbfd26359685c6d1c9d82c12a1f637",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0396",
       "path": "fikra_v3/context_loader.py",
       "name": "context_loader.py",
       "extension": ".py",
@@ -6187,7 +6247,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0393",
+      "asset_id": "AST-0397",
       "path": "fikra_v3/integrity_validator.py",
       "name": "integrity_validator.py",
       "extension": ".py",
@@ -6202,7 +6262,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0394",
+      "asset_id": "AST-0398",
       "path": "fikra_v3/knowledge_graph.py",
       "name": "knowledge_graph.py",
       "extension": ".py",
@@ -6217,12 +6277,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0395",
+      "asset_id": "AST-0399",
       "path": "fikra_v3/media_intelligence.py",
       "name": "media_intelligence.py",
       "extension": ".py",
-      "size_bytes": 6313,
-      "sha256": "9a22832de8cd8bcdb2f409e73590f40f3a514175dd379b95f3d8c892a4c052cb",
+      "size_bytes": 8716,
+      "sha256": "d91570e4a0115ad1d6eaf88a00f2a041c4471217e2ede1ef49909c386231b43c",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -6232,7 +6292,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0396",
+      "asset_id": "AST-0400",
       "path": "fikra_v3/model_adapter.py",
       "name": "model_adapter.py",
       "extension": ".py",
@@ -6247,7 +6307,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0397",
+      "asset_id": "AST-0401",
       "path": "fikra_v3/motion_craft.py",
       "name": "motion_craft.py",
       "extension": ".py",
@@ -6262,7 +6322,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0398",
+      "asset_id": "AST-0402",
       "path": "fikra_v3/multi_agent_review.py",
       "name": "multi_agent_review.py",
       "extension": ".py",
@@ -6277,7 +6337,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0399",
+      "asset_id": "AST-0403",
       "path": "fikra_v3/project_bootstrap.py",
       "name": "project_bootstrap.py",
       "extension": ".py",
@@ -6292,7 +6352,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0400",
+      "asset_id": "AST-0404",
       "path": "fikra_v3/project_state.py",
       "name": "project_state.py",
       "extension": ".py",
@@ -6307,7 +6367,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0401",
+      "asset_id": "AST-0405",
       "path": "fikra_v3/prompt_compiler.py",
       "name": "prompt_compiler.py",
       "extension": ".py",
@@ -6322,7 +6382,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0402",
+      "asset_id": "AST-0406",
+      "path": "fikra_v3/quality_scorer.py",
+      "name": "quality_scorer.py",
+      "extension": ".py",
+      "size_bytes": 4782,
+      "sha256": "2b1abf48ba37436e79084f324ed8357eee5d7a72a406d88604acec0ea08e0cca",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0407",
       "path": "fikra_v3/readiness_scorer.py",
       "name": "readiness_scorer.py",
       "extension": ".py",
@@ -6337,7 +6412,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0403",
+      "asset_id": "AST-0408",
       "path": "fikra_v3/regression_guard.py",
       "name": "regression_guard.py",
       "extension": ".py",
@@ -6352,7 +6427,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0404",
+      "asset_id": "AST-0409",
+      "path": "fikra_v3/scene_schema.py",
+      "name": "scene_schema.py",
+      "extension": ".py",
+      "size_bytes": 3409,
+      "sha256": "876d6e2b0f457ef74a4287b66ce4bc54cbe2da91c266a3a78120b3ba4eb6604c",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0410",
       "path": "fikra_v3/sfx_synthesizer.py",
       "name": "sfx_synthesizer.py",
       "extension": ".py",
@@ -6367,7 +6457,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0405",
+      "asset_id": "AST-0411",
+      "path": "fikra_v3/style_execution.py",
+      "name": "style_execution.py",
+      "extension": ".py",
+      "size_bytes": 3547,
+      "sha256": "d65561caa920fbc7f9d139bc759bc9df0731d6821d162ba4effe14efbaf1ea27",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0412",
       "path": "fikra_v3/style_recommender.py",
       "name": "style_recommender.py",
       "extension": ".py",
@@ -6382,12 +6487,12 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0406",
+      "asset_id": "AST-0413",
       "path": "fikra_v3/tiktok_retention.py",
       "name": "tiktok_retention.py",
       "extension": ".py",
-      "size_bytes": 4425,
-      "sha256": "b019194abb26317a4e0c438f9f18efa08dbe3eaf4936d23edce47ea7dd7a1cfe",
+      "size_bytes": 6737,
+      "sha256": "25c1d9c5868b96675469c0bb65d32e1c414bbd1fb4095b457bc9d5a0eed6164c",
       "category": "v3_runtime",
       "usage_type": "executable_engine",
       "rights_status": "Internal/MIT",
@@ -6397,7 +6502,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0407",
+      "asset_id": "AST-0414",
       "path": "fikra_v3/visual_intelligence.py",
       "name": "visual_intelligence.py",
       "extension": ".py",
@@ -6412,7 +6517,22 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0408",
+      "asset_id": "AST-0415",
+      "path": "fikra_v3/visual_quality.py",
+      "name": "visual_quality.py",
+      "extension": ".py",
+      "size_bytes": 7920,
+      "sha256": "e92fc3687e96c6401193790f286e4a35a28da70931e555bc029092d9e3ca98b5",
+      "category": "v3_runtime",
+      "usage_type": "executable_engine",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0416",
       "path": "tests/__init__.py",
       "name": "__init__.py",
       "extension": ".py",
@@ -6427,7 +6547,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0409",
+      "asset_id": "AST-0417",
       "path": "tests/test_arabic_qa.py",
       "name": "test_arabic_qa.py",
       "extension": ".py",
@@ -6442,7 +6562,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0410",
+      "asset_id": "AST-0418",
       "path": "tests/test_asset_and_graph.py",
       "name": "test_asset_and_graph.py",
       "extension": ".py",
@@ -6457,7 +6577,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0411",
+      "asset_id": "AST-0419",
       "path": "tests/test_context_and_modes.py",
       "name": "test_context_and_modes.py",
       "extension": ".py",
@@ -6472,7 +6592,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0412",
+      "asset_id": "AST-0420",
       "path": "tests/test_engines_and_regression.py",
       "name": "test_engines_and_regression.py",
       "extension": ".py",
@@ -6487,7 +6607,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0413",
+      "asset_id": "AST-0421",
       "path": "tests/test_media_intelligence.py",
       "name": "test_media_intelligence.py",
       "extension": ".py",
@@ -6502,7 +6622,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0414",
+      "asset_id": "AST-0422",
       "path": "tests/test_production_readiness_fixes.py",
       "name": "test_production_readiness_fixes.py",
       "extension": ".py",
@@ -6517,7 +6637,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0415",
+      "asset_id": "AST-0423",
       "path": "tests/test_state_approvals_prompt.py",
       "name": "test_state_approvals_prompt.py",
       "extension": ".py",
@@ -6532,7 +6652,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0416",
+      "asset_id": "AST-0424",
       "path": "tests/test_v31_upgrades.py",
       "name": "test_v31_upgrades.py",
       "extension": ".py",
@@ -6547,7 +6667,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0417",
+      "asset_id": "AST-0425",
       "path": "tests/test_v32_visual_intelligence.py",
       "name": "test_v32_visual_intelligence.py",
       "extension": ".py",
@@ -6562,7 +6682,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0418",
+      "asset_id": "AST-0426",
       "path": "tests/test_v33_creative_experience.py",
       "name": "test_v33_creative_experience.py",
       "extension": ".py",
@@ -6577,7 +6697,7 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0419",
+      "asset_id": "AST-0427",
       "path": "tests/test_v34_motion_craft.py",
       "name": "test_v34_motion_craft.py",
       "extension": ".py",
@@ -6592,12 +6712,27 @@
       "verified": true
     },
     {
-      "asset_id": "AST-0420",
+      "asset_id": "AST-0428",
       "path": "tests/test_v35_upgrade.py",
       "name": "test_v35_upgrade.py",
       "extension": ".py",
-      "size_bytes": 3893,
-      "sha256": "ab995f73856cce55aada8c58749f212bd8844694d1492fa8faa9ce675172ab0d",
+      "size_bytes": 3936,
+      "sha256": "0f47566eec90904ba5d3cdb7ba2bcc5aa33fddd42f3f19cf0eef08851558b194",
+      "category": "qa_tests",
+      "usage_type": "automated_verification",
+      "rights_status": "Internal/MIT",
+      "style_ids": [],
+      "logo_ids": [],
+      "ref_ids": [],
+      "verified": true
+    },
+    {
+      "asset_id": "AST-0429",
+      "path": "tests/test_v36_quality_evolution.py",
+      "name": "test_v36_quality_evolution.py",
+      "extension": ".py",
+      "size_bytes": 7861,
+      "sha256": "612f0b87432d41ed1a9c2a10a48d41aa7d81ad2a823feb70e908b01c7fb81082",
       "category": "qa_tests",
       "usage_type": "automated_verification",
       "rights_status": "Internal/MIT",

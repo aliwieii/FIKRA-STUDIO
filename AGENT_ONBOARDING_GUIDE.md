@@ -1,6 +1,6 @@
-# AGENT ONBOARDING GUIDE — FIKRA STUDIO V3.5
+# AGENT ONBOARDING GUIDE — FIKRA STUDIO V3.6
 
-This guide enables any fresh AI agent (Gemini, Claude, ChatGPT, Antigravity, Codex, Cursor) to operate FIKRA STUDIO V3.5 accurately in under 60 seconds with zero prior chat history.
+This guide enables any fresh AI agent (Gemini, Claude, ChatGPT, Antigravity, Codex, Cursor) to operate FIKRA STUDIO V3.6 accurately in under 60 seconds with zero prior chat history.
 
 ## 10-Question Instant Orientation
 | # | Question | Authoritative Answer / Entry Point |
