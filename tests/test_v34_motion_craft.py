@@ -20,7 +20,7 @@ class TestV34MotionCraft(unittest.TestCase):
         self.root = repo_root()
 
     def test_version_and_catalog_counts(self):
-        self.assertEqual(__version__, "3.4.0")
+        self.assertGreaterEqual(tuple(int(x) for x in __version__.split(".")), (3, 4, 0))
         cat = load_motion_craft_catalog(self.root)
         self.assertEqual(len(cat["anti_slide_motion_rules"]), 6)
         self.assertEqual(len(cat["narrative_archetypes"]), 8)

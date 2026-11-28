@@ -1,6 +1,6 @@
 {
   "name": "FIKRA STUDIO",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "identity": "AGENT-FIRST UNIVERSAL CREATIVE PRODUCTION SYSTEM",
   "branch": "feature/v3.3-creative-experience",
   "source_of_truth": "AGENTS.md",
@@ -58,7 +58,7 @@
     "html_gallery": "03_STYLE_LIBRARY/FIKRA_STYLE_GALLERY_V33.html",
     "naming_map": "FIKRA_STYLE_NAMING_MAP.md"
   },
-  "release_tag": "v3.4.0",
+  "release_tag": "v3.5.0",
   "v3_4_upgrades": {
     "motion_craft_catalog": "03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json",
     "motion_craft_module": "fikra_v3/motion_craft.py",
@@ -70,5 +70,17 @@
     "anti_slide_rules": 6,
     "narrative_archetypes": 8,
     "reel_effects": 12
+  },
+  "v3_5_upgrades": {
+    "khatt_w_noor_engine": "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/KHATT_W_NOOR_STICKMAN_ENGINE/",
+    "sfx_synthesizer": "fikra_v3/sfx_synthesizer.py",
+    "tiktok_retention": "fikra_v3/tiktok_retention.py",
+    "tiktok_playbook": "02_WORKFLOWS/TIKTOK_RETENTION_AND_VIEWS_PLAYBOOK.md",
+    "prompt_compiler": "compile_v35_production_prompt",
+    "cli_commands": [
+      "sfx",
+      "quickstart",
+      "tiktok-audit"
+    ]
   }
 }

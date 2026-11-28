@@ -373,3 +373,43 @@ def compile_v34_production_prompt(
         "prompt_qa_gate": base["prompt_qa_gate"],
         "prompt_markdown": final_prompt,
     }
+
+
+def compile_v35_production_prompt(
+    state: dict[str, Any],
+    root: Path | None = None,
+    target_tool: str | None = None,
+    sfx_direction: str = "Crisp justified SFX from 13-SFX Khatt-w-Noor / V3.5 synthesizer (ZERO music)",
+    archetype_slug: str | None = None,
+    reel_effects: list[str] | None = None,
+) -> dict[str, Any]:
+    """V3.5 Production Prompt Compiler: embeds TikTok Retention Contract & Khatt-w-Noor Zero-Music SFX Engine."""
+    base = compile_v34_production_prompt(
+        state,
+        root=root,
+        target_tool=target_tool,
+        sfx_direction=sfx_direction,
+        archetype_slug=archetype_slug,
+        reel_effects=reel_effects,
+    )
+    v35_lines = [
+        "",
+        "## 11. V3.5 TikTok Retention & Khatt-w-Noor Zero-Music SFX Engine",
+        "- **3-Second Hook Rule:** Open with an immediate visual hook & curiosity gap in 0.0-2.8s (NO slow throat-clearing intros).",
+        "- **Pattern Interrupt Cadence:** Trigger a visual/camera/SFX reset every 2.0-3.5s.",
+        "- **Seamless Loop & Safe Zones:** Bridge ending back to frame 1; keep captions/symbols clear of TikTok UI (top 14%, bottom 22%, right 12%).",
+        "- **Procedural Stickman & Zero-Music SFX Engine:** `08_PROJECT_ASSETS/CODE_AND_SCRIPTS/KHATT_W_NOOR_STICKMAN_ENGINE/` (`engine.js`, `sfx.py`, `sync.py`) + `python3 -m fikra_v3 sfx`.",
+        "",
+    ]
+    final_prompt = base["prompt_markdown"] + "\n".join(v35_lines)
+    music_audit = assert_no_music_leak(final_prompt)
+    if not music_audit["pass"]:
+        raise ValueError(f"NO-MUSIC policy violation detected in V3.5 compiled prompt: {music_audit['leaks']}")
+    return {
+        "mode": base["mode"],
+        "target_tool": base["target_tool"],
+        "isolation_clean": base["isolation_clean"],
+        "music_audit": music_audit,
+        "prompt_qa_gate": base["prompt_qa_gate"],
+        "prompt_markdown": final_prompt,
+    }
