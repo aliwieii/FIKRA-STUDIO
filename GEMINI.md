@@ -1,4 +1,4 @@
-# GEMINI.md — Thin Agent Router for FIKRA STUDIO V3.4
+# GEMINI.md — Thin Agent Router for FIKRA STUDIO V3.5
 
 > **Activation Charter:** [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md)
 

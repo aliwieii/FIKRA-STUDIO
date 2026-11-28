@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script>
+const q = new URLSearchParams(location.search);
+window.CFG = { W: +(q.get('w') || 1080), H: +(q.get('h') || 1920) };   // set the size here or via ?w=&h=
+</script>
+<style>
+html,body{margin:0;background:#000}
+#stage{position:relative;overflow:hidden}
+#svg{position:absolute;inset:0}
+#caps{position:absolute;inset:0;pointer-events:none}
+.cap{position:absolute;left:6%;right:6%;direction:rtl;text-align:center;font-family:'IBM Plex Sans Arabic','Noto Sans Arabic','Amiri','Tahoma',sans-serif;font-weight:700;color:var(--ink);white-space:normal}
+.cap span{display:inline-block;will-change:transform}
+.cap .hl{color:#EE7B30}
+.cap .sm{font-size:.42em;font-weight:500;vertical-align:.55em;opacity:.9}
+</style></head><body>
+<div id="stage"><svg id="svg"></svg><div id="caps"></div></div>
+<script src="timing.js"></script><script src="engine.js"></script>
+<script>
+// ===== BEATS: one per caption. {d, bg, text, tr, at, draw(lt,t,b), w?, push?, focus?, scroll?, hold?} =====
+const BEATS = [
+  // beat 1 (first beat: no transition)
+  { d: 2.6, bg: 'peach', text: 'قال *النبي* {صلى الله عليه وسلم}', scroll: 30, sfx: [[.3, 'step', -8], [.7, 'step', -8], [1.1, 'step', -8], [1.5, 'step', -8], [1.9, 'step', -8]],
+    draw: lt => sun(CX + 120 * u, span(lt, 0, 2.4, easeOut), lt) + fig({ x: CX - 120 * u, pose: P.walk(lt) }) },
+  // iris grows from the sun's position in the previous beat
+  { d: 2.2, bg: 'cream', text: '*الجنّة*/ للأوّابين', tr: 'iris', at: [CX + 120 * u, GY - 140 * u], sfx: [[.5, 'chime', -4]],
+    draw: lt => door(CX + 120 * u, span(lt, .4, 1.4), lt) + fig({ x: CX - 110 * u + span(lt, 0, 2.2, lin) * 80 * u, pose: P.walk(lt) }) },
+  // wipe = contrast / question
+  { d: 2.4, bg: 'navy', text: 'قالوا يا/ *رسول الله*', tr: 'wipe', sfx: [[.2, 'pop', -6], [.32, 'pop', -6], [.44, 'pop', -6], [.56, 'pop', -6]],
+    draw: lt => crowd(4, { s: .6, gap: 150 }, i => ({ pose: P.ask(lt + i) })) + crowd.last.map((h, i) => mark(h.top[0], h.top[1] - 26 * u, span(lt, .2 + i * .12, .5 + i * .12))).join('') },
+  // a fall then a rise, motif symbol (scribble = sin) and rings (repentance)
+  { d: 3.4, bg: 'cream', text: 'الذي يُذنب/ ثم *يتوب*', tr: 'wipe', sfx: [[1.0, 'thud', -3], [2.1, 'chime', -5]],
+    draw: lt => { const f = span(lt, .5, 1.0), r = span(lt, 1.8, 2.6);
+      const pose = r > 0 ? mixPose(P.kneel(), P.stand(), r) : mixPose(P.stand(), P.lie(), f);
+      let s = `<g opacity="${1 - r}">${scribble(CX, GY - 420 * u + f * 300 * u, 34 * u, span(lt, .1, .5), lt)}</g>` + fig({ x: CX, pose });
+      if (r > .3) s += rings(fig.last.head[0], fig.last.head[1] + 80 * u, 140 * u, lt);
+      return s; } },
+];
+init();
+</script></body></html>

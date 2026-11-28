@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## [3.5.0] — 2026-11-28 (Branch: `feature/v3.5-khatt-w-noor-and-tiktok-retention`)
+### Added & Upgraded
+- **Upgraded Khatt-w-Noor Stickman & Zero-Music SFX Engine (`08_PROJECT_ASSETS/CODE_AND_SCRIPTS/KHATT_W_NOOR_STICKMAN_ENGINE/`):** Integrated procedural 18-pose SVG stickman (`engine.js`), Playwright frame renderer (`render.js`), Arabic word/pause voice sync (`sync.py`), 13-SFX procedural synthesizer (`sfx.py`), and offline system-font fallback in `scene_template.html` (supporting Fusha & any dialect).
+- **Zero-Dependency SFX Synthesizer (`fikra_v3/sfx_synthesizer.py`):** Generates real stereo `.wav` sound effects (`whoosh`, `swell`, `pop`, `tick`, `click`, `chime`, `ding`, `thud`, `step`, `sparkle`, `riser`, `heartbeat`, `soft`) with zero background music.
+- **TikTok Retention & Simplification Engine (`fikra_v3/tiktok_retention.py` + `02_WORKFLOWS/TIKTOK_RETENTION_AND_VIEWS_PLAYBOOK.md`):** Enforces 3-second hold hooks, 2.0–3.5s pattern interrupts, seamless loops, safe zones, 3–5 niche hashtags, and one-shot `quickstart` blueprints (`python3 -m fikra_v3 quickstart`, `tiktok-audit`, `sfx`).
+- **52 Reference Videos Included Directly in GitHub Repository (`07_REFERENCE_MEDIA/VIDEOS/`):** Updated `.gitignore` so all 52 reference videos are shipped directly in the repo for one-click GitHub download.
+
 ## [3.4.0] — 2026-11-23 (Branch: `feature/v3.4-motion-craft-and-presets`)
 ### Added & Upgraded (Researched via `find-skills` / `skills.sh` & Open-Source Motion Repos)
 - **Motion Craft & Anti-Slide Engine (`fikra_v3/motion_craft.py` + `03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json`):**
