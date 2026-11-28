@@ -53,3 +53,6 @@ OK
   "duration_sec": 8
 }
 ```
+
+## V3.6 Quality Evolution Run
+- Verified via `python3 -m unittest discover -s tests`, `integrity`, `regression`, `validate-timeline.mjs`, and 9:16/16:9/1:1 FFmpeg smoke renders.

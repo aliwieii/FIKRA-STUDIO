@@ -17,7 +17,7 @@ class TestV35Upgrade(unittest.TestCase):
         self.root = repo_root()
 
     def test_version_and_khatt_w_noor_engine_present(self):
-        self.assertEqual(__version__, "3.5.0")
+        self.assertGreaterEqual(tuple(int(x) for x in __version__.split(".")), (3, 5, 0))
         eng = self.root / "08_PROJECT_ASSETS/CODE_AND_SCRIPTS/KHATT_W_NOOR_STICKMAN_ENGINE"
         for fn in ("engine.js", "render.js", "sfx.py", "sync.py", "get_asr.sh", "scene_template.html", "README_AR.md"):
             self.assertTrue((eng / fn).exists(), f"Missing {fn}")

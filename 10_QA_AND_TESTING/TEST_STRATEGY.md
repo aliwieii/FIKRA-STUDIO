@@ -23,3 +23,6 @@
    - Executes Node.js `validate-timeline.mjs`.
    - Validates HyperFrames `variables.json` schema and `index.html` RTL/`seekToFrame`.
    - Runs `integrity_validator` (0 broken links, 0 JSON errors, 0 leaked secrets, 100% hash match) and `regression_guard` (all 7 automated regression invariants).
+
+## V3.6 Quality Evolution Additions
+- Evidence-based quality scoring (`quality_scorer.py`), Visual Quality Engine (`visual_quality.py`), EBU R128 audio mastering (`analyze_audio_mastering`), render-level Arabic caption PNG fixtures, and Scene Schema validation (`tests/test_v36_quality_evolution.py`).

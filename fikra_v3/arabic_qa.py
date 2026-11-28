@@ -1,5 +1,6 @@
 """Feature I: Arabic QA Engine — RTL, shaping, diacritics, BiDi, zero-drop caption pagination, SRT QA."""
 from __future__ import annotations
+from pathlib import Path
 
 import re
 from typing import Any
@@ -119,4 +120,89 @@ def validate_srt(srt_text: str) -> dict[str, Any]:
         "total_words": total_words,
         "errors": errors,
         "pass": len(blocks) > 0 and len(errors) == 0,
+    }
+
+
+def render_arabic_caption_fixture(
+    text: str,
+    output_png: Path,
+    aspect_ratio: str = "9:16",
+    font_size: int | None = None,
+) -> dict[str, Any]:
+    """V3.6 Render-level Arabic Caption QA: renders caption inside safe zones and verifies zero overflow."""
+    dims = {"9:16": (1080, 1920), "16:9": (1920, 1080), "1:1": (1080, 1080)}
+    w, h = dims.get(aspect_ratio, (1080, 1920))
+    fsize = font_size or (48 if w == 1080 else 54)
+    text_qa = analyze_arabic_text(text)
+
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        return {
+            "pass": text_qa["pass"],
+            "render_executed": False,
+            "reason": "Pillow unavailable; text-level QA only.",
+            "text_qa": text_qa,
+        }
+
+    # Safe-zone bounds per aspect ratio
+    margin_x = int(w * 0.08)
+    safe_top = int(h * (0.14 if aspect_ratio == "9:16" else 0.08))
+    safe_bottom = int(h * (0.78 if aspect_ratio == "9:16" else 0.90))
+    max_text_w = w - 2 * margin_x
+
+    im = Image.new("RGB", (w, h), (10, 15, 28))
+    draw = ImageDraw.Draw(im)
+    # Safe-zone guide rectangle
+    draw.rectangle([margin_x, safe_top, w - margin_x, safe_bottom], outline=(56, 189, 248), width=2)
+
+    font = None
+    for candidate in (
+        "/usr/share/fonts/truetype/noto/NotoSansArabic-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ):
+        if Path(candidate).exists():
+            font = ImageFont.truetype(candidate, fsize)
+            break
+    if font is None:
+        font = ImageFont.load_default()
+
+    # Word wrap cleanly without dropping words
+    words = text.split()
+    lines, cur = [], []
+    for wd in words:
+        trial = " ".join(cur + [wd])
+        bbox = draw.textbbox((0, 0), trial, font=font)
+        if (bbox[2] - bbox[0]) <= max_text_w or not cur:
+            cur.append(wd)
+        else:
+            lines.append(" ".join(cur))
+            cur = [wd]
+    if cur:
+        lines.append(" ".join(cur))
+
+    y = int(h * 0.22) if aspect_ratio == "9:16" else int(h * 0.72)
+    overflow = False
+    for ln in lines:
+        bbox = draw.textbbox((0, 0), ln, font=font)
+        lw = bbox[2] - bbox[0]
+        lh = bbox[3] - bbox[1]
+        if lw > max_text_w or (y + lh) > safe_bottom:
+            overflow = True
+        draw.text((max(margin_x, (w - lw) // 2), y), ln, fill=(248, 250, 252), font=font)
+        y += int(lh * 1.45) + 6
+
+    output_png.parent.mkdir(parents=True, exist_ok=True)
+    im.save(output_png)
+
+    return {
+        "pass": text_qa["pass"] and (not overflow) and output_png.exists(),
+        "render_executed": True,
+        "output_png": str(output_png),
+        "aspect_ratio": aspect_ratio,
+        "canvas": f"{w}x{h}",
+        "lines_rendered": len(lines),
+        "words_preserved": len(words),
+        "overflow_detected": overflow,
+        "text_qa": text_qa,
     }

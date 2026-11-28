@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## [3.6.0] — 2026-11-28 (Branch: `feature/v3.6-quality-evolution`)
+### Added & Fixed (Maximum Quality Evolution)
+- **Conflict Resolutions:** Unified NO-MUSIC policy in `02_WORKFLOWS/UNIVERSAL_VIDEO_WORKFLOW.md`, added optional `aspect_ratio` (`9:16`, `16:9`, `1:1`) to `quickstart_blueprint()`, widened `.github/workflows/ci.yml` branch triggers (`feature/**`, `fix/**`, `development/**`), and removed duplicate `<ArabicCaptionOverlay />` inside `SampleFikraHook.tsx`.
+- **Visual Quality Engine (`fikra_v3/visual_quality.py`):** Objective FFmpeg/FFprobe/Pillow checks (`blackdetect`, `freezedetect`, sharpness, contrast, exposure, flicker, resolution) cleanly separated from heuristic and human reviews.
+- **Data-Driven Scene Schema & Style/Consistency Engines (`scene_schema.py`, `style_execution.py`, `consistency_engine.py`):** Multi-scene timeline validation, 15-field executable style specs with honest readiness status, and SHA-256 asset identity records.
+- **Audio Mastering & Arabic Render QA:** `analyze_audio_mastering()` (EBU R128 LUFS/True Peak) and `render_arabic_caption_fixture()` (real PNG safe-zone & overflow verification).
+- **Evidence-Based Quality Scorer (`fikra_v3/quality_scorer.py`):** 7-domain 100-point scoring requiring real render/FFprobe evidence.
+
 ## [3.5.0] — 2026-11-28 (Branch: `feature/v3.5-khatt-w-noor-and-tiktok-retention`)
 ### Added & Upgraded
 - **Upgraded Khatt-w-Noor Stickman & Zero-Music SFX Engine (`08_PROJECT_ASSETS/CODE_AND_SCRIPTS/KHATT_W_NOOR_STICKMAN_ENGINE/`):** Integrated procedural 18-pose SVG stickman (`engine.js`), Playwright frame renderer (`render.js`), Arabic word/pause voice sync (`sync.py`), 13-SFX procedural synthesizer (`sfx.py`), and offline system-font fallback in `scene_template.html` (supporting Fusha & any dialect).

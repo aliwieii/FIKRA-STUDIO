@@ -25,6 +25,7 @@ from .motion_craft import check_motion_craft_compliance, list_narrative_archetyp
 from .sfx_synthesizer import synthesize_from_meta
 from .tiktok_retention import audit_tiktok_retention, quickstart_blueprint
 from .visual_intelligence import extract_contact_sheet, verify_reference_access
+from .visual_quality import evaluate_visual_quality
 
 
 def _p(data):
@@ -117,8 +118,13 @@ def main(argv: list[str] | None = None) -> int:
     p_qs.add_argument("--topic", required=True)
     p_qs.add_argument("--mode", default="UNIVERSAL_VIDEO_MODE")
     p_qs.add_argument("--duration", type=int, default=45)
+    p_qs.add_argument("--aspect", default=None)
     p_tt = sub.add_parser("tiktok-audit", help="Audit beats JSON for TikTok retention (V3.5)")
     p_tt.add_argument("--beats", required=True)
+    p_vq = sub.add_parser("quality-audit", help="Run V3.6 Visual Quality Engine on an MP4")
+    p_vq.add_argument("--video", required=True)
+    p_vq.add_argument("--aspect", default="9:16")
+    p_vq.add_argument("--sheet")
 
     args = parser.parse_args(argv)
     r = repo_root()
@@ -180,7 +186,7 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "sfx":
         _p(synthesize_from_meta(Path(args.meta), Path(args.out)))
     elif args.cmd == "quickstart":
-        _p(quickstart_blueprint(args.topic, mode=args.mode, duration_sec=args.duration, root=r))
+        _p(quickstart_blueprint(args.topic, mode=args.mode, duration_sec=args.duration, aspect_ratio=args.aspect, root=r))
     elif args.cmd == "tiktok-audit":
         data = json.loads(Path(args.beats).read_text(encoding="utf-8"))
         rep = audit_tiktok_retention(data.get("beats", data), hashtags=data.get("hashtags") if isinstance(data, dict) else None)
@@ -200,10 +206,14 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "sfx":
         _p(synthesize_from_meta(Path(args.meta), Path(args.out)))
     elif args.cmd == "quickstart":
-        _p(quickstart_blueprint(args.topic, mode=args.mode, duration_sec=args.duration, root=r))
+        _p(quickstart_blueprint(args.topic, mode=args.mode, duration_sec=args.duration, aspect_ratio=args.aspect, root=r))
     elif args.cmd == "tiktok-audit":
         data = json.loads(Path(args.beats).read_text(encoding="utf-8"))
         rep = audit_tiktok_retention(data.get("beats", data), hashtags=data.get("hashtags") if isinstance(data, dict) else None)
+        _p(rep)
+        return 0 if rep["pass"] else 1
+    elif args.cmd == "quality-audit":
+        rep = evaluate_visual_quality(Path(args.video), expected_aspect=args.aspect, contact_sheet_out=Path(args.sheet) if args.sheet else None)
         _p(rep)
         return 0 if rep["pass"] else 1
     return 0

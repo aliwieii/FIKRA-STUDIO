@@ -1,6 +1,6 @@
 {
   "name": "FIKRA STUDIO",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "identity": "AGENT-FIRST UNIVERSAL CREATIVE PRODUCTION SYSTEM",
   "branch": "feature/v3.3-creative-experience",
   "source_of_truth": "AGENTS.md",
@@ -58,7 +58,7 @@
     "html_gallery": "03_STYLE_LIBRARY/FIKRA_STYLE_GALLERY_V33.html",
     "naming_map": "FIKRA_STYLE_NAMING_MAP.md"
   },
-  "release_tag": "v3.5.0",
+  "release_tag": "v3.6.0",
   "v3_4_upgrades": {
     "motion_craft_catalog": "03_STYLE_LIBRARY/MOTION_CRAFT_AND_REEL_PRESETS_V34.json",
     "motion_craft_module": "fikra_v3/motion_craft.py",
@@ -82,5 +82,14 @@
       "quickstart",
       "tiktok-audit"
     ]
+  },
+  "v3_6_upgrades": {
+    "visual_quality": "fikra_v3/visual_quality.py",
+    "scene_schema": "fikra_v3/scene_schema.py",
+    "style_execution": "fikra_v3/style_execution.py",
+    "consistency_engine": "fikra_v3/consistency_engine.py",
+    "quality_scorer": "fikra_v3/quality_scorer.py",
+    "audio_mastering": "fikra_v3/media_intelligence.py::analyze_audio_mastering",
+    "arabic_render_qa": "fikra_v3/arabic_qa.py::render_arabic_caption_fixture"
   }
 }

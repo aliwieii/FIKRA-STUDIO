@@ -1,4 +1,4 @@
-# AGENTS.md — FIKRA STUDIO V3.5 (Single Source of Truth)
+# AGENTS.md — FIKRA STUDIO V3.6 (Single Source of Truth)
 
 > **Activation Charter:** [`ACTIVATION_PROMPT.md`](ACTIVATION_PROMPT.md)
 
@@ -9,7 +9,7 @@
 ---
 
 ## 1. What Is FIKRA STUDIO?
-FIKRA STUDIO V3.5 is a modular, forensic-grade creative production direction, prompt engineering, asset intelligence, and programmatic video engineering system supporting Arabic-first and universal video workflows.
+FIKRA STUDIO V3.6 is a modular, forensic-grade creative production direction, prompt engineering, asset intelligence, and programmatic video engineering system supporting Arabic-first and universal video workflows.
 
 ## 2. What Can It Do?
 - Route any creative request into **9 strictly isolated operating modes** (`UNIVERSAL_VIDEO_MODE`, `FIKRA_CHANNEL_MODE`, `QURAN_MODE`, `PODCAST_SHORT_MODE`, `LOGO_ANIMATION_MODE`, `PROMPT_ONLY_MODE`, `REFERENCE_AUDIT_MODE`, `VISUAL_UPGRADE_MODE`, `STICKMAN_COMEDY_MODE`).
